@@ -1,1 +1,398 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<title>Ink Room | Demo by RNS Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#090a0d;
+color:#f5f5f5;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:26px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+backdrop-filter:blur(12px);
+background:rgba(5,5,8,0.34);
+border-bottom:1px solid rgba(255,255,255,0.07);
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:600;
+letter-spacing:1px;
+}
+
+nav{
+display:flex;
+gap:24px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:0.76rem;
+letter-spacing:2px;
+text-transform:uppercase;
+opacity:0.85;
+}
+
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.38) contrast(1.08) saturate(0.85);
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:
+linear-gradient(to bottom, rgba(5,5,8,0.10), rgba(5,5,8,0.86)),
+radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 60%);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:20px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:5.6rem;
+font-weight:500;
+margin-bottom:22px;
+}
+
+.hero p{
+font-size:1.15rem;
+line-height:1.9;
+max-width:760px;
+margin:auto;
+opacity:0.9;
+}
+
+.section{
+padding:120px 8%;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+text-align:center;
+margin-bottom:70px;
+font-weight:500;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+}
+
+.card{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:30px;
+overflow:hidden;
+backdrop-filter:blur(12px);
+}
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+display:block;
+filter:brightness(0.85) contrast(1.05);
+}
+
+.card-content{
+padding:30px;
+}
+
+.card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+margin-bottom:16px;
+font-weight:500;
+}
+
+.card p{
+line-height:1.9;
+opacity:0.86;
+font-size:0.98rem;
+}
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+margin-top:70px;
+}
+
+.info-box{
+padding:40px;
+border-radius:30px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.info-box h4{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.info-box p{
+line-height:1.9;
+opacity:0.88;
+}
+
+.button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+height:62px;
+padding:0 38px;
+border-radius:999px;
+border:1px solid rgba(255,255,255,0.28);
+color:white;
+text-decoration:none;
+letter-spacing:2px;
+text-transform:uppercase;
+font-size:0.78rem;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+margin-top:34px;
+}
+
+footer{
+padding:100px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.08);
+margin-top:100px;
+}
+
+footer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+margin-bottom:20px;
+}
+
+footer p{
+opacity:0.8;
+margin-bottom:20px;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+font-size:1.05rem;
+border-bottom:1px solid rgba(255,255,255,0.4);
+padding-bottom:4px;
+}
+
+@media(max-width:768px){
+
+header{
+padding:20px;
+align-items:flex-start;
+gap:18px;
+}
+
+.logo{
+font-size:1.45rem;
+}
+
+nav{
+gap:12px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+nav a{
+font-size:0.62rem;
+letter-spacing:1px;
+}
+
+.hero h1{
+font-size:3.8rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.section{
+padding:90px 20px;
+}
+
+.section-title{
+font-size:3rem;
+}
+
+.card img{
+height:240px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Ink Room</div>
+
+<nav>
+<a href="index.html">RNS Studio</a>
+<a href="#arbeid">Arbeid</a>
+<a href="#booking">Booking</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<img src="tattoo1.jpg" alt="Ink Room tattoo studio">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+<h1>Ink Room</h1>
+
+<p>
+Et rolig og personlig tattoo-konsept for kunder som vil føle seg trygge før de bestiller.
+Her handler nettsiden om stil, tillit, arbeid og følelsen av å velge riktig artist.
+</p>
+
+<a href="#booking" class="button">Book time</a>
+</div>
+
+</section>
+
+<section class="section" id="arbeid">
+
+<h2 class="section-title">Arbeid og uttrykk</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="tattoo1.jpg" alt="Tattoo stemning">
+<div class="card-content">
+<h3>Stil</h3>
+<p>
+En tattoo-side bør vise uttrykket tydelig: linjer, detaljer, mørke flater og personlig identitet.
+Kunden skal kjenne stilen før de tar kontakt.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="tattoo2.jpg" alt="Tattoo studio">
+<div class="card-content">
+<h3>Studio</h3>
+<p>
+Bilder av rommet, arbeidsprosessen og atmosfæren bygger trygghet.
+Det gjør studioet mer menneskelig og mindre anonymt.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="tattoo3.jpg" alt="Tattoo detaljer">
+<div class="card-content">
+<h3>Detaljer</h3>
+<p>
+Små detaljer gir tillit: hygiene, ro, portefølje, forberedelser og tydelig informasjon før timen.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="booking">
+
+<h2 class="section-title">Booking</h2>
+
+<div class="info">
+
+<div class="info-box">
+<h4>Timebestilling</h4>
+<p>
+Send kort beskrivelse av motiv, plassering og ønsket størrelse.
+Legg gjerne ved referansebilder.
+</p>
+</div>
+
+<div class="info-box">
+<h4>Åpningstider</h4>
+<p>
+Mandag–fredag: 10:00–18:00<br>
+Lørdag: 11:00–15:00<br>
+Søndag: Etter avtale
+</p>
+</div>
+
+<div class="info-box">
+<h4>Kontakt</h4>
+<p>
+booking@inkroom.no<br>
++47 45 88 12 90<br>
+Storgata 18, 6500 Kristiansund
+</p>
+</div>
+
+</div>
+</section>
+
+<footer id="kontakt">
+<h2>Demo laget av RNS Studio</h2>
+<p>
+Dette er en fiktiv demoside som viser hvordan et tattoo-studio kan fremstå tryggere,
+råere og mer profesjonelt på nett.
+</p>
+<a href="index.html">Tilbake til RNS Studio</a>
+</footer>
+
+</body>
+</html>
