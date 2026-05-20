@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -32,35 +31,34 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:28px 42px;
+padding:24px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
-background:rgba(246,241,235,0.72);
+background:rgba(246,241,235,0.78);
 backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(0,0,0,0.05);
+border-bottom:1px solid rgba(0,0,0,0.06);
 }
 
 .logo{
 font-family:'Cormorant Garamond',serif;
 font-size:2rem;
 font-weight:600;
-letter-spacing:1px;
 }
 
 nav{
 display:flex;
-gap:26px;
+gap:24px;
 }
 
 nav a{
 color:#2d241f;
 text-decoration:none;
-font-size:0.76rem;
+font-size:0.74rem;
 letter-spacing:2px;
 text-transform:uppercase;
-opacity:0.8;
+opacity:0.82;
 }
 
 .hero{
@@ -78,21 +76,30 @@ position:absolute;
 width:100%;
 height:100%;
 object-fit:cover;
-filter:brightness(0.72) saturate(0.92);
+filter:brightness(0.72) saturate(0.92) contrast(1.02);
 }
 
 .hero-overlay{
 position:absolute;
 inset:0;
 background:
-linear-gradient(to bottom, rgba(246,241,235,0.10), rgba(246,241,235,0.78));
+linear-gradient(to bottom, rgba(246,241,235,0.12), rgba(246,241,235,0.82)),
+radial-gradient(circle at center, rgba(255,255,255,0.18), transparent 60%);
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-max-width:900px;
+max-width:920px;
 padding:20px;
+}
+
+.kicker{
+font-size:0.76rem;
+letter-spacing:4px;
+text-transform:uppercase;
+opacity:0.62;
+margin-bottom:22px;
 }
 
 .hero h1{
@@ -100,7 +107,6 @@ font-family:'Cormorant Garamond',serif;
 font-size:6rem;
 font-weight:500;
 margin-bottom:20px;
-color:#2d241f;
 }
 
 .hero p{
@@ -108,7 +114,15 @@ font-size:1.14rem;
 line-height:1.9;
 max-width:760px;
 margin:auto;
-color:#43362d;
+color:#46392f;
+}
+
+.hero-actions{
+margin-top:42px;
+display:flex;
+gap:18px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 .button{
@@ -118,21 +132,24 @@ justify-content:center;
 height:62px;
 padding:0 38px;
 border-radius:999px;
-border:1px solid rgba(45,36,31,0.16);
+border:1px solid rgba(45,36,31,0.18);
 color:#2d241f;
 text-decoration:none;
 letter-spacing:2px;
 text-transform:uppercase;
 font-size:0.76rem;
-background:rgba(255,255,255,0.45);
+background:rgba(255,255,255,0.48);
 backdrop-filter:blur(10px);
-margin-top:34px;
 transition:0.3s ease;
 }
 
 .button:hover{
 background:white;
 transform:translateY(-3px);
+}
+
+.button.secondary{
+background:rgba(246,241,235,0.2);
 }
 
 .section{
@@ -143,9 +160,16 @@ padding:120px 8%;
 font-family:'Cormorant Garamond',serif;
 font-size:4rem;
 text-align:center;
-margin-bottom:70px;
+margin-bottom:34px;
 font-weight:500;
-color:#2d241f;
+}
+
+.section-intro{
+max-width:760px;
+margin:0 auto 70px;
+text-align:center;
+line-height:1.9;
+color:#5c4b40;
 }
 
 .grid{
@@ -156,11 +180,10 @@ gap:28px;
 
 .card{
 background:rgba(255,255,255,0.62);
-border:1px solid rgba(0,0,0,0.05);
+border:1px solid rgba(0,0,0,0.06);
 border-radius:34px;
 overflow:hidden;
-backdrop-filter:blur(10px);
-box-shadow:0 10px 40px rgba(0,0,0,0.04);
+box-shadow:0 14px 42px rgba(0,0,0,0.05);
 }
 
 .card img{
@@ -179,7 +202,6 @@ font-family:'Cormorant Garamond',serif;
 font-size:2.2rem;
 margin-bottom:16px;
 font-weight:500;
-color:#2d241f;
 }
 
 .card p{
@@ -188,26 +210,66 @@ font-size:0.98rem;
 color:#5c4b40;
 }
 
+.service-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:26px;
+}
+
+.service-item{
+padding:34px;
+border-radius:30px;
+background:rgba(255,255,255,0.62);
+border:1px solid rgba(0,0,0,0.06);
+box-shadow:0 14px 42px rgba(0,0,0,0.04);
+}
+
+.service-item span{
+display:block;
+font-size:0.72rem;
+letter-spacing:3px;
+text-transform:uppercase;
+opacity:0.52;
+margin-bottom:16px;
+}
+
+.service-item h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin-bottom:14px;
+}
+
+.service-item p{
+line-height:1.8;
+color:#5c4b40;
+margin-bottom:18px;
+}
+
+.price{
+font-size:1rem;
+letter-spacing:1px;
+color:#2d241f;
+}
+
 .info{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:40px;
-margin-top:70px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:34px;
 }
 
 .info-box{
-padding:42px;
+padding:40px;
 border-radius:34px;
 background:rgba(255,255,255,0.62);
-border:1px solid rgba(0,0,0,0.05);
-box-shadow:0 10px 40px rgba(0,0,0,0.04);
+border:1px solid rgba(0,0,0,0.06);
+box-shadow:0 14px 42px rgba(0,0,0,0.04);
 }
 
 .info-box h4{
 font-family:'Cormorant Garamond',serif;
 font-size:2rem;
-margin-bottom:20px;
-font-weight:500;
+margin-bottom:18px;
 }
 
 .info-box p{
@@ -215,25 +277,47 @@ line-height:1.9;
 color:#5c4b40;
 }
 
+.demo-note{
+max-width:900px;
+margin:0 auto;
+padding:48px;
+border-radius:34px;
+background:rgba(255,255,255,0.62);
+border:1px solid rgba(0,0,0,0.06);
+text-align:center;
+box-shadow:0 14px 42px rgba(0,0,0,0.04);
+}
+
+.demo-note h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.demo-note p{
+line-height:1.9;
+color:#5c4b40;
+margin-bottom:28px;
+}
+
 footer{
-padding:100px 20px;
+padding:90px 20px;
 text-align:center;
 border-top:1px solid rgba(0,0,0,0.06);
-margin-top:100px;
 }
 
 footer h2{
 font-family:'Cormorant Garamond',serif;
 font-size:3rem;
 margin-bottom:20px;
-font-weight:500;
 }
 
 footer p{
-max-width:720px;
-margin:auto auto 24px;
-line-height:1.9;
 color:#5c4b40;
+max-width:700px;
+margin:auto auto 24px;
+line-height:1.8;
 }
 
 footer a{
@@ -246,9 +330,9 @@ padding-bottom:4px;
 @media(max-width:768px){
 
 header{
-padding:20px;
+padding:18px 20px;
 align-items:flex-start;
-gap:18px;
+gap:16px;
 }
 
 .logo{
@@ -286,8 +370,11 @@ font-size:3rem;
 height:240px;
 }
 
+.demo-note{
+padding:34px 24px;
 }
 
+}
 </style>
 </head>
 
@@ -300,7 +387,7 @@ height:240px;
 <nav>
 <a href="index.html">RNS Studio</a>
 <a href="#opplevelse">Opplevelse</a>
-<a href="#booking">Booking</a>
+<a href="#tjenester">Tjenester</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
 
@@ -308,22 +395,28 @@ height:240px;
 
 <section class="hero">
 
-<img src="frisor1.jpg" alt="Luma Studio">
+<img src="frisor1.jpg" alt="Luma Studio frisør">
 
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
 
+<div class="kicker">
+Hair · Beauty · Wellness · Booking
+</div>
+
 <h1>Luma Studio</h1>
 
 <p>
-Et lyst og rolig frisørkonsept bygget rundt velvære,
-detaljer og følelsen av å bli tatt godt imot.
-Denne demoen viser hvordan en moderne salong kan fremstå varm,
-elegant og profesjonell på nett.
+Et lyst og elegant frisørkonsept med rolig atmosfære,
+personlig oppfølging og enkel booking.
+Nettsiden gir kunden følelsen av salongen før de bestiller time.
 </p>
 
-<a href="#booking" class="button">Bestill time</a>
+<div class="hero-actions">
+<a href="#tjenester" class="button">Se tjenester</a>
+<a href="#kontakt" class="button secondary">Bestill time</a>
+</div>
 
 </div>
 
@@ -331,53 +424,88 @@ elegant og profesjonell på nett.
 
 <section class="section" id="opplevelse">
 
-<h2 class="section-title">Opplevelsen</h2>
+<h2 class="section-title">En roligere salongopplevelse</h2>
+
+<p class="section-intro">
+Denne demosiden viser hvordan en frisør, hudpleieklinikk eller velværebedrift
+kan fremstå mer eksklusiv, varm og profesjonell på nett.
+</p>
 
 <div class="grid">
 
 <div class="card">
-
-<img src="frisor1.jpg" alt="Frisør stemning">
-
+<img src="frisor1.jpg" alt="Luma atmosfære">
 <div class="card-content">
 <h3>Atmosfære</h3>
-
 <p>
-Lyse flater, myke toner og rolige bilder gjør nettsiden varm,
-moderne og enkel å stole på fra første sekund.
+Lyse flater, myke toner og store bilder gjør siden ren,
+elegant og trygg fra første sekund.
 </p>
-
 </div>
 </div>
 
 <div class="card">
-
-<img src="frisor2.jpg" alt="Frisør detaljer">
-
+<img src="frisor2.jpg" alt="Luma detaljer">
 <div class="card-content">
 <h3>Detaljer</h3>
-
 <p>
-En moderne salongside handler ikke bare om priser.
-Den skal vise følelsen av stedet, menneskene og opplevelsen rundt besøket.
+En god salongside viser mer enn priser. Den viser menneskene,
+stemningen og følelsen av å bli tatt godt imot.
 </p>
-
 </div>
 </div>
 
 <div class="card">
-
-<img src="frisor3.jpg" alt="Frisør styling">
-
+<img src="frisor3.jpg" alt="Luma behandling">
 <div class="card-content">
 <h3>Velvære</h3>
-
 <p>
-Store bilder, luftige seksjoner og enkel booking gjør at siden føles premium,
-rolig og profesjonell uten å bli kald.
+Tydelig booking, tjenester og kontakt gjør det enklere for kunden å velge
+og bestille uten friksjon.
 </p>
+</div>
+</div>
 
 </div>
+
+</section>
+
+<section class="section" id="tjenester">
+
+<h2 class="section-title">Tjenester</h2>
+
+<p class="section-intro">
+Tjenestene kan tilpasses med ekte priser, behandlinger, ansatte,
+bookinglink og produktinformasjon.
+</p>
+
+<div class="service-list">
+
+<div class="service-item">
+<span>Hair</span>
+<h3>Klipp og styling</h3>
+<p>
+Personlig klipp, føn, styling og veiledning tilpasset kunden.
+</p>
+<div class="price">Fra 690 kr</div>
+</div>
+
+<div class="service-item">
+<span>Color</span>
+<h3>Farge og behandling</h3>
+<p>
+Farge, gloss, striping og behandlinger med fokus på kvalitet og helhet.
+</p>
+<div class="price">Fra 1.290 kr</div>
+</div>
+
+<div class="service-item">
+<span>Consultation</span>
+<h3>Konsultasjon</h3>
+<p>
+For deg som ønsker ny stil, fargeendring eller plan for videre behandling.
+</p>
+<div class="price">Fra 350 kr</div>
 </div>
 
 </div>
@@ -391,39 +519,49 @@ rolig og profesjonell uten å bli kald.
 <div class="info">
 
 <div class="info-box">
-
 <h4>Åpningstider</h4>
-
 <p>
-Mandag – fredag: 09:00–18:00<br>
+Mandag–fredag: 09:00–18:00<br>
 Lørdag: 10:00–15:00<br>
 Søndag: Stengt
 </p>
-
 </div>
 
 <div class="info-box">
-
-<h4>Tjenester</h4>
-
+<h4>Bestill time</h4>
 <p>
-Klipp, farge, styling, konsultasjon og behandlinger
-med fokus på ro, kvalitet og personlig oppfølging.
+Send ønsket behandling, tidspunkt og gjerne bilde av håret ditt.
+Vi svarer med forslag til time.
 </p>
-
 </div>
 
 <div class="info-box">
-
 <h4>Kontakt</h4>
-
 <p>
 booking@lumastudio.no<br>
 +47 91 42 66 80<br>
 Nedre gate 14, Trondheim
 </p>
+</div>
 
 </div>
+
+</section>
+
+<section class="section">
+
+<div class="demo-note">
+
+<h2>Hva kunden kan få</h2>
+
+<p>
+Denne demosiden kan tilpasses frisører, hudpleie, velvære, spa,
+coacher og andre bedrifter som ønsker et lyst, moderne og elegant uttrykk.
+Siden kan inneholde booking, tjenester, ansatte, priser, bilder,
+kart og kontaktinformasjon.
+</p>
+
+<a href="index.html" class="button">Tilbake til RNS Studio</a>
 
 </div>
 
@@ -431,14 +569,14 @@ Nedre gate 14, Trondheim
 
 <footer id="kontakt">
 
-<h2>Demo laget av RNS Studio</h2>
+<h2>Luma Studio</h2>
 
 <p>
-Dette er en fiktiv demoside laget for å vise hvordan en frisørsalong
-kan fremstå mer elegant, menneskelig og profesjonell på nett.
+Dette er en fiktiv demoside laget av RNS Studio for å vise hvordan en frisør-
+eller velværebedrift kan fremstå mer elegant, trygg og salgsbar på nett.
 </p>
 
-<a href="index.html">Tilbake til RNS Studio</a>
+<a href="mailto:booking@lumastudio.no">booking@lumastudio.no</a>
 
 </footer>
 
