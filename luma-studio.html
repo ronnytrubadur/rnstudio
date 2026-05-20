@@ -1,1 +1,446 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<title>Luma Studio | Demo by RNS Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f6f1eb;
+color:#2d241f;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:28px 42px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:rgba(246,241,235,0.72);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:600;
+letter-spacing:1px;
+}
+
+nav{
+display:flex;
+gap:26px;
+}
+
+nav a{
+color:#2d241f;
+text-decoration:none;
+font-size:0.76rem;
+letter-spacing:2px;
+text-transform:uppercase;
+opacity:0.8;
+}
+
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.72) saturate(0.92);
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:
+linear-gradient(to bottom, rgba(246,241,235,0.10), rgba(246,241,235,0.78));
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:20px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:6rem;
+font-weight:500;
+margin-bottom:20px;
+color:#2d241f;
+}
+
+.hero p{
+font-size:1.14rem;
+line-height:1.9;
+max-width:760px;
+margin:auto;
+color:#43362d;
+}
+
+.button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+height:62px;
+padding:0 38px;
+border-radius:999px;
+border:1px solid rgba(45,36,31,0.16);
+color:#2d241f;
+text-decoration:none;
+letter-spacing:2px;
+text-transform:uppercase;
+font-size:0.76rem;
+background:rgba(255,255,255,0.45);
+backdrop-filter:blur(10px);
+margin-top:34px;
+transition:0.3s ease;
+}
+
+.button:hover{
+background:white;
+transform:translateY(-3px);
+}
+
+.section{
+padding:120px 8%;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+text-align:center;
+margin-bottom:70px;
+font-weight:500;
+color:#2d241f;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+}
+
+.card{
+background:rgba(255,255,255,0.62);
+border:1px solid rgba(0,0,0,0.05);
+border-radius:34px;
+overflow:hidden;
+backdrop-filter:blur(10px);
+box-shadow:0 10px 40px rgba(0,0,0,0.04);
+}
+
+.card img{
+width:100%;
+height:340px;
+object-fit:cover;
+display:block;
+}
+
+.card-content{
+padding:34px;
+}
+
+.card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+margin-bottom:16px;
+font-weight:500;
+color:#2d241f;
+}
+
+.card p{
+line-height:1.9;
+font-size:0.98rem;
+color:#5c4b40;
+}
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+margin-top:70px;
+}
+
+.info-box{
+padding:42px;
+border-radius:34px;
+background:rgba(255,255,255,0.62);
+border:1px solid rgba(0,0,0,0.05);
+box-shadow:0 10px 40px rgba(0,0,0,0.04);
+}
+
+.info-box h4{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+margin-bottom:20px;
+font-weight:500;
+}
+
+.info-box p{
+line-height:1.9;
+color:#5c4b40;
+}
+
+footer{
+padding:100px 20px;
+text-align:center;
+border-top:1px solid rgba(0,0,0,0.06);
+margin-top:100px;
+}
+
+footer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+margin-bottom:20px;
+font-weight:500;
+}
+
+footer p{
+max-width:720px;
+margin:auto auto 24px;
+line-height:1.9;
+color:#5c4b40;
+}
+
+footer a{
+color:#2d241f;
+text-decoration:none;
+border-bottom:1px solid rgba(45,36,31,0.35);
+padding-bottom:4px;
+}
+
+@media(max-width:768px){
+
+header{
+padding:20px;
+align-items:flex-start;
+gap:18px;
+}
+
+.logo{
+font-size:1.5rem;
+}
+
+nav{
+gap:12px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+nav a{
+font-size:0.62rem;
+letter-spacing:1px;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.section{
+padding:90px 20px;
+}
+
+.section-title{
+font-size:3rem;
+}
+
+.card img{
+height:240px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Luma Studio</div>
+
+<nav>
+<a href="index.html">RNS Studio</a>
+<a href="#opplevelse">Opplevelse</a>
+<a href="#booking">Booking</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<img src="frisor1.jpg" alt="Luma Studio">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>Luma Studio</h1>
+
+<p>
+Et lyst og rolig frisørkonsept bygget rundt velvære,
+detaljer og følelsen av å bli tatt godt imot.
+Denne demoen viser hvordan en moderne salong kan fremstå varm,
+elegant og profesjonell på nett.
+</p>
+
+<a href="#booking" class="button">Bestill time</a>
+
+</div>
+
+</section>
+
+<section class="section" id="opplevelse">
+
+<h2 class="section-title">Opplevelsen</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="frisor1.jpg" alt="Frisør stemning">
+
+<div class="card-content">
+<h3>Atmosfære</h3>
+
+<p>
+Lyse flater, myke toner og rolige bilder gjør nettsiden varm,
+moderne og enkel å stole på fra første sekund.
+</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="frisor2.jpg" alt="Frisør detaljer">
+
+<div class="card-content">
+<h3>Detaljer</h3>
+
+<p>
+En moderne salongside handler ikke bare om priser.
+Den skal vise følelsen av stedet, menneskene og opplevelsen rundt besøket.
+</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="frisor3.jpg" alt="Frisør styling">
+
+<div class="card-content">
+<h3>Velvære</h3>
+
+<p>
+Store bilder, luftige seksjoner og enkel booking gjør at siden føles premium,
+rolig og profesjonell uten å bli kald.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="booking">
+
+<h2 class="section-title">Booking</h2>
+
+<div class="info">
+
+<div class="info-box">
+
+<h4>Åpningstider</h4>
+
+<p>
+Mandag – fredag: 09:00–18:00<br>
+Lørdag: 10:00–15:00<br>
+Søndag: Stengt
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h4>Tjenester</h4>
+
+<p>
+Klipp, farge, styling, konsultasjon og behandlinger
+med fokus på ro, kvalitet og personlig oppfølging.
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h4>Kontakt</h4>
+
+<p>
+booking@lumastudio.no<br>
++47 91 42 66 80<br>
+Nedre gate 14, Trondheim
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="kontakt">
+
+<h2>Demo laget av RNS Studio</h2>
+
+<p>
+Dette er en fiktiv demoside laget for å vise hvordan en frisørsalong
+kan fremstå mer elegant, menneskelig og profesjonell på nett.
+</p>
+
+<a href="index.html">Tilbake til RNS Studio</a>
+
+</footer>
+
+</body>
+</html>
