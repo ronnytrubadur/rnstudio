@@ -6,22 +6,15 @@
 
 <title>Kronotop Café | Demo by RNS Studio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 
 body{
-background:#101117;
-color:#f6efe7;
+background:#0f1118;
+color:#f5f5f5;
 font-family:'Inter',sans-serif;
 overflow-x:hidden;
 }
@@ -31,42 +24,34 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:24px 42px;
+padding:24px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
-backdrop-filter:blur(14px);
-background:rgba(12,12,12,0.34);
+backdrop-filter:blur(12px);
+background:rgba(10,10,10,0.30);
 border-bottom:1px solid rgba(255,255,255,0.07);
 }
 
 .logo{
 font-family:'Cormorant Garamond',serif;
 font-size:2rem;
-font-weight:500;
-letter-spacing:1px;
+font-weight:600;
 }
 
 nav{
 display:flex;
-gap:26px;
-align-items:center;
+gap:24px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-size:0.78rem;
+font-size:0.76rem;
 letter-spacing:2px;
 text-transform:uppercase;
 opacity:0.86;
-}
-
-.rns-link{
-border:1px solid rgba(255,255,255,0.28);
-border-radius:999px;
-padding:12px 18px;
 }
 
 .hero{
@@ -81,21 +66,18 @@ overflow:hidden;
 
 .hero img{
 position:absolute;
-inset:0;
 width:100%;
 height:100%;
 object-fit:cover;
-filter:brightness(0.48) saturate(0.95) contrast(1.05);
+filter:brightness(0.42) saturate(0.95) contrast(1.05);
 }
 
-.hero::after{
-content:"";
+.hero-overlay{
 position:absolute;
 inset:0;
 background:
-linear-gradient(to bottom, rgba(10,10,10,0.16), rgba(10,10,10,0.84)),
-radial-gradient(circle at center, rgba(255,255,255,0.06), transparent 60%);
-z-index:1;
+linear-gradient(to bottom, rgba(10,10,10,0.08), rgba(10,10,10,0.84)),
+radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 60%);
 }
 
 .hero-content{
@@ -106,42 +88,49 @@ padding:20px;
 }
 
 .kicker{
-font-size:0.78rem;
+font-size:0.76rem;
 letter-spacing:4px;
 text-transform:uppercase;
-color:rgba(255,255,255,0.68);
+opacity:0.72;
 margin-bottom:22px;
 }
 
 .hero h1{
 font-family:'Cormorant Garamond',serif;
-font-size:6.2rem;
+font-size:5.6rem;
 font-weight:500;
-line-height:0.95;
-margin-bottom:26px;
+margin-bottom:22px;
 }
 
 .hero p{
-font-size:1.22rem;
+font-size:1.16rem;
 line-height:1.9;
 max-width:760px;
-margin:0 auto 46px;
-opacity:0.9;
+margin:auto;
+opacity:0.92;
+}
+
+.hero-actions{
+margin-top:42px;
+display:flex;
+gap:18px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 .button{
 display:inline-flex;
 align-items:center;
 justify-content:center;
-height:64px;
-padding:0 40px;
+height:62px;
+padding:0 36px;
 border-radius:999px;
-border:1px solid rgba(255,255,255,0.28);
+border:1px solid rgba(255,255,255,0.26);
 color:white;
 text-decoration:none;
-letter-spacing:3px;
+letter-spacing:2px;
 text-transform:uppercase;
-font-size:0.78rem;
+font-size:0.76rem;
 background:rgba(255,255,255,0.06);
 backdrop-filter:blur(10px);
 transition:0.3s ease;
@@ -149,23 +138,22 @@ transition:0.3s ease;
 
 .button:hover{
 background:white;
-color:#101117;
+color:#0f1118;
+}
+
+.button.secondary{
+background:transparent;
 }
 
 .section{
 padding:120px 8%;
 }
 
-.container{
-max-width:1180px;
-margin:0 auto;
-}
-
 .section-title{
 font-family:'Cormorant Garamond',serif;
-font-size:4.2rem;
+font-size:4rem;
 text-align:center;
-margin-bottom:28px;
+margin-bottom:34px;
 font-weight:500;
 }
 
@@ -173,9 +161,8 @@ font-weight:500;
 max-width:760px;
 margin:0 auto 70px;
 text-align:center;
-color:rgba(246,239,231,0.74);
 line-height:1.9;
-font-size:1.05rem;
+color:rgba(255,255,255,0.72);
 }
 
 .grid{
@@ -190,12 +177,6 @@ border:1px solid rgba(255,255,255,0.08);
 border-radius:30px;
 overflow:hidden;
 backdrop-filter:blur(12px);
-transition:0.4s ease;
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:rgba(255,255,255,0.18);
 }
 
 .card img{
@@ -203,29 +184,28 @@ width:100%;
 height:320px;
 object-fit:cover;
 display:block;
-filter:brightness(0.9) saturate(0.95);
 }
 
 .card-content{
-padding:32px;
+padding:30px;
 }
 
 .card h3{
 font-family:'Cormorant Garamond',serif;
-font-size:2.25rem;
+font-size:2.2rem;
 margin-bottom:16px;
 font-weight:500;
 }
 
 .card p{
 line-height:1.9;
-opacity:0.84;
+opacity:0.86;
 font-size:0.98rem;
 }
 
 .menu-list{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:26px;
 }
 
@@ -241,7 +221,7 @@ display:block;
 font-size:0.72rem;
 letter-spacing:3px;
 text-transform:uppercase;
-color:rgba(246,239,231,0.52);
+opacity:0.55;
 margin-bottom:16px;
 }
 
@@ -254,11 +234,12 @@ margin-bottom:14px;
 
 .menu-item p{
 line-height:1.8;
-opacity:0.82;
-margin-bottom:20px;
+opacity:0.76;
+margin-bottom:18px;
 }
 
 .price{
+font-size:1rem;
 letter-spacing:1px;
 opacity:0.95;
 }
@@ -266,11 +247,11 @@ opacity:0.95;
 .info{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:32px;
+gap:34px;
 }
 
 .info-box{
-padding:42px;
+padding:40px;
 border-radius:30px;
 background:rgba(255,255,255,0.035);
 border:1px solid rgba(255,255,255,0.08);
@@ -278,68 +259,60 @@ border:1px solid rgba(255,255,255,0.08);
 
 .info-box h4{
 font-family:'Cormorant Garamond',serif;
-font-size:2.2rem;
+font-size:2rem;
 margin-bottom:20px;
-font-weight:500;
 }
 
 .info-box p{
 line-height:1.9;
-opacity:0.84;
+opacity:0.86;
 }
 
-.contact-panel{
-display:grid;
-grid-template-columns:1.1fr 0.9fr;
-gap:34px;
-align-items:stretch;
-background:rgba(255,255,255,0.035);
-border:1px solid rgba(255,255,255,0.08);
+.demo-note{
+max-width:900px;
+margin:0 auto;
+padding:48px;
 border-radius:34px;
-overflow:hidden;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.09);
+text-align:center;
 }
 
-.contact-text{
-padding:52px;
-}
-
-.contact-text h2{
+.demo-note h2{
 font-family:'Cormorant Garamond',serif;
-font-size:3.4rem;
+font-size:3rem;
 font-weight:500;
-margin-bottom:22px;
+margin-bottom:18px;
 }
 
-.contact-text p{
+.demo-note p{
 line-height:1.9;
-opacity:0.84;
+opacity:0.78;
 margin-bottom:28px;
 }
 
-.contact-list{
-line-height:2.1;
-opacity:0.9;
-}
-
-.contact-panel img{
-width:100%;
-height:100%;
-min-height:420px;
-object-fit:cover;
-filter:brightness(0.84) saturate(0.95);
-}
-
 footer{
-padding:70px 20px;
+padding:90px 20px;
 text-align:center;
 border-top:1px solid rgba(255,255,255,0.08);
-color:rgba(246,239,231,0.58);
+}
+
+footer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+margin-bottom:20px;
+}
+
+footer p{
+opacity:0.78;
+margin-bottom:26px;
+line-height:1.8;
 }
 
 footer a{
 color:white;
 text-decoration:none;
-border-bottom:1px solid rgba(255,255,255,0.35);
+border-bottom:1px solid rgba(255,255,255,0.4);
 padding-bottom:4px;
 }
 
@@ -348,7 +321,7 @@ padding-bottom:4px;
 header{
 padding:18px 20px;
 align-items:flex-start;
-gap:14px;
+gap:16px;
 }
 
 .logo{
@@ -356,7 +329,7 @@ font-size:1.45rem;
 }
 
 nav{
-gap:11px;
+gap:12px;
 flex-wrap:wrap;
 justify-content:flex-end;
 }
@@ -366,12 +339,8 @@ font-size:0.62rem;
 letter-spacing:1px;
 }
 
-.rns-link{
-padding:9px 12px;
-}
-
 .hero h1{
-font-size:3.7rem;
+font-size:3.6rem;
 }
 
 .hero p{
@@ -390,16 +359,8 @@ font-size:3rem;
 height:240px;
 }
 
-.contact-panel{
-grid-template-columns:1fr;
-}
-
-.contact-text{
-padding:34px;
-}
-
-.contact-text h2{
-font-size:2.7rem;
+.demo-note{
+padding:34px 24px;
 }
 
 }
@@ -412,11 +373,10 @@ font-size:2.7rem;
 <div class="logo">Kronotop Café</div>
 
 <nav>
-<a href="#stemning">Stemning</a>
+<a href="index.html">RNS Studio</a>
 <a href="#meny">Meny</a>
-<a href="#info">Info</a>
+<a href="#besok">Besøk</a>
 <a href="#kontakt">Kontakt</a>
-<a href="index.html" class="rns-link">RNS Studio</a>
 </nav>
 </header>
 
@@ -424,65 +384,73 @@ font-size:2.7rem;
 
 <img src="kronotop1.jpg" alt="Kronotop Café">
 
+<div class="hero-overlay"></div>
+
 <div class="hero-content">
-<div class="kicker">Kaffe · Bakst · Rolige øyeblikk</div>
+
+<div class="kicker">
+Åpent hver dag · Kaffe · Lunsj · Bakst
+</div>
 
 <h1>Kronotop Café</h1>
 
 <p>
-Et lunt sted for kaffe, småretter og gode pauser.
-Her handler det ikke bare om det som serveres,
-men om følelsen av å senke skuldrene et øyeblikk.
+Et lunt sted for kaffe, små måltider og rolige øyeblikk.
+Her får gjesten raskt følelsen av stedet, ser hva som tilbys,
+finner åpningstider og kan ta kontakt uten å lete.
 </p>
 
-<a href="#meny" class="button">Se menyen</a>
+<div class="hero-actions">
+<a href="#meny" class="button">Se meny</a>
+<a href="#kontakt" class="button secondary">Kontakt caféen</a>
+</div>
+
 </div>
 
 </section>
 
-<section class="section" id="stemning">
+<section class="section">
 
-<div class="container">
-
-<h2 class="section-title">Et sted å lande.</h2>
+<h2 class="section-title">Et sted folk får lyst til å besøke</h2>
 
 <p class="section-intro">
-Kronotop Café er en demo for hvordan en lokal café kan presenteres på en varm,
-tydelig og profesjonell måte. Målet er at gjesten skal forstå stemningen før de går inn døren.
+Denne demosiden viser hvordan en café kan presenteres på en varm,
+tydelig og profesjonell måte. Bildene skaper stemning,
+teksten gjør tilbudet lett å forstå, og kontaktinformasjonen er enkel å finne.
 </p>
 
 <div class="grid">
 
 <div class="card">
-<img src="kronotop1.jpg" alt="Café fasade">
+<img src="kronotop1.jpg" alt="Kronotop atmosfære">
 <div class="card-content">
-<h3>Atmosfære</h3>
+<h3>Stemning</h3>
 <p>
-Store bilder og rolig tekst gjør at nettsiden føles mer som et sted enn en annonse.
+Store bilder og rolig tekst gir kunden følelsen av caféen før de kommer inn døren.
+Det bygger tillit og gjør stedet lettere å huske.
 </p>
 </div>
 </div>
 
 <div class="card">
-<img src="kronotop2.jpg" alt="Café interiør">
+<img src="kronotop2.jpg" alt="Kronotop interiør">
 <div class="card-content">
-<h3>Hverdagsrom</h3>
+<h3>Opplevelse</h3>
 <p>
-Et sted for kaffe alene, samtaler med venner, små møter og rolige pauser i byen.
+En god nettside handler ikke bare om informasjon.
+Den skal vise hvorfor folk skal velge akkurat dette stedet.
 </p>
 </div>
 </div>
 
 <div class="card">
-<img src="kronotop3.jpg" alt="Café detaljer">
+<img src="kronotop3.jpg" alt="Kronotop detaljer">
 <div class="card-content">
 <h3>Detaljer</h3>
 <p>
-Kaffe, bakst, lys og små detaljer bygger tillit og gjør opplevelsen mer menneskelig.
+Meny, åpningstider, adresse og kontakt er samlet slik at gjesten raskt finner det de trenger.
 </p>
 </div>
-</div>
-
 </div>
 
 </div>
@@ -491,58 +459,58 @@ Kaffe, bakst, lys og små detaljer bygger tillit og gjør opplevelsen mer mennes
 
 <section class="section" id="meny">
 
-<div class="container">
-
 <h2 class="section-title">Meny</h2>
 
 <p class="section-intro">
-En enkel meny med det folk faktisk leter etter først:
-kaffe, noe godt å spise og et sted å sette seg ned.
+En enkel meny gjør det lett for kunden å se hva caféen tilbyr.
+Dette kan tilpasses med ekte priser, kategorier og bilder.
 </p>
 
 <div class="menu-list">
 
 <div class="menu-item">
 <span>Kaffe</span>
-<h3>Espresso, latte & cappuccino</h3>
-<p>Nytraktet kaffe, myke melkedrikker og klassikere gjennom hele dagen.</p>
+<h3>Espresso, latte og cappuccino</h3>
+<p>
+Klassiske kaffedrikker laget med fokus på smak, ro og kvalitet.
+</p>
 <div class="price">Fra 45 kr</div>
 </div>
 
 <div class="menu-item">
-<span>Bakst</span>
-<h3>Fersk bakst</h3>
-<p>Croissant, kanelbolle, focaccia og dagens søte fra disken.</p>
-<div class="price">Fra 55 kr</div>
-</div>
-
-<div class="menu-item">
 <span>Lunsj</span>
-<h3>Toast & småretter</h3>
-<p>Enkle, gode retter for rolige formiddager, møter og pauser.</p>
+<h3>Toast, focaccia og småretter</h3>
+<p>
+Enkle retter for rolige formiddager, møter, pauser og hyggelige samtaler.
+</p>
 <div class="price">Fra 95 kr</div>
 </div>
 
+<div class="menu-item">
+<span>Bakst</span>
+<h3>Kanelbolle, croissant og kaker</h3>
+<p>
+Søtt, lunt og enkelt — små pauser gjennom hele dagen.
+</p>
+<div class="price">Fra 55 kr</div>
 </div>
 
 </div>
 
 </section>
 
-<section class="section" id="info">
+<section class="section" id="besok">
 
-<div class="container">
-
-<h2 class="section-title">Praktisk info</h2>
+<h2 class="section-title">Besøk oss</h2>
 
 <div class="info">
 
 <div class="info-box">
-<h4>Åpent hver dag</h4>
+<h4>Åpningstider</h4>
 <p>
-Mandag–fredag: 08:00–18:00<br>
-Lørdag: 09:00–17:00<br>
-Søndag: 10:00–16:00
+Åpent hver dag<br>
+Mandag–fredag: 09:00–18:00<br>
+Lørdag–søndag: 10:00–17:00
 </p>
 </div>
 
@@ -551,59 +519,51 @@ Søndag: 10:00–16:00
 <p>
 Havnegata 12<br>
 6500 Kristiansund<br>
-Norge
+Nær sentrum og havna
 </p>
 </div>
 
 <div class="info-box">
-<h4>Bestilling</h4>
+<h4>Kontakt</h4>
 <p>
-For grupper, små arrangementer eller bordbestilling:
-send oss en melding, så finner vi en løsning.
+Bord, spørsmål eller samarbeid:<br>
+hei@kronotopcafe.no<br>
++47 98 24 56 78
 </p>
-</div>
-
 </div>
 
 </div>
 
 </section>
 
-<section class="section" id="kontakt">
+<section class="section">
 
-<div class="container">
+<div class="demo-note">
 
-<div class="contact-panel">
-
-<div class="contact-text">
-
-<h2>Kontakt Kronotop</h2>
+<h2>Hva kunden kan få</h2>
 
 <p>
-Dette er en falsk demo-kontakt laget for å vise hvordan en café-side kan presentere
-kontaktinformasjon på en tydelig og profesjonell måte.
+Denne siden kan tilpasses en ekte café, restaurant, bakeri eller liten butikk.
+RNS Studio kan legge inn ekte meny, åpningstider, bilder, kontaktinfo,
+kart, sosiale medier og eventuelt booking eller bestilling.
 </p>
 
-<div class="contact-list">
-Telefon: 79 24 88 10<br>
-E-post: hei@kronotopcafe.no<br>
-Adresse: Havnegata 125, 6520 Kristiansand
-</div>
-
-</div>
-
-<img src="kronotop2.jpg" alt="Kronotop Café kontakt">
-
-</div>
+<a href="index.html" class="button">Tilbake til RNS Studio</a>
 
 </div>
 
 </section>
 
-<footer>
+<footer id="kontakt">
 
-Demo laget av RNS Studio ·
-<a href="index.html">Tilbake til RNS Studio</a>
+<h2>Kronotop Café</h2>
+
+<p>
+Dette er en fiktiv demoside laget av RNS Studio for å vise hvordan en lokal café
+kan fremstå mer profesjonell, varm og salgsbar på nett.
+</p>
+
+<a href="mailto:hei@kronotopcafe.no">hei@kronotopcafe.no</a>
 
 </footer>
 
