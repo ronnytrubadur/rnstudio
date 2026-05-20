@@ -6,7 +6,7 @@
 
 <title>RNS Studio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -44,6 +44,10 @@ body{
   width:100%;
   height:100%;
   object-fit:cover;
+  filter:
+    brightness(0.72)
+    saturate(0.9)
+    contrast(1.05);
 }
 
 .hero::after{
@@ -51,8 +55,8 @@ body{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(rgba(4,10,18,0.28), rgba(4,10,18,0.72)),
-    radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 55%);
+    linear-gradient(rgba(4,10,18,0.25), rgba(4,10,18,0.72)),
+    radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 55%);
   z-index:1;
 }
 
@@ -63,18 +67,22 @@ body{
 }
 
 .logo{
-  font-size:6.2rem;
+  font-family:'Cormorant Garamond', serif;
+  font-size:7rem;
   font-weight:500;
-  letter-spacing:18px;
-  margin-bottom:26px;
+  letter-spacing:14px;
+  margin-bottom:20px;
+  color:white;
+  text-shadow:0 0 30px rgba(255,255,255,0.08);
 }
 
 .tagline{
-  font-size:1.25rem;
+  font-size:1.2rem;
   color:#d7dee7;
   font-weight:300;
   line-height:1.8;
   margin-bottom:44px;
+  letter-spacing:0.5px;
 }
 
 .button{
@@ -84,11 +92,11 @@ body{
   color:white;
   text-decoration:none;
   border-radius:999px;
-  transition:0.3s ease;
+  transition:0.35s ease;
   backdrop-filter:blur(12px);
   background:rgba(255,255,255,0.04);
-  font-size:0.9rem;
-  letter-spacing:1px;
+  font-size:0.82rem;
+  letter-spacing:2px;
 }
 
 .button:hover{
@@ -199,9 +207,10 @@ footer a:hover{
 }
 
 @media(max-width:768px){
+
   .logo{
-    font-size:3.2rem;
-    letter-spacing:9px;
+    font-size:4.2rem;
+    letter-spacing:8px;
   }
 
   .tagline{
@@ -215,6 +224,7 @@ footer a:hover{
   .card{
     padding:32px;
   }
+
 }
 </style>
 </head>
@@ -238,55 +248,72 @@ footer a:hover{
 <section class="section">
   <div class="intro">
     <h1>Digital identitet med menneskelig tyngde.</h1>
+
     <p>
-      RNS Studio bygger nettsider, innhold og visuell tilstedeværelse for mennesker og bedrifter
-      som vil fremstå tydeligere, roligere og mer ekte på nett.
+      RNS Studio bygger nettsider, visuelle uttrykk og cinematic innhold
+      for mennesker og bedrifter som vil fremstå tydeligere, roligere og mer ekte på nett.
     </p>
   </div>
 </section>
 
 <section class="section" id="work">
+
   <div class="grid">
 
     <div class="card">
       <span>01</span>
       <h3>Identity</h3>
+
       <p>
-        Vi former uttrykket rundt bedriften din: stemning, tekst, struktur og digital retning.
+        Visuell retning, struktur og identitet bygget rundt følelsen folk sitter igjen med.
       </p>
     </div>
 
     <div class="card">
       <span>02</span>
       <h3>Motion</h3>
+
       <p>
-        Cinematic innhold, korte videoer og visuelle konsepter som får folk til å stoppe opp.
+        Cinematic videoer og innhold som skaper stemning, oppmerksomhet og tilstedeværelse.
       </p>
     </div>
 
     <div class="card">
       <span>03</span>
       <h3>Presence</h3>
+
       <p>
-        Nettsider og innhold som gjør at mennesker husker følelsen av det du tilbyr.
+        Nettsider og digitale uttrykk som føles gjennomført, rolige og premium.
       </p>
     </div>
 
   </div>
+
 </section>
 
 <section class="section">
+
   <div class="about">
-    <h2>Ikke generisk. Ikke overprodusert. Ikke glemt.</h2>
+
+    <h2>
+      Ikke generisk. Ikke overprodusert. Ikke glemt.
+    </h2>
+
     <p>
-      AI kan produsere raskt. Men det er menneskelig smak, retning og følelse som gjør at noe faktisk treffer.
-      RNS bruker moderne verktøy som motor — men uttrykket skal alltid føles ekte.
+      AI kan produsere raskt. Men det er menneskelig smak,
+      retning og følelse som gjør at noe faktisk treffer.
+      RNS bruker moderne verktøy som motor —
+      men uttrykket skal alltid føles ekte.
     </p>
+
   </div>
+
 </section>
 
 <footer>
-  <a href="mailto:Ronny.nilsen.studio@gmail.com">Ronny.nilsen.studio@gmail.com</a>
+  <a href="mailto:Ronny.nilsen.studio@gmail.com">
+    Ronny.nilsen.studio@gmail.com
+  </a>
 </footer>
 
 </body>
