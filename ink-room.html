@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -26,12 +27,14 @@ font-family:'Inter',sans-serif;
 overflow-x:hidden;
 }
 
+/* HEADER */
+
 header{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:26px 40px;
+padding:24px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -45,7 +48,6 @@ border-bottom:1px solid rgba(255,255,255,0.07);
 font-family:'Cormorant Garamond',serif;
 font-size:2rem;
 font-weight:600;
-letter-spacing:1px;
 }
 
 nav{
@@ -62,6 +64,8 @@ text-transform:uppercase;
 opacity:0.85;
 }
 
+/* HERO */
+
 .hero{
 height:100vh;
 position:relative;
@@ -77,38 +81,83 @@ position:absolute;
 width:100%;
 height:100%;
 object-fit:cover;
-filter:brightness(0.38) contrast(1.08) saturate(0.85);
+filter:brightness(0.34) contrast(1.08) saturate(0.88);
 }
 
 .hero-overlay{
 position:absolute;
 inset:0;
 background:
-linear-gradient(to bottom, rgba(5,5,8,0.10), rgba(5,5,8,0.86)),
+linear-gradient(to bottom, rgba(5,5,8,0.10), rgba(5,5,8,0.88)),
 radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 60%);
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-max-width:900px;
+max-width:920px;
 padding:20px;
+}
+
+.kicker{
+font-size:0.76rem;
+letter-spacing:4px;
+text-transform:uppercase;
+opacity:0.7;
+margin-bottom:22px;
 }
 
 .hero h1{
 font-family:'Cormorant Garamond',serif;
-font-size:5.6rem;
+font-size:5.8rem;
 font-weight:500;
 margin-bottom:22px;
 }
 
 .hero p{
-font-size:1.15rem;
+font-size:1.16rem;
 line-height:1.9;
 max-width:760px;
 margin:auto;
-opacity:0.9;
+opacity:0.92;
 }
+
+.hero-actions{
+margin-top:42px;
+display:flex;
+gap:18px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+height:62px;
+padding:0 36px;
+border-radius:999px;
+border:1px solid rgba(255,255,255,0.24);
+color:white;
+text-decoration:none;
+letter-spacing:2px;
+text-transform:uppercase;
+font-size:0.76rem;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(10px);
+transition:0.3s ease;
+}
+
+.button:hover{
+background:white;
+color:#090a0d;
+}
+
+.button.secondary{
+background:transparent;
+}
+
+/* SECTION */
 
 .section{
 padding:120px 8%;
@@ -118,9 +167,19 @@ padding:120px 8%;
 font-family:'Cormorant Garamond',serif;
 font-size:4rem;
 text-align:center;
-margin-bottom:70px;
+margin-bottom:34px;
 font-weight:500;
 }
+
+.section-intro{
+max-width:760px;
+margin:0 auto 70px;
+text-align:center;
+line-height:1.9;
+color:rgba(255,255,255,0.72);
+}
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -129,7 +188,7 @@ gap:28px;
 }
 
 .card{
-background:rgba(255,255,255,0.03);
+background:rgba(255,255,255,0.035);
 border:1px solid rgba(255,255,255,0.08);
 border-radius:30px;
 overflow:hidden;
@@ -138,10 +197,10 @@ backdrop-filter:blur(12px);
 
 .card img{
 width:100%;
-height:320px;
+height:340px;
 object-fit:cover;
 display:block;
-filter:brightness(0.85) contrast(1.05);
+filter:brightness(0.9) contrast(1.04);
 }
 
 .card-content{
@@ -161,17 +220,18 @@ opacity:0.86;
 font-size:0.98rem;
 }
 
+/* INFO */
+
 .info{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:40px;
-margin-top:70px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:34px;
 }
 
 .info-box{
 padding:40px;
 border-radius:30px;
-background:rgba(255,255,255,0.03);
+background:rgba(255,255,255,0.035);
 border:1px solid rgba(255,255,255,0.08);
 }
 
@@ -183,32 +243,40 @@ margin-bottom:20px;
 
 .info-box p{
 line-height:1.9;
-opacity:0.88;
+opacity:0.86;
 }
 
-.button{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-height:62px;
-padding:0 38px;
-border-radius:999px;
-border:1px solid rgba(255,255,255,0.28);
-color:white;
-text-decoration:none;
-letter-spacing:2px;
-text-transform:uppercase;
-font-size:0.78rem;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-margin-top:34px;
+/* NOTE */
+
+.demo-note{
+max-width:900px;
+margin:0 auto;
+padding:48px;
+border-radius:34px;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.09);
+text-align:center;
 }
+
+.demo-note h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.demo-note p{
+line-height:1.9;
+opacity:0.78;
+margin-bottom:28px;
+}
+
+/* FOOTER */
 
 footer{
-padding:100px 20px;
+padding:90px 20px;
 text-align:center;
 border-top:1px solid rgba(255,255,255,0.08);
-margin-top:100px;
 }
 
 footer h2{
@@ -218,24 +286,26 @@ margin-bottom:20px;
 }
 
 footer p{
-opacity:0.8;
-margin-bottom:20px;
+opacity:0.78;
+margin-bottom:26px;
+line-height:1.8;
 }
 
 footer a{
 color:white;
 text-decoration:none;
-font-size:1.05rem;
 border-bottom:1px solid rgba(255,255,255,0.4);
 padding-bottom:4px;
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
 
 header{
-padding:20px;
+padding:18px 20px;
 align-items:flex-start;
-gap:18px;
+gap:16px;
 }
 
 .logo{
@@ -273,125 +343,201 @@ font-size:3rem;
 height:240px;
 }
 
+.demo-note{
+padding:34px 24px;
 }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="logo">Ink Room</div>
 
 <nav>
 <a href="index.html">RNS Studio</a>
-<a href="#arbeid">Arbeid</a>
+<a href="#portfolio">Portfolio</a>
 <a href="#booking">Booking</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
+
 </header>
 
 <section class="hero">
 
-<img src="tattoo1.jpg" alt="Ink Room tattoo studio">
+<img src="tattoo1.jpg" alt="Ink Room Tattoo Studio">
 
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
+
+<div class="kicker">
+Custom tattoos · Fine line · Blackwork
+</div>
+
 <h1>Ink Room</h1>
 
 <p>
-Et rolig og personlig tattoo-konsept for kunder som vil føle seg trygge før de bestiller.
-Her handler nettsiden om stil, tillit, arbeid og følelsen av å velge riktig artist.
+Et moderne tattoo-studio med fokus på detaljer,
+trygghet og personlig uttrykk.
+Kunden får raskt følelsen av studioet,
+ser arbeidet og finner booking uten å lete.
 </p>
 
+<div class="hero-actions">
 <a href="#booking" class="button">Book time</a>
+<a href="#kontakt" class="button secondary">Kontakt studio</a>
+</div>
+
 </div>
 
 </section>
 
-<section class="section" id="arbeid">
+<section class="section" id="portfolio">
 
-<h2 class="section-title">Arbeid og uttrykk</h2>
+<h2 class="section-title">Portfolio</h2>
+
+<p class="section-intro">
+En god tattoo-side handler om mer enn bare bilder.
+Kunden skal føle stil, stemning og trygghet før de tar kontakt.
+</p>
 
 <div class="grid">
 
 <div class="card">
-<img src="tattoo1.jpg" alt="Tattoo stemning">
+
+<img src="tattoo1.jpg" alt="Tattoo portfolio">
+
 <div class="card-content">
 <h3>Stil</h3>
+
 <p>
-En tattoo-side bør vise uttrykket tydelig: linjer, detaljer, mørke flater og personlig identitet.
-Kunden skal kjenne stilen før de tar kontakt.
+Store bilder og tydelig identitet gjør det lett å forstå hvilken type arbeid studioet tilbyr.
 </p>
+
 </div>
 </div>
 
 <div class="card">
+
 <img src="tattoo2.jpg" alt="Tattoo studio">
+
 <div class="card-content">
 <h3>Studio</h3>
+
 <p>
-Bilder av rommet, arbeidsprosessen og atmosfæren bygger trygghet.
-Det gjør studioet mer menneskelig og mindre anonymt.
+Bilder av miljøet og prosessen gjør studioet mer personlig og bygger tillit hos kunden.
 </p>
+
 </div>
 </div>
 
 <div class="card">
-<img src="tattoo3.jpg" alt="Tattoo detaljer">
+
+<img src="tattoo3.jpg" alt="Tattoo details">
+
 <div class="card-content">
 <h3>Detaljer</h3>
+
 <p>
-Små detaljer gir tillit: hygiene, ro, portefølje, forberedelser og tydelig informasjon før timen.
+Booking, åpningstider, hygiene og kontaktinformasjon presenteres enkelt og tydelig.
 </p>
+
 </div>
 </div>
 
 </div>
+
 </section>
 
 <section class="section" id="booking">
 
 <h2 class="section-title">Booking</h2>
 
+<p class="section-intro">
+Kunden skal enkelt forstå hvordan de bestiller time
+og hva de må sende inn før konsultasjon.
+</p>
+
 <div class="info">
 
 <div class="info-box">
+
 <h4>Timebestilling</h4>
+
 <p>
-Send kort beskrivelse av motiv, plassering og ønsket størrelse.
-Legg gjerne ved referansebilder.
+Send motiv, størrelse, plassering og gjerne referansebilder.
+Du får svar med prisestimat og forslag til time.
 </p>
+
 </div>
 
 <div class="info-box">
+
 <h4>Åpningstider</h4>
+
 <p>
 Mandag–fredag: 10:00–18:00<br>
 Lørdag: 11:00–15:00<br>
 Søndag: Etter avtale
 </p>
+
 </div>
 
 <div class="info-box">
+
 <h4>Kontakt</h4>
+
 <p>
 booking@inkroom.no<br>
 +47 45 88 12 90<br>
-Storgata 18, 6500 Kristiansund
+Storgata 18, Trondheim
 </p>
+
 </div>
 
 </div>
+
+</section>
+
+<section class="section">
+
+<div class="demo-note">
+
+<h2>Hva kunden kan få</h2>
+
+<p>
+Denne demosiden kan tilpasses ekte tattoo-studioer med portfolio,
+booking, priser, artistpresentasjon, FAQ, sosiale medier og kontaktinformasjon.
+Designet kan gjøres mørkere, mer minimalistisk eller mer eksklusivt etter stil.
+</p>
+
+<a href="index.html" class="button">
+Tilbake til RNS Studio
+</a>
+
+</div>
+
 </section>
 
 <footer id="kontakt">
-<h2>Demo laget av RNS Studio</h2>
+
+<h2>Ink Room</h2>
+
 <p>
-Dette er en fiktiv demoside som viser hvordan et tattoo-studio kan fremstå tryggere,
-råere og mer profesjonelt på nett.
+Dette er en fiktiv demoside laget av RNS Studio
+for å vise hvordan et tattoo-studio kan fremstå mer profesjonelt,
+tydelig og salgbart på nett.
 </p>
-<a href="index.html">Tilbake til RNS Studio</a>
+
+<a href="mailto:booking@inkroom.no">
+booking@inkroom.no
+</a>
+
 </footer>
 
 </body>
