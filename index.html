@@ -135,7 +135,15 @@ color:white;
 text-decoration:none;
 letter-spacing:5px;
 text-transform:uppercase;
+transition:0.3s ease;
 }
+
+.hero-button:hover{
+transform:translateY(-4px);
+background:rgba(255,255,255,0.08);
+}
+
+/* SECTION */
 
 .section{
 padding:150px 24px;
@@ -153,6 +161,8 @@ text-align:center;
 margin-bottom:80px;
 }
 
+/* SERVICES */
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -164,6 +174,7 @@ background:rgba(255,255,255,0.03);
 border:1px solid rgba(255,255,255,0.06);
 border-radius:34px;
 padding:50px 40px;
+backdrop-filter:blur(10px);
 }
 
 .card h3{
@@ -174,13 +185,12 @@ margin-bottom:18px;
 .card p{
 color:rgba(255,255,255,0.72);
 line-height:1.9;
-margin-bottom:30px;
+margin-bottom:24px;
 }
 
 .price{
-font-size:1.1rem;
-letter-spacing:2px;
-text-transform:uppercase;
+font-size:1.05rem;
+line-height:1.8;
 color:white;
 }
 
@@ -247,7 +257,48 @@ text-decoration:none;
 letter-spacing:2px;
 text-transform:uppercase;
 font-size:0.76rem;
+transition:0.3s ease;
 }
+
+.demo-button:hover{
+background:white;
+color:#091018;
+}
+
+/* PROCESS */
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.process-box{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.06);
+border-radius:34px;
+padding:42px;
+}
+
+.process-number{
+font-size:0.8rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:rgba(255,255,255,0.45);
+margin-bottom:20px;
+}
+
+.process-box h3{
+font-size:1.7rem;
+margin-bottom:18px;
+}
+
+.process-box p{
+color:rgba(255,255,255,0.72);
+line-height:1.9;
+}
+
+/* CONTACT */
 
 .contact{
 text-align:center;
@@ -270,6 +321,8 @@ letter-spacing:1px;
 border-bottom:1px solid rgba(255,255,255,0.25);
 padding-bottom:8px;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -300,7 +353,7 @@ font-size:1rem;
 }
 
 .description{
-font-size:1.12rem;
+font-size:1.08rem;
 line-height:1.8;
 }
 
@@ -339,7 +392,8 @@ font-size:2.4rem;
 
 <div class="nav-links">
 <a href="#services">Tjenester</a>
-<a href="#projects">Demo</a>
+<a href="#projects">Demoer</a>
+<a href="#process">Prosess</a>
 <a href="#contact">Kontakt</a>
 </div>
 
@@ -361,9 +415,9 @@ Nettsider som føles ekte.
 
 <div class="description">
 Jeg lager moderne nettsider for bedrifter,
-gründere, kreative prosjekter og mennesker som vil ha
-et design som ser profesjonelt ut, fungerer på mobil
-og gir et sterkere førsteinntrykk på nett.
+gründere og kreative prosjekter som vil ha
+et design som ser profesjonelt ut,
+fungerer på mobil og gir et sterkere førsteinntrykk på nett.
 </div>
 
 <a href="#projects" class="hero-button">
@@ -383,27 +437,50 @@ Se demoer
 <div class="cards">
 
 <div class="card">
-<h3>Nettsider</h3>
+
+<h3>Standard nettside</h3>
+
 <p>
-Moderne nettsider med tydelig identitet, mobilvennlig design og et uttrykk som føles ekte.
+Moderne nettside med mobilvennlig design,
+kontaktinformasjon, tjenester, bilder og oppsett klart til publisering.
 </p>
-<div class="price">Fra 7.000 kr</div>
+
+<div class="price">
+Førpris: 9.900 kr<br>
+Intropris: 6.900 kr
+</div>
+
 </div>
 
 <div class="card">
-<h3>Premium design</h3>
+
+<h3>Premium nettside</h3>
+
 <p>
-Cinematic uttrykk, store bilder, animasjoner og stemning som gjør siden mer levende.
+Mer eksklusivt uttrykk med store bilder,
+video, animasjoner, cinematic design og mer gjennomført identitet.
 </p>
-<div class="price">Fra 12.000 kr</div>
+
+<div class="price">
+Førpris: 16.000 kr<br>
+Intropris: 11.200 kr
+</div>
+
 </div>
 
 <div class="card">
-<h3>Visuell identitet</h3>
+
+<h3>Hva du får</h3>
+
 <p>
-Farger, typografi og designretning som gjør at bedriften fremstår mer gjennomført.
+Mobilvennlig nettside, moderne design,
+hjelp med domene, publisering og personlig oppfølging helt til siden er live.
 </p>
-<div class="price">Etter avtale</div>
+
+<div class="price">
+Ingen teknisk erfaring nødvendig
+</div>
+
 </div>
 
 </div>
@@ -421,10 +498,13 @@ Farger, typografi og designretning som gjør at bedriften fremstår mer gjennomf
 <div class="demo-grid">
 
 <div class="demo-site">
+
 <img src="kronotop1.jpg" alt="Kronotop Café">
 
 <div class="demo-body">
+
 <div class="demo-label">Café / Demo</div>
+
 <h3>Kronotop Café</h3>
 
 <p>
@@ -435,14 +515,18 @@ mennesker og rolige detaljer.
 <a href="kronotop-cafe.html" class="demo-button">
 Åpne demo
 </a>
+
 </div>
 </div>
 
 <div class="demo-site">
+
 <img src="tattoo1.jpg" alt="Ink Room">
 
 <div class="demo-body">
+
 <div class="demo-label">Tattoo / Demo</div>
+
 <h3>Ink Room</h3>
 
 <p>
@@ -453,14 +537,18 @@ tillit og tydelig identitet.
 <a href="ink-room.html" class="demo-button">
 Åpne demo
 </a>
+
 </div>
 </div>
 
 <div class="demo-site">
+
 <img src="bar1.jpg" alt="Nord Bar">
 
 <div class="demo-body">
+
 <div class="demo-label">Cocktailbar / Demo</div>
+
 <h3>Nord Bar</h3>
 
 <p>
@@ -471,14 +559,18 @@ cocktails og eksklusiv lounge-stemning.
 <a href="nord-bar.html" class="demo-button">
 Åpne demo
 </a>
+
 </div>
 </div>
 
 <div class="demo-site">
+
 <img src="frisor1.jpg" alt="Luma Studio">
 
 <div class="demo-body">
+
 <div class="demo-label">Frisør / Demo</div>
+
 <h3>Luma Studio</h3>
 
 <p>
@@ -489,7 +581,82 @@ luftig design og premium booking-følelse.
 <a href="luma-studio.html" class="demo-button">
 Åpne demo
 </a>
+
 </div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="process">
+
+<div class="container">
+
+<h2 class="section-title">Hvordan det fungerer</h2>
+
+<div class="process-grid">
+
+<div class="process-box">
+
+<div class="process-number">
+01
+</div>
+
+<h3>Vi tar en prat</h3>
+
+<p>
+Du forteller hva du driver med,
+hva slags stil du liker og hva nettsiden skal brukes til.
+</p>
+
+</div>
+
+<div class="process-box">
+
+<div class="process-number">
+02
+</div>
+
+<h3>Du sender innhold</h3>
+
+<p>
+Bilder, tekst, priser, kontaktinformasjon og annet innhold.
+Har du ikke alt klart hjelper jeg deg videre.
+</p>
+
+</div>
+
+<div class="process-box">
+
+<div class="process-number">
+03
+</div>
+
+<h3>Jeg bygger siden</h3>
+
+<p>
+Nettsiden designes og tilpasses mobil,
+med fokus på identitet, brukervennlighet og moderne uttrykk.
+</p>
+
+</div>
+
+<div class="process-box">
+
+<div class="process-number">
+04
+</div>
+
+<h3>Hjelp helt til live side</h3>
+
+<p>
+Jeg hjelper med domene,
+publisering og oppsett helt til nettsiden er live og klar til bruk.
+</p>
+
 </div>
 
 </div>
@@ -505,7 +672,7 @@ luftig design og premium booking-følelse.
 <h2 class="section-title">Kontakt</h2>
 
 <div class="contact-text">
-Ta kontakt for samarbeid, prisoverslag eller demo.
+Ta kontakt for samarbeid, spørsmål eller prisoverslag.
 </div>
 
 <a href="mailto:Ronny.nilsen.studio@gmail.com" class="mail-link">
