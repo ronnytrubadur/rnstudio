@@ -2,420 +2,430 @@
 <html lang="no">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>RNS Studio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:'Inter', sans-serif;
-  background:#0b1118;
-  color:#f5f5f5;
-  overflow-x:hidden;
+    font-family:'Inter', sans-serif;
+    background:#0b1118;
+    color:#f5f5f5;
+    overflow-x:hidden;
 }
 
-.hero{
-  position:relative;
-  height:100vh;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
-}
+/* ---------- NAV ---------- */
 
-.hero video{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:
-    brightness(0.68)
-    saturate(0.92)
-    contrast(1.05);
-}
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
 
-.hero::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(
-      rgba(5,10,20,0.18),
-      rgba(5,10,20,0.82)
-    ),
-    radial-gradient(
-      circle at center,
-      rgba(255,255,255,0.04),
-      transparent 58%
-    );
-  z-index:1;
-}
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:900px;
-  transform:translateY(40px);
+    padding:22px 34px;
+
+    background:rgba(4,8,14,0.18);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,0.06);
 }
 
 .logo{
-  font-family:'Cormorant Garamond', serif;
-  font-size:7.8rem;
-  font-weight:500;
-  letter-spacing:16px;
-  margin-bottom:18px;
-  color:white;
-  text-shadow:0 0 30px rgba(255,255,255,0.06);
+    font-family:'Cormorant Garamond', serif;
+    font-size:2rem;
+    letter-spacing:4px;
+    color:white;
 }
 
-.tagline{
-  font-size:1.15rem;
-  color:#d8e0e9;
-  font-weight:300;
-  line-height:1.9;
-  letter-spacing:1px;
-  margin-bottom:26px;
-  opacity:0.92;
+.nav-links{
+    display:flex;
+    gap:26px;
 }
 
-.subtext{
-  max-width:620px;
-  margin:0 auto 52px;
-  color:#c0cad5;
-  line-height:1.9;
-  font-size:0.98rem;
-  opacity:0.86;
+.nav-links a{
+    color:rgba(255,255,255,0.82);
+    text-decoration:none;
+    font-size:0.95rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:0.3s ease;
 }
 
-.button{
-  display:inline-block;
-  padding:16px 42px;
-  border:1px solid rgba(255,255,255,0.28);
-  color:white;
-  text-decoration:none;
-  border-radius:999px;
-  transition:0.35s ease;
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-  background:rgba(255,255,255,0.07);
-  box-shadow:
-    0 0 40px rgba(255,255,255,0.06),
-    inset 0 0 18px rgba(255,255,255,0.03);
-  font-size:0.76rem;
-  letter-spacing:3px;
+.nav-links a:hover{
+    color:white;
+    transform:translateY(-1px);
 }
 
-.button:hover{
-  background:white;
-  color:#081019;
-  transform:translateY(-2px);
-  box-shadow:0 18px 50px rgba(0,0,0,0.25);
+/* ---------- HERO ---------- */
+
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    padding:20px;
 }
+
+.hero video{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    filter:
+        brightness(0.68)
+        saturate(0.92)
+        contrast(1.05);
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(5,10,20,0.18),
+        rgba(5,10,20,0.72)
+    ),
+
+    radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.04),
+        transparent 58%
+    );
+
+    z-index:1;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:7rem;
+    font-weight:500;
+    letter-spacing:10px;
+
+    margin-bottom:10px;
+
+    color:white;
+}
+
+.subtitle{
+    font-size:1.2rem;
+    font-weight:300;
+    letter-spacing:2px;
+
+    color:rgba(255,255,255,0.82);
+
+    margin-bottom:36px;
+}
+
+.description{
+    max-width:760px;
+
+    margin:0 auto 50px;
+
+    font-size:1.4rem;
+    line-height:1.9;
+
+    color:rgba(255,255,255,0.9);
+}
+
+.hero-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    width:320px;
+    height:78px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,0.22);
+
+    color:white;
+    text-decoration:none;
+
+    letter-spacing:5px;
+    text-transform:uppercase;
+
+    font-size:0.95rem;
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+
+    transition:0.4s ease;
+}
+
+.hero-button:hover{
+    transform:translateY(-4px);
+
+    background:rgba(255,255,255,0.12);
+
+    border-color:rgba(255,255,255,0.5);
+}
+
+/* ---------- SECTION ---------- */
 
 .section{
-  padding:140px 10%;
+    padding:140px 20px;
+    background:#0b1118;
 }
 
-.intro{
-  max-width:960px;
-  margin:0 auto;
-  text-align:center;
+.container{
+    max-width:1200px;
+    margin:0 auto;
 }
 
-.intro h1{
-  font-size:clamp(2.4rem,5vw,5rem);
-  font-weight:400;
-  line-height:1.08;
-  letter-spacing:-2px;
-  margin-bottom:38px;
+.section-title{
+    font-family:'Cormorant Garamond', serif;
+    font-size:4rem;
+    text-align:center;
+
+    margin-bottom:70px;
+
+    color:white;
 }
 
-.intro p{
-  color:#aeb9c6;
-  line-height:2.1;
-  font-size:1.05rem;
-  max-width:760px;
-  margin:0 auto;
-}
+/* ---------- CARDS ---------- */
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
 .card{
-  background:linear-gradient(180deg,#121b25,#0e151d);
-  border:1px solid rgba(255,255,255,0.06);
-  padding:44px;
-  border-radius:28px;
-  transition:0.35s ease;
-  min-height:260px;
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.06);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    transition:0.4s ease;
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(255,255,255,0.16);
-}
+    transform:translateY(-8px);
 
-.card span{
-  display:block;
-  color:#748395;
-  font-size:0.75rem;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:28px;
+    background:rgba(255,255,255,0.05);
+
+    border-color:rgba(255,255,255,0.12);
 }
 
 .card h3{
-  margin-bottom:18px;
-  font-size:1.5rem;
-  font-weight:400;
+    font-size:1.5rem;
+    margin-bottom:20px;
+    color:white;
 }
 
 .card p{
-  color:#aeb9c6;
-  line-height:1.95;
-  font-size:0.98rem;
-  margin-bottom:22px;
+    color:rgba(255,255,255,0.72);
+    line-height:1.8;
 }
 
-.price{
-  color:white;
-  font-size:1rem;
-  letter-spacing:1px;
-}
-
-.about{
-  max-width:860px;
-  margin:auto;
-  text-align:center;
-}
-
-.about h2{
-  font-size:clamp(2.2rem,4vw,4rem);
-  font-weight:400;
-  margin-bottom:34px;
-  letter-spacing:-1px;
-  line-height:1.15;
-}
-
-.about p{
-  color:#aeb9c6;
-  line-height:2.1;
-  font-size:1.08rem;
-}
+/* ---------- CONTACT ---------- */
 
 .contact{
-  text-align:center;
-}
-
-.contact h2{
-  font-size:clamp(2rem,4vw,4rem);
-  margin-bottom:24px;
-  font-weight:400;
+    text-align:center;
 }
 
 .contact p{
-  color:#aeb9c6;
-  margin-bottom:40px;
-  line-height:2;
+    font-size:1.1rem;
+    color:rgba(255,255,255,0.72);
+
+    margin-bottom:30px;
 }
 
 .contact a{
-  color:white;
-  text-decoration:none;
-  font-size:1rem;
-  border-bottom:1px solid rgba(255,255,255,0.3);
-  padding-bottom:4px;
+    color:white;
+    text-decoration:none;
 }
 
-footer{
-  padding:80px 20px;
-  text-align:center;
-  border-top:1px solid rgba(255,255,255,0.06);
-  color:#8a96a5;
-}
+/* ---------- MOBILE ---------- */
 
 @media(max-width:768px){
 
-  .hero-content{
-    transform:translateY(20px);
-  }
+    nav{
+        padding:18px 20px;
+    }
 
-  .logo{
-    font-size:4.6rem;
-    letter-spacing:8px;
-  }
+    .logo{
+        font-size:1.6rem;
+    }
 
-  .tagline{
-    font-size:1rem;
-  }
+    .nav-links{
+        gap:16px;
+    }
 
-  .subtext{
-    font-size:0.95rem;
-  }
+    .nav-links a{
+        font-size:0.7rem;
+        letter-spacing:1px;
+    }
 
-  .section{
-    padding:100px 24px;
-  }
+    .hero h1{
+        font-size:4.2rem;
+        letter-spacing:6px;
+    }
 
-  .card{
-    padding:34px;
-  }
+    .subtitle{
+        font-size:1rem;
+    }
+
+    .description{
+        font-size:1.1rem;
+        line-height:1.8;
+    }
+
+    .hero-button{
+        width:100%;
+        max-width:320px;
+    }
+
+    .section-title{
+        font-size:3rem;
+    }
 
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+
+<nav>
+
+<div class="logo">RNS</div>
+
+<div class="nav-links">
+<a href="#services">Tjenester</a>
+<a href="#contact">Kontakt</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
 <section class="hero">
 
 <video autoplay muted loop playsinline>
-  <source src="hero.mp4" type="video/mp4">
+<source src="hero.mp4" type="video/mp4">
 </video>
 
 <div class="hero-content">
 
-  <div class="logo">RNS</div>
+<h1>RNS</h1>
 
-  <div class="tagline">
-    Synlighet som føles ekte.
-  </div>
-
-  <div class="subtext">
-    Cinematic nettsider, visuelle uttrykk og digital identitet
-    for bedrifter som vil skille seg ut uten å føles generiske.
-  </div>
-
-  <a href="#services" class="button">
-    TJENESTER
-  </a>
-
+<div class="subtitle">
+Synlighet som føles ekte.
 </div>
 
-</section>
-
-<section class="section">
-
-  <div class="intro">
-
-    <h1>
-      Digital tilstedeværelse med menneskelig tyngde.
-    </h1>
-
-    <p>
-      RNS Studio bygger moderne nettsider og visuelt innhold
-      med fokus på stemning, identitet og ekte uttrykk.
-      Målet er ikke bare å se bra ut —
-      men å bli husket.
-    </p>
-
-  </div>
-
-</section>
-
-<section class="section" id="services">
-
-<div class="grid">
-
-<div class="card">
-<span>01</span>
-<h3>Cinematic Website</h3>
-<p>
-Premium nettsider med video, stemning,
-minimalistisk design og mobiloptimalisering.
-</p>
-<div class="price">Fra 15.000 kr</div>
+<div class="description">
+Cinematic nettsider, visuelle uttrykk og digital identitet for bedrifter som vil skille seg ut uten å føles generiske.
 </div>
 
-<div class="card">
-<span>02</span>
-<h3>Content & Reels</h3>
-<p>
-Korte cinematic videoer og innhold
-for Instagram, TikTok og markedsføring.
-</p>
-<div class="price">Fra 5.000 kr</div>
-</div>
-
-<div class="card">
-<span>03</span>
-<h3>Visual Identity</h3>
-<p>
-Visuell retning, branding og digital identitet
-for bedrifter som vil fremstå mer premium.
-</p>
-<div class="price">Fra 25.000 kr</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="about">
-
-<h2>
-Ikke generisk.
-Ikke overprodusert.
-Ikke glemt.
-</h2>
-
-<p>
-AI kan produsere raskt.
-Men det er menneskelig smak,
-retning og følelse som gjør at noe faktisk treffer.
-
-RNS bruker moderne verktøy som motor —
-men uttrykket skal alltid føles ekte.
-</p>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="contact">
-
-<h2>
-La oss bygge noe som føles levende.
-</h2>
-
-<p>
-Ta kontakt for demo, idéer eller prosjektforespørsel.
-</p>
-
-<a href="mailto:Ronny.nilsen.studio@gmail.com">
-Ronny.nilsen.studio@gmail.com
+<a href="#services" class="hero-button">
+Tjenester
 </a>
 
 </div>
 
 </section>
 
-<footer>
-RNS Studio
-</footer>
+<!-- SERVICES -->
+
+<section class="section" id="services">
+
+<div class="container">
+
+<h2 class="section-title">Tjenester</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Nettsider</h3>
+<p>
+Moderne nettsider med cinematic uttrykk, mobiltilpasning og premium design som skaper tillit og oppmerksomhet.
+</p>
+</div>
+
+<div class="card">
+<h3>Visuell identitet</h3>
+<p>
+Farger, fonter, stil og uttrykk som gjør at bedriften føles gjennomført og profesjonell.
+</p>
+</div>
+
+<div class="card">
+<h3>Innhold & video</h3>
+<p>
+Video, bilder og visuelle elementer som gir siden liv og skaper en sterkere opplevelse for kunden.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+<div class="container">
+
+<h2 class="section-title">Kontakt</h2>
+
+<p>
+Instagram:
+<br><br>
+<a href="https://instagram.com/ronny_nilsen_84" target="_blank">
+@ronny_nilsen_84
+</a>
+</p>
+
+</div>
+
+</section>
 
 </body>
 </html>
