@@ -109,9 +109,23 @@ body{
 
   letter-spacing:1px;
 
-  margin-bottom:52px;
+  margin-bottom:26px;
 
   opacity:0.92;
+}
+
+.subtext{
+  max-width:620px;
+
+  margin:0 auto 52px;
+
+  color:#c0cad5;
+
+  line-height:1.9;
+
+  font-size:0.98rem;
+
+  opacity:0.86;
 }
 
 .button{
@@ -204,7 +218,7 @@ body{
 
   transition:0.35s ease;
 
-  min-height:240px;
+  min-height:260px;
 }
 
 .card:hover{
@@ -242,6 +256,16 @@ body{
   line-height:1.95;
 
   font-size:0.98rem;
+
+  margin-bottom:22px;
+}
+
+.price{
+  color:white;
+
+  font-size:1rem;
+
+  letter-spacing:1px;
 }
 
 .about{
@@ -272,6 +296,39 @@ body{
   font-size:1.08rem;
 }
 
+.contact{
+  text-align:center;
+}
+
+.contact h2{
+  font-size:clamp(2rem,4vw,4rem);
+
+  margin-bottom:24px;
+
+  font-weight:400;
+}
+
+.contact p{
+  color:#aeb9c6;
+
+  margin-bottom:40px;
+
+  line-height:2;
+}
+
+.contact a{
+  color:white;
+
+  text-decoration:none;
+
+  font-size:1rem;
+
+  border-bottom:
+  1px solid rgba(255,255,255,0.3);
+
+  padding-bottom:4px;
+}
+
 footer{
   padding:80px 20px;
 
@@ -281,16 +338,6 @@ footer{
   1px solid rgba(255,255,255,0.06);
 
   color:#8a96a5;
-}
-
-footer a{
-  color:#dce5ef;
-
-  text-decoration:none;
-}
-
-footer a:hover{
-  text-decoration:underline;
 }
 
 @media(max-width:768px){
@@ -307,8 +354,10 @@ footer a:hover{
 
   .tagline{
     font-size:1rem;
+  }
 
-    margin-bottom:40px;
+  .subtext{
+    font-size:0.95rem;
   }
 
   .section{
@@ -342,8 +391,13 @@ footer a:hover{
     Synlighet som føles ekte.
   </div>
 
-  <a href="#work" class="button">
-    SE ARBEID
+  <div class="subtext">
+    Cinematic nettsider, visuelle uttrykk og digital identitet
+    for bedrifter som vil skille seg ut uten å føles generiske.
+  </div>
+
+  <a href="#services" class="button">
+    TJENESTER
   </a>
 
 </div>
@@ -355,21 +409,21 @@ footer a:hover{
   <div class="intro">
 
     <h1>
-      Digital identitet med menneskelig tyngde.
+      Digital tilstedeværelse med menneskelig tyngde.
     </h1>
 
     <p>
-      RNS Studio bygger nettsider,
-      cinematic innhold og visuelle uttrykk
-      for mennesker og bedrifter som vil
-      fremstå tydeligere, roligere og mer ekte på nett.
+      RNS Studio bygger moderne nettsider og visuelt innhold
+      med fokus på stemning, identitet og ekte uttrykk.
+      Målet er ikke bare å se bra ut —
+      men å bli husket.
     </p>
 
   </div>
 
 </section>
 
-<section class="section" id="work">
+<section class="section" id="services">
 
 <div class="grid">
 
@@ -377,12 +431,16 @@ footer a:hover{
 
 <span>01</span>
 
-<h3>Identity</h3>
+<h3>Cinematic Website</h3>
 
 <p>
-Visuell retning, struktur og identitet
-bygget rundt følelsen folk sitter igjen med.
+Premium nettsider med video, stemning,
+minimalistisk design og mobiloptimalisering.
 </p>
+
+<div class="price">
+Fra 15.000 kr
+</div>
 
 </div>
 
@@ -390,12 +448,16 @@ bygget rundt følelsen folk sitter igjen med.
 
 <span>02</span>
 
-<h3>Motion</h3>
+<h3>Content & Reels</h3>
 
 <p>
-Cinematic videoer og innhold som skaper
-stemning, oppmerksomhet og tilstedeværelse.
+Korte cinematic videoer og innhold
+for Instagram, TikTok og markedsføring.
 </p>
+
+<div class="price">
+Fra 5.000 kr
+</div>
 
 </div>
 
@@ -403,12 +465,16 @@ stemning, oppmerksomhet og tilstedeværelse.
 
 <span>03</span>
 
-<h3>Presence</h3>
+<h3>Visual Identity</h3>
 
 <p>
-Nettsider og digitale uttrykk som føles
-gjennomført, rolige og premium.
+Visuell retning, branding og digital identitet
+for bedrifter som vil fremstå mer premium.
 </p>
+
+<div class="price">
+Fra 25.000 kr
+</div>
 
 </div>
 
@@ -439,12 +505,28 @@ men uttrykket skal alltid føles ekte.
 
 </section>
 
-<footer>
+<section class="section">
+
+<div class="contact">
+
+<h2>
+La oss bygge noe som føles levende.
+</h2>
+
+<p>
+Ta kontakt for demo, idéer eller prosjektforespørsel.
+</p>
 
 <a href="mailto:Ronny.nilsen.studio@gmail.com">
 Ronny.nilsen.studio@gmail.com
 </a>
 
+</div>
+
+</section>
+
+<footer>
+RNS Studio
 </footer>
 
 </body>
