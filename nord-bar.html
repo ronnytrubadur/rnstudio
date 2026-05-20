@@ -1,1 +1,423 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<title>Nord Bar | Demo by RNS Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#08090c;
+color:#f5f5f5;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:26px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:rgba(5,5,8,0.35);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.07);
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:600;
+}
+
+nav{
+display:flex;
+gap:24px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:0.74rem;
+letter-spacing:2px;
+text-transform:uppercase;
+opacity:0.85;
+}
+
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.35) contrast(1.08) saturate(0.95);
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:
+linear-gradient(to bottom, rgba(5,5,8,0.15), rgba(5,5,8,0.88)),
+radial-gradient(circle at center, rgba(255,180,120,0.08), transparent 60%);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:20px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:6rem;
+font-weight:500;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.12rem;
+line-height:1.9;
+max-width:760px;
+margin:auto;
+opacity:0.9;
+}
+
+.button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+height:62px;
+padding:0 38px;
+border-radius:999px;
+border:1px solid rgba(255,255,255,0.25);
+color:white;
+text-decoration:none;
+letter-spacing:2px;
+text-transform:uppercase;
+font-size:0.76rem;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+margin-top:34px;
+}
+
+.section{
+padding:120px 8%;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+text-align:center;
+margin-bottom:70px;
+font-weight:500;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+}
+
+.card{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:30px;
+overflow:hidden;
+backdrop-filter:blur(12px);
+}
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+display:block;
+filter:brightness(0.9) contrast(1.05);
+}
+
+.card-content{
+padding:30px;
+}
+
+.card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.1rem;
+margin-bottom:16px;
+font-weight:500;
+}
+
+.card p{
+line-height:1.9;
+opacity:0.86;
+font-size:0.98rem;
+}
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+margin-top:70px;
+}
+
+.info-box{
+padding:40px;
+border-radius:30px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.info-box h4{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+margin-bottom:18px;
+}
+
+.info-box p{
+line-height:1.9;
+opacity:0.88;
+}
+
+footer{
+padding:100px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,0.08);
+margin-top:100px;
+}
+
+footer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+margin-bottom:20px;
+}
+
+footer p{
+opacity:0.8;
+max-width:700px;
+margin:auto auto 24px;
+line-height:1.8;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+border-bottom:1px solid rgba(255,255,255,0.4);
+padding-bottom:4px;
+}
+
+@media(max-width:768px){
+
+header{
+padding:20px;
+align-items:flex-start;
+gap:18px;
+}
+
+.logo{
+font-size:1.5rem;
+}
+
+nav{
+gap:12px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+nav a{
+font-size:0.62rem;
+letter-spacing:1px;
+}
+
+.hero h1{
+font-size:3.8rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.section{
+padding:90px 20px;
+}
+
+.section-title{
+font-size:3rem;
+}
+
+.card img{
+height:240px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Nord Bar</div>
+
+<nav>
+<a href="index.html">RNS Studio</a>
+<a href="#stemning">Stemning</a>
+<a href="#meny">Meny</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<img src="bar1.jpg" alt="Nord Bar">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>Nord Bar</h1>
+
+<p>
+Et mørkt og eksklusivt barkonsept med cinematic stemning, varme detaljer
+og en digital opplevelse som føles levende fra første sekund.
+</p>
+
+<a href="#meny" class="button">Se meny</a>
+
+</div>
+
+</section>
+
+<section class="section" id="stemning">
+
+<h2 class="section-title">Stemning</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="bar1.jpg" alt="Bar stemning">
+
+<div class="card-content">
+<h3>Kvelder</h3>
+
+<p>
+Store bilder, mørke toner og filmatisk lys gir følelsen av en eksklusiv kveld
+før kunden i det hele tatt har kommet inn døra.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="bar2.jpg" alt="Cocktails">
+
+<div class="card-content">
+<h3>Cocktails</h3>
+
+<p>
+En moderne barside bør vise detaljer, signaturdrinker og atmosfæren rundt opplevelsen —
+ikke bare åpningstider og tekst.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="bar3.jpg" alt="Lounge">
+
+<div class="card-content">
+<h3>Lounge</h3>
+
+<p>
+Rolige animasjoner, tydelig booking og visuelt sterke seksjoner gjør nettsiden mer levende
+og premium.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="meny">
+
+<h2 class="section-title">Info</h2>
+
+<div class="info">
+
+<div class="info-box">
+<h4>Åpningstider</h4>
+
+<p>
+Mandag – torsdag: 16:00–00:00<br>
+Fredag – lørdag: 16:00–02:00<br>
+Søndag: Lounge & events
+</p>
+
+</div>
+
+<div class="info-box">
+<h4>Konsept</h4>
+
+<p>
+Nord Bar kombinerer lounge, cocktails og mørk nordisk atmosfære
+i et moderne uttrykk som føles eksklusivt uten å bli stivt.
+</p>
+
+</div>
+
+<div class="info-box">
+<h4>Kontakt</h4>
+
+<p>
+booking@nordbar.no<br>
++47 48 22 91 40<br>
+Havnepromenaden 8, Trondheim
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="kontakt">
+
+<h2>Demo laget av RNS Studio</h2>
+
+<p>
+Dette er en fiktiv demoside laget for å vise hvordan en cocktailbar eller lounge
+kan fremstå mer levende, moderne og profesjonell på nett.
+</p>
+
+<a href="index.html">Tilbake til RNS Studio</a>
+
+</footer>
+
+</body>
+</html>
