@@ -32,7 +32,7 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:26px 40px;
+padding:24px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -77,22 +77,30 @@ position:absolute;
 width:100%;
 height:100%;
 object-fit:cover;
-filter:brightness(0.35) contrast(1.08) saturate(0.95);
+filter:brightness(0.34) contrast(1.08) saturate(0.95);
 }
 
 .hero-overlay{
 position:absolute;
 inset:0;
 background:
-linear-gradient(to bottom, rgba(5,5,8,0.15), rgba(5,5,8,0.88)),
+linear-gradient(to bottom, rgba(5,5,8,0.12), rgba(5,5,8,0.88)),
 radial-gradient(circle at center, rgba(255,180,120,0.08), transparent 60%);
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-max-width:900px;
+max-width:920px;
 padding:20px;
+}
+
+.kicker{
+font-size:0.76rem;
+letter-spacing:4px;
+text-transform:uppercase;
+opacity:0.72;
+margin-bottom:22px;
 }
 
 .hero h1{
@@ -103,11 +111,19 @@ margin-bottom:20px;
 }
 
 .hero p{
-font-size:1.12rem;
+font-size:1.14rem;
 line-height:1.9;
 max-width:760px;
 margin:auto;
 opacity:0.9;
+}
+
+.hero-actions{
+margin-top:42px;
+display:flex;
+gap:18px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 .button{
@@ -125,7 +141,16 @@ text-transform:uppercase;
 font-size:0.76rem;
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(10px);
-margin-top:34px;
+transition:0.3s ease;
+}
+
+.button:hover{
+background:white;
+color:#08090c;
+}
+
+.button.secondary{
+background:transparent;
 }
 
 .section{
@@ -136,8 +161,16 @@ padding:120px 8%;
 font-family:'Cormorant Garamond',serif;
 font-size:4rem;
 text-align:center;
-margin-bottom:70px;
+margin-bottom:34px;
 font-weight:500;
+}
+
+.section-intro{
+max-width:760px;
+margin:0 auto 70px;
+text-align:center;
+line-height:1.9;
+color:rgba(255,255,255,0.72);
 }
 
 .grid{
@@ -147,7 +180,7 @@ gap:28px;
 }
 
 .card{
-background:rgba(255,255,255,0.03);
+background:rgba(255,255,255,0.035);
 border:1px solid rgba(255,255,255,0.08);
 border-radius:30px;
 overflow:hidden;
@@ -156,10 +189,10 @@ backdrop-filter:blur(12px);
 
 .card img{
 width:100%;
-height:320px;
+height:330px;
 object-fit:cover;
 display:block;
-filter:brightness(0.9) contrast(1.05);
+filter:brightness(0.85) contrast(1.05);
 }
 
 .card-content{
@@ -168,7 +201,7 @@ padding:30px;
 
 .card h3{
 font-family:'Cormorant Garamond',serif;
-font-size:2.1rem;
+font-size:2.15rem;
 margin-bottom:16px;
 font-weight:500;
 }
@@ -179,17 +212,57 @@ opacity:0.86;
 font-size:0.98rem;
 }
 
+.menu-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:26px;
+}
+
+.menu-item{
+padding:34px;
+border-radius:28px;
+background:rgba(255,255,255,0.035);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.menu-item span{
+display:block;
+font-size:0.72rem;
+letter-spacing:3px;
+text-transform:uppercase;
+opacity:0.55;
+margin-bottom:16px;
+}
+
+.menu-item h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:500;
+margin-bottom:14px;
+}
+
+.menu-item p{
+line-height:1.8;
+opacity:0.76;
+margin-bottom:18px;
+}
+
+.price{
+font-size:1rem;
+letter-spacing:1px;
+opacity:0.95;
+}
+
 .info{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:40px;
-margin-top:70px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:34px;
 }
 
 .info-box{
 padding:40px;
 border-radius:30px;
-background:rgba(255,255,255,0.03);
+background:rgba(255,255,255,0.035);
 border:1px solid rgba(255,255,255,0.08);
 }
 
@@ -204,11 +277,33 @@ line-height:1.9;
 opacity:0.88;
 }
 
+.demo-note{
+max-width:900px;
+margin:0 auto;
+padding:48px;
+border-radius:34px;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.09);
+text-align:center;
+}
+
+.demo-note h2{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.demo-note p{
+line-height:1.9;
+opacity:0.78;
+margin-bottom:28px;
+}
+
 footer{
-padding:100px 20px;
+padding:90px 20px;
 text-align:center;
 border-top:1px solid rgba(255,255,255,0.08);
-margin-top:100px;
 }
 
 footer h2{
@@ -218,7 +313,7 @@ margin-bottom:20px;
 }
 
 footer p{
-opacity:0.8;
+opacity:0.78;
 max-width:700px;
 margin:auto auto 24px;
 line-height:1.8;
@@ -234,9 +329,9 @@ padding-bottom:4px;
 @media(max-width:768px){
 
 header{
-padding:20px;
+padding:18px 20px;
 align-items:flex-start;
-gap:18px;
+gap:16px;
 }
 
 .logo{
@@ -274,6 +369,10 @@ font-size:3rem;
 height:240px;
 }
 
+.demo-note{
+padding:34px 24px;
+}
+
 }
 
 </style>
@@ -287,8 +386,8 @@ height:240px;
 
 <nav>
 <a href="index.html">RNS Studio</a>
-<a href="#stemning">Stemning</a>
 <a href="#meny">Meny</a>
+<a href="#booking">Booking</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
 
@@ -302,60 +401,67 @@ height:240px;
 
 <div class="hero-content">
 
+<div class="kicker">
+Cocktails · Lounge · Events · Åpent hver uke
+</div>
+
 <h1>Nord Bar</h1>
 
 <p>
-Et mørkt og eksklusivt barkonsept med cinematic stemning, varme detaljer
-og en digital opplevelse som føles levende fra første sekund.
+En mørk og eksklusiv baropplevelse med cocktails,
+lounge-stemning og et uttrykk som får gjesten til å kjenne atmosfæren
+før de kommer inn døren.
 </p>
 
-<a href="#meny" class="button">Se meny</a>
+<div class="hero-actions">
+<a href="#meny" class="button">Se drinker</a>
+<a href="#booking" class="button secondary">Book bord</a>
+</div>
 
 </div>
 
 </section>
 
-<section class="section" id="stemning">
+<section class="section">
 
-<h2 class="section-title">Stemning</h2>
+<h2 class="section-title">En kveld folk husker</h2>
+
+<p class="section-intro">
+Denne demosiden viser hvordan en bar, restaurant eller lounge kan bruke bilder,
+stemning, meny og tydelig booking til å fremstå mer eksklusiv og profesjonell på nett.
+</p>
 
 <div class="grid">
 
 <div class="card">
-<img src="bar1.jpg" alt="Bar stemning">
-
+<img src="bar1.jpg" alt="Nord Bar stemning">
 <div class="card-content">
-<h3>Kvelder</h3>
-
+<h3>Atmosfære</h3>
 <p>
-Store bilder, mørke toner og filmatisk lys gir følelsen av en eksklusiv kveld
-før kunden i det hele tatt har kommet inn døra.
+Store bilder, mørke toner og rolig tekst gir følelsen av stedet med én gang.
+Det gjør baren mer minneverdig og mer fristende å besøke.
 </p>
 </div>
 </div>
 
 <div class="card">
-<img src="bar2.jpg" alt="Cocktails">
-
+<img src="bar2.jpg" alt="Nord Bar cocktails">
 <div class="card-content">
 <h3>Cocktails</h3>
-
 <p>
-En moderne barside bør vise detaljer, signaturdrinker og atmosfæren rundt opplevelsen —
-ikke bare åpningstider og tekst.
+En moderne barside bør vise signaturdrinker, detaljer og opplevelsen rundt besøket —
+ikke bare åpningstider.
 </p>
 </div>
 </div>
 
 <div class="card">
-<img src="bar3.jpg" alt="Lounge">
-
+<img src="bar3.jpg" alt="Nord Bar lounge">
 <div class="card-content">
-<h3>Lounge</h3>
-
+<h3>Booking</h3>
 <p>
-Rolige animasjoner, tydelig booking og visuelt sterke seksjoner gjør nettsiden mer levende
-og premium.
+Tydelige knapper, åpningstider og kontakt gjør det enkelt for gjesten å reservere bord
+eller spørre om arrangement.
 </p>
 </div>
 </div>
@@ -366,41 +472,96 @@ og premium.
 
 <section class="section" id="meny">
 
-<h2 class="section-title">Info</h2>
+<h2 class="section-title">Signaturdrinker</h2>
+
+<p class="section-intro">
+Menyen kan tilpasses med ekte drinker, priser, mat, vinliste,
+events eller kampanjer.
+</p>
+
+<div class="menu-list">
+
+<div class="menu-item">
+<span>Signature</span>
+<h3>Nordic Old Fashioned</h3>
+<p>
+Røyk, sitrus og varme toner. En mørk klassiker med nordisk kant.
+</p>
+<div class="price">165 kr</div>
+</div>
+
+<div class="menu-item">
+<span>Fresh</span>
+<h3>Midnight Sour</h3>
+<p>
+Syrlig, elegant og balansert. Perfekt før maten eller sent på kvelden.
+</p>
+<div class="price">155 kr</div>
+</div>
+
+<div class="menu-item">
+<span>Alcohol free</span>
+<h3>Blue Hour</h3>
+<p>
+En alkoholfri signatur med urter, bær og frisk bitterhet.
+</p>
+<div class="price">115 kr</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="booking">
+
+<h2 class="section-title">Booking</h2>
 
 <div class="info">
 
 <div class="info-box">
 <h4>Åpningstider</h4>
-
 <p>
-Mandag – torsdag: 16:00–00:00<br>
-Fredag – lørdag: 16:00–02:00<br>
+Torsdag: 18:00–01:00<br>
+Fredag: 18:00–02:00<br>
+Lørdag: 18:00–02:00<br>
 Søndag: Lounge & events
 </p>
-
 </div>
 
 <div class="info-box">
-<h4>Konsept</h4>
-
+<h4>Bord og events</h4>
 <p>
-Nord Bar kombinerer lounge, cocktails og mørk nordisk atmosfære
-i et moderne uttrykk som føles eksklusivt uten å bli stivt.
+Book bord for små grupper, date night,
+firmaevent eller private kvelder.
 </p>
-
 </div>
 
 <div class="info-box">
 <h4>Kontakt</h4>
-
 <p>
 booking@nordbar.no<br>
 +47 48 22 91 40<br>
 Havnepromenaden 8, Trondheim
 </p>
+</div>
 
 </div>
+
+</section>
+
+<section class="section">
+
+<div class="demo-note">
+
+<h2>Hva kunden kan få</h2>
+
+<p>
+Denne demosiden kan tilpasses ekte barer, restauranter og utesteder med meny,
+booking, events, åpningstider, kart, galleri, sosiale medier og kontaktinformasjon.
+Designet kan gjøres mørkt, eksklusivt, varmt eller mer energisk etter stedet.
+</p>
+
+<a href="index.html" class="button">Tilbake til RNS Studio</a>
 
 </div>
 
@@ -408,14 +569,14 @@ Havnepromenaden 8, Trondheim
 
 <footer id="kontakt">
 
-<h2>Demo laget av RNS Studio</h2>
+<h2>Nord Bar</h2>
 
 <p>
-Dette er en fiktiv demoside laget for å vise hvordan en cocktailbar eller lounge
-kan fremstå mer levende, moderne og profesjonell på nett.
+Dette er en fiktiv demoside laget av RNS Studio for å vise hvordan en cocktailbar,
+lounge eller restaurant kan fremstå mer levende, profesjonell og salgsbar på nett.
 </p>
 
-<a href="index.html">Tilbake til RNS Studio</a>
+<a href="mailto:booking@nordbar.no">booking@nordbar.no</a>
 
 </footer>
 
