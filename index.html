@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -204,90 +203,151 @@ nav{
     color:white;
 }
 
-/* ---------- SHOWCASE POSTERS ---------- */
+/* ---------- DEMO PREVIEWS ---------- */
 
-.poster-grid{
+.demo-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:38px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:42px;
 }
 
-.poster{
-    position:relative;
-    min-height:620px;
+.demo-site{
+    background:rgba(255,255,255,0.035);
+    border:1px solid rgba(255,255,255,0.08);
     border-radius:38px;
     overflow:hidden;
-    border:1px solid rgba(255,255,255,0.08);
-    background:#0d151f;
-    box-shadow:0 30px 80px rgba(0,0,0,0.35);
+    box-shadow:0 34px 90px rgba(0,0,0,0.38);
+    transition:0.4s ease;
 }
 
-.poster img{
+.demo-site:hover{
+    transform:translateY(-8px);
+    border-color:rgba(255,255,255,0.16);
+}
+
+.demo-hero{
+    position:relative;
+    min-height:360px;
+    overflow:hidden;
+}
+
+.demo-hero img{
     position:absolute;
     inset:0;
     width:100%;
     height:100%;
     object-fit:cover;
-    filter:brightness(0.52) saturate(0.92) contrast(1.08);
+    filter:brightness(0.55) saturate(0.95) contrast(1.08);
     transition:0.7s ease;
 }
 
-.poster:hover img{
+.demo-site:hover .demo-hero img{
     transform:scale(1.05);
-    filter:brightness(0.63) saturate(0.98) contrast(1.1);
 }
 
-.poster::after{
+.demo-hero::after{
     content:"";
     position:absolute;
     inset:0;
     background:
-    linear-gradient(
-        rgba(5,10,18,0.05),
-        rgba(5,10,18,0.88)
-    );
+    linear-gradient(rgba(5,10,18,0.08), rgba(5,10,18,0.82));
     z-index:1;
 }
 
-.poster-content{
+.demo-hero-content{
     position:absolute;
     inset:0;
     z-index:2;
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
-    padding:42px;
+    padding:34px;
 }
 
-.poster-label{
-    font-size:0.75rem;
+.demo-label{
+    font-size:0.72rem;
     letter-spacing:3px;
     text-transform:uppercase;
-    color:rgba(255,255,255,0.66);
-    margin-bottom:18px;
+    color:rgba(255,255,255,0.68);
+    margin-bottom:16px;
 }
 
-.poster h3{
+.demo-hero h3{
     font-family:'Cormorant Garamond', serif;
-    font-size:3.6rem;
+    font-size:3.5rem;
     font-weight:400;
     line-height:1;
     margin-bottom:22px;
 }
 
-.poster p{
-    color:rgba(255,255,255,0.78);
-    line-height:1.85;
-    font-size:1rem;
-    margin-bottom:34px;
+.demo-mini-nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
-.poster-button{
+.demo-mini-nav span{
+    border:1px solid rgba(255,255,255,0.24);
+    border-radius:999px;
+    padding:9px 15px;
+    font-size:0.72rem;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.85);
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(8px);
+}
+
+.demo-body{
+    padding:36px 34px 38px;
+}
+
+.demo-body h4{
+    font-size:1.35rem;
+    margin-bottom:16px;
+}
+
+.demo-body p{
+    color:rgba(255,255,255,0.72);
+    line-height:1.85;
+    margin-bottom:28px;
+}
+
+.demo-info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-bottom:30px;
+}
+
+.demo-info div{
+    border:1px solid rgba(255,255,255,0.07);
+    background:rgba(255,255,255,0.025);
+    border-radius:18px;
+    padding:18px;
+}
+
+.demo-info span{
+    display:block;
+    color:rgba(255,255,255,0.52);
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
+
+.demo-info strong{
+    font-size:0.95rem;
+    font-weight:400;
+    color:white;
+}
+
+.demo-button{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    width:170px;
-    height:54px;
+    height:52px;
+    padding:0 28px;
     border-radius:999px;
     border:1px solid rgba(255,255,255,0.28);
     color:white;
@@ -300,7 +360,7 @@ nav{
     transition:0.3s ease;
 }
 
-.poster-button:hover{
+.demo-button:hover{
     background:white;
     color:#091018;
 }
@@ -343,11 +403,11 @@ nav{
     }
 
     .nav-links{
-        gap:18px;
+        gap:14px;
     }
 
     .nav-links a{
-        font-size:0.72rem;
+        font-size:0.68rem;
         letter-spacing:1px;
     }
 
@@ -383,17 +443,16 @@ nav{
         padding:38px 30px;
     }
 
-    .poster{
-        min-height:560px;
-        border-radius:30px;
+    .demo-hero{
+        min-height:340px;
     }
 
-    .poster-content{
-        padding:34px;
-    }
-
-    .poster h3{
+    .demo-hero h3{
         font-size:3rem;
+    }
+
+    .demo-info{
+        grid-template-columns:1fr;
     }
 
 }
@@ -403,7 +462,6 @@ nav{
 <body>
 
 <nav>
-
 <div class="logo">RNS</div>
 
 <div class="nav-links">
@@ -411,7 +469,6 @@ nav{
 <a href="#projects">Demo</a>
 <a href="#contact">Kontakt</a>
 </div>
-
 </nav>
 
 <section class="hero">
@@ -449,45 +506,27 @@ Se tjenester
 <div class="cards">
 
 <div class="card">
-
 <h3>Nettsider</h3>
-
 <p>
 Moderne nettsider med cinematic uttrykk, mobiltilpasning og premium design som skaper tillit og oppmerksomhet.
 </p>
-
-<div class="price">
-Fra 7.000 kr
-</div>
-
+<div class="price">Fra 7.000 kr</div>
 </div>
 
 <div class="card">
-
 <h3>Premium sider</h3>
-
 <p>
 Eksklusive nettsider med video, animasjoner og visuelle detaljer som gir en mer luksuriøs og filmatisk opplevelse.
 </p>
-
-<div class="price">
-Fra 12.000 kr
-</div>
-
+<div class="price">Fra 12.000 kr</div>
 </div>
 
 <div class="card">
-
 <h3>Visuell identitet</h3>
-
 <p>
 Farger, fonter, uttrykk og designretning som gjør at bedriften føles mer gjennomført og profesjonell.
 </p>
-
-<div class="price">
-Etter avtale
-</div>
-
+<div class="price">Etter avtale</div>
 </div>
 
 </div>
@@ -500,47 +539,119 @@ Etter avtale
 
 <div class="container">
 
-<h2 class="section-title">Demo / Plakater</h2>
+<h2 class="section-title">Demo</h2>
 
-<div class="poster-grid">
+<div class="demo-grid">
 
-<div class="poster">
+<div class="demo-site">
+
+<div class="demo-hero">
 <img src="demo1.jpg" alt="Norð Bar demo">
-
-<div class="poster-content">
-<div class="poster-label">Cocktailbar / Demo</div>
+<div class="demo-hero-content">
+<div class="demo-label">Cocktailbar / Demo</div>
 <h3>Norð Bar</h3>
+<div class="demo-mini-nav">
+<span>Meny</span>
+<span>Booking</span>
+<span>Kontakt</span>
+</div>
+</div>
+</div>
+
+<div class="demo-body">
+<h4>En mørk og eksklusiv baropplevelse.</h4>
 <p>
-En mørk og eksklusiv bar-identitet med cinematic stemning, premium detaljer og et uttrykk som føles levende.
+Demoen viser hvordan en cocktailbar kan fremstå mer premium med tydelig atmosfære, enkel booking, åpningstider og en nettside som selger stemningen før gjesten kommer inn døren.
 </p>
-<a href="#contact" class="poster-button">Kontakt</a>
+
+<div class="demo-info">
+<div>
+<span>Fokus</span>
+<strong>Stemning / booking</strong>
+</div>
+<div>
+<span>Passer for</span>
+<strong>Bar, restaurant, lounge</strong>
 </div>
 </div>
 
-<div class="poster">
-<img src="demo2.jpg" alt="Hollow Studio demo">
+<a href="#contact" class="demo-button">Start prosjekt</a>
+</div>
 
-<div class="poster-content">
-<div class="poster-label">Studio / Demo</div>
-<h3>Hollow Studio</h3>
+</div>
+
+<div class="demo-site">
+
+<div class="demo-hero">
+<img src="demo2.jpg" alt="Tattoo Studio demo">
+<div class="demo-hero-content">
+<div class="demo-label">Tattoo / Demo</div>
+<h3>Ink Room</h3>
+<div class="demo-mini-nav">
+<span>Portfolio</span>
+<span>Timebestilling</span>
+<span>Artist</span>
+</div>
+</div>
+</div>
+
+<div class="demo-body">
+<h4>Rått, rent og personlig.</h4>
 <p>
-Et minimalistisk visuelt konsept for et kreativt studio med rolig energi, tydelig retning og moderne identitet.
+Et tattoo-konsept der nettsiden viser stil, arbeid, booking og identitet på en måte som føles trygg, moderne og ekte — uten å bli generisk eller for polert.
 </p>
-<a href="#contact" class="poster-button">Kontakt</a>
+
+<div class="demo-info">
+<div>
+<span>Fokus</span>
+<strong>Portfolio / tillit</strong>
+</div>
+<div>
+<span>Passer for</span>
+<strong>Tattoo, frisør, barber</strong>
 </div>
 </div>
 
-<div class="poster">
+<a href="#contact" class="demo-button">Start prosjekt</a>
+</div>
+
+</div>
+
+<div class="demo-site">
+
+<div class="demo-hero">
 <img src="demo3.jpg" alt="Kronotop Café demo">
-
-<div class="poster-content">
-<div class="poster-label">Café / Demo</div>
+<div class="demo-hero-content">
+<div class="demo-label">Café / Demo</div>
 <h3>Kronotop Café</h3>
-<p>
-Et varmt, moderne café-konsept bygget rundt ro, lys, stemning og en digital opplevelse som føles ekte.
-</p>
-<a href="#contact" class="poster-button">Kontakt</a>
+<div class="demo-mini-nav">
+<span>Meny</span>
+<span>Åpningstider</span>
+<span>Finn oss</span>
 </div>
+</div>
+</div>
+
+<div class="demo-body">
+<h4>Et varmt sted folk får lyst til å besøke.</h4>
+<p>
+Kronotop Café viser hvordan en lokal kafé kan bruke bilder, tekst, meny og kontakt tydeligere — så folk raskt forstår stemningen, åpningstidene og hvorfor de bør komme innom.
+</p>
+
+<div class="demo-info">
+<div>
+<span>Fokus</span>
+<strong>Meny / besøk</strong>
+</div>
+<div>
+<span>Passer for</span>
+<strong>Café, bakeri, liten restaurant</strong>
+</div>
+</div>
+
+<a href="#contact" class="demo-button">Start prosjekt</a>
+</div>
+
 </div>
 
 </div>
@@ -559,8 +670,8 @@ Et varmt, moderne café-konsept bygget rundt ro, lys, stemning og en digital opp
 Ta kontakt for demo, prisoverslag eller samarbeid.
 </div>
 
-<a href="mailto:kontakt@rnstudio.no" class="mail-link">
-kontakt@rnstudio.no
+<a href="mailto:Ronny.nilsen.studio@gmail.com" class="mail-link">
+Ronny.nilsen.studio@gmail.com
 </a>
 
 </div>
