@@ -516,7 +516,7 @@ section{
 <div class="container nav">
 
 <a href="#">
-<img src="./solglimt-logo.PNG" class="logo" alt="">
+<img src="/preview/solglimt/solglimt-logo.PNG" class="logo" alt="Solglimt logo">
 </a>
 
 <nav class="nav-links">
@@ -536,7 +536,7 @@ Bestill time
 <section class="hero">
 
 <video autoplay muted loop playsinline>
-<source src="./hero-film.mp4" type="video/mp4">
+<source src="/preview/solglimt/hero-film.mp4" type="video/mp4">
 </video>
 
 <div class="hero-overlay"></div>
@@ -577,7 +577,7 @@ Se behandlinger
 <div class="container about-grid">
 
 <div class="about-image fade">
-<img src="./to-stoler.jpg" alt="">
+<img src="/preview/solglimt/to-stoler.jpg" alt="">
 </div>
 
 <div class="about-box fade">
@@ -705,13 +705,13 @@ Bilder som viser følelsen av Solglimt.
 <div class="gallery-grid">
 
 <div class="gallery-main fade">
-<img src="./benk.jpg" alt="">
+<img src="/preview/solglimt/benk.jpg" alt="">
 </div>
 
 <div class="gallery-side">
 
-<img src="./handkle.jpg" class="fade" alt="">
-<img src="./resepsjon.jpg" class="fade" alt="">
+<img src="/preview/solglimt/handkle.jpg" class="fade" alt="">
+<img src="/preview/solglimt/resepsjon.jpg" class="fade" alt="">
 
 </div>
 
@@ -768,7 +768,7 @@ booking@solglimtvelvaere.no
 </div>
 
 <div class="contact-image">
-<img src="./to-stoler.jpg" alt="">
+<img src="/preview/solglimt/to-stoler.jpg" alt="">
 </div>
 
 </div>
@@ -798,17 +798,17 @@ Nordisk velvære i rolige omgivelser.
 const fades = document.querySelectorAll('.fade');
 
 const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
 },{
-  threshold:0.12
+threshold:0.12
 });
 
 fades.forEach(el=>{
-  observer.observe(el);
+observer.observe(el);
 });
 
 </script>
