@@ -3,25 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Solglimt Hud & Velvære</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --bg:#f5efe6;
   --cream:#fffaf3;
   --soft:#ece1d3;
   --text:#372d24;
   --muted:#6f6256;
-  --line:rgba(55,45,36,.12);
-  --shadow:0 30px 80px rgba(70,52,34,.12);
+  --line:rgba(55,45,36,.10);
+  --shadow:0 30px 80px rgba(70,52,34,.10);
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:'Manrope',sans-serif;
   background:var(--bg);
@@ -29,9 +40,24 @@ body{
   overflow-x:hidden;
   line-height:1.7;
 }
-img,video{width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.container{width:min(1280px,92%);margin:auto}
+
+img,
+video{
+  width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1280px,92%);
+  margin:auto;
+}
+
+/* NAV */
 
 header{
   position:fixed;
@@ -39,59 +65,87 @@ header{
   left:0;
   width:100%;
   z-index:100;
-  padding:22px 0;
-  background:rgba(245,239,230,.72);
+  padding:24px 0;
+  background:rgba(245,239,230,.68);
   backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(55,45,36,.06);
+  border-bottom:1px solid rgba(55,45,36,.05);
 }
+
 .nav{
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
-.logo{width:112px}
+
+.logo{
+  width:108px;
+}
+
 .nav-links{
   display:flex;
   align-items:center;
-  gap:34px;
+  gap:38px;
   font-size:13px;
   color:#7b6f63;
 }
+
+.nav-links a{
+  transition:.25s ease;
+}
+
+.nav-links a:hover{
+  color:var(--text);
+}
+
 .nav-btn{
-  background:rgba(255,250,243,.9);
+  background:rgba(255,250,243,.84);
+  backdrop-filter:blur(12px);
   padding:13px 22px;
   border-radius:999px;
   box-shadow:0 14px 34px rgba(70,52,34,.08);
 }
 
+/* HERO */
+
 .hero{
   position:relative;
   min-height:100vh;
+  overflow:hidden;
   display:flex;
   align-items:flex-end;
-  overflow:hidden;
 }
+
 .hero video{
   position:absolute;
   inset:0;
+  width:100%;
   height:100%;
   object-fit:cover;
 }
+
 .hero-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(to right,
-  rgba(245,239,230,.94) 0%,
-  rgba(245,239,230,.68) 36%,
-  rgba(245,239,230,.22) 70%,
-  rgba(245,239,230,.06) 100%);
+
+  background:
+  linear-gradient(
+  to right,
+  rgba(245,239,230,.92) 0%,
+  rgba(245,239,230,.58) 34%,
+  rgba(245,239,230,.18) 62%,
+  rgba(245,239,230,.05) 100%
+  );
 }
+
 .hero-content{
   position:relative;
   z-index:2;
-  padding:0 0 110px 4vw;
+  width:100%;
+  padding-bottom:110px;
+  padding-left:4vw;
   max-width:780px;
 }
+
 .kicker{
   display:inline-block;
   margin-bottom:26px;
@@ -100,27 +154,32 @@ header{
   text-transform:uppercase;
   color:#8e7e70;
 }
+
 h1,h2,h3{
   font-family:'Cormorant Garamond',serif;
   font-weight:500;
   line-height:.96;
 }
+
 h1{
-  font-size:clamp(54px,7vw,108px);
+  font-size:clamp(52px,7vw,108px);
   letter-spacing:-2px;
   margin-bottom:28px;
 }
+
 .hero p{
   max-width:520px;
   color:#4d4034;
   font-size:20px;
   margin-bottom:42px;
 }
+
 .hero-buttons{
   display:flex;
   gap:16px;
   flex-wrap:wrap;
 }
+
 .btn{
   display:inline-flex;
   align-items:center;
@@ -130,30 +189,45 @@ h1{
   transition:.35s ease;
   font-size:14px;
 }
+
 .btn-dark{
   background:var(--text);
   color:var(--cream);
   box-shadow:0 22px 50px rgba(55,45,36,.18);
 }
-.btn-light{
-  background:rgba(255,250,243,.82);
-  border:1px solid rgba(255,255,255,.55);
-}
-.btn:hover{transform:translateY(-3px)}
 
-section{padding:145px 0}
+.btn-light{
+  background:rgba(255,250,243,.78);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.4);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+  padding:150px 0;
+}
+
 .section-head{
   max-width:720px;
   margin-bottom:72px;
 }
+
 .section-head h2{
   font-size:clamp(48px,6vw,86px);
   margin-bottom:24px;
 }
+
 .section-head p{
   color:var(--muted);
   font-size:18px;
 }
+
+/* ABOUT */
 
 .about-grid{
   display:grid;
@@ -161,30 +235,42 @@ section{padding:145px 0}
   gap:80px;
   align-items:center;
 }
+
 .about-image img{
   height:760px;
   object-fit:cover;
   border-radius:42px;
   box-shadow:var(--shadow);
 }
+
 .about-box{
   background:var(--cream);
   padding:68px;
   border-radius:42px;
   box-shadow:var(--shadow);
 }
+
 .about-box h2{
   font-size:clamp(44px,5vw,78px);
   margin-bottom:28px;
 }
+
 .about-box p{
   color:var(--muted);
   margin-bottom:22px;
   font-size:18px;
 }
 
-.services{background:var(--soft)}
-.service-list{border-top:1px solid var(--line)}
+/* SERVICES */
+
+.services{
+  background:var(--soft);
+}
+
+.service-list{
+  border-top:1px solid var(--line);
+}
+
 .service{
   display:grid;
   grid-template-columns:90px 1fr 1.1fr auto;
@@ -192,51 +278,72 @@ section{padding:145px 0}
   align-items:center;
   padding:42px 0;
   border-bottom:1px solid var(--line);
+  transition:.35s ease;
 }
+
+.service:hover{
+  padding-left:14px;
+}
+
 .service-number{
   color:#988777;
   font-size:13px;
 }
-.service h3{font-size:42px}
+
+.service h3{
+  font-size:42px;
+}
+
 .service p{
   color:var(--muted);
   max-width:430px;
 }
+
 .price{
   font-family:'Cormorant Garamond',serif;
   font-size:34px;
   white-space:nowrap;
 }
 
+/* STATEMENT */
+
 .statement{
-  padding:180px 0;
+  padding:190px 0;
   text-align:center;
 }
+
 .statement h2{
-  font-size:clamp(58px,8vw,124px);
+  font-size:clamp(58px,8vw,128px);
   max-width:1000px;
   margin:auto;
 }
+
+/* GALLERY */
 
 .gallery-grid{
   display:grid;
   grid-template-columns:1.15fr .85fr;
   gap:26px;
 }
+
 .gallery-main img{
   height:760px;
   object-fit:cover;
   border-radius:42px;
 }
+
 .gallery-side{
   display:grid;
   gap:26px;
 }
+
 .gallery-side img{
   height:367px;
   object-fit:cover;
   border-radius:42px;
 }
+
+/* CONTACT */
 
 .contact-box{
   background:var(--cream);
@@ -248,14 +355,17 @@ section{padding:145px 0}
   gap:72px;
   align-items:center;
 }
+
 .contact-box h2{
   font-size:clamp(48px,5vw,82px);
 }
+
 .contact-list{
   display:grid;
   gap:28px;
   margin-top:42px;
 }
+
 .contact-item small{
   display:block;
   font-size:11px;
@@ -264,18 +374,25 @@ section{padding:145px 0}
   color:#9b8b7b;
   margin-bottom:6px;
 }
+
 .contact-item a,
 .contact-item p{
   font-family:'Cormorant Garamond',serif;
   font-size:30px;
 }
+
 .contact-image img{
   height:620px;
   object-fit:cover;
   border-radius:38px;
 }
 
-footer{padding:44px 0}
+/* FOOTER */
+
+footer{
+  padding:44px 0;
+}
+
 .footer-inner{
   border-top:1px solid var(--line);
   padding-top:28px;
@@ -286,232 +403,398 @@ footer{padding:44px 0}
   font-size:14px;
 }
 
+/* ANIMATION */
+
 .fade{
   opacity:0;
   transform:translateY(32px);
   transition:opacity .9s ease, transform .9s ease;
 }
+
 .fade.visible{
   opacity:1;
   transform:translateY(0);
 }
 
+/* MOBILE */
+
 @media(max-width:980px){
-  .about-grid,.gallery-grid,.contact-box{grid-template-columns:1fr}
-  .about-image img,.gallery-main img,.contact-image img{height:520px}
-  .service{grid-template-columns:1fr;gap:12px}
-  .hero-content{padding-left:0}
+
+.about-grid,
+.gallery-grid,
+.contact-box{
+  grid-template-columns:1fr;
+}
+
+.about-image img,
+.gallery-main img,
+.contact-image img{
+  height:520px;
+}
+
+.service{
+  grid-template-columns:1fr;
+  gap:12px;
+}
+
+.price{
+  margin-top:10px;
+}
+
+.hero-content{
+  padding-left:0;
+}
+
 }
 
 @media(max-width:720px){
-  .nav-links a:not(.nav-btn){display:none}
-  .logo{width:96px}
-  .hero-content{padding-bottom:80px}
-  h1{font-size:58px}
-  .hero p{font-size:18px}
-  .hero-buttons{flex-direction:column;align-items:flex-start}
-  section{padding:90px 0}
-  .about-image img,.gallery-main img,.gallery-side img,.contact-image img{
-    height:390px;
-    border-radius:28px;
-  }
-  .about-box,.contact-box{
-    padding:34px;
-    border-radius:30px;
-  }
-  .service h3{font-size:34px}
-  .contact-item a,.contact-item p{font-size:24px}
-  .footer-inner{flex-direction:column}
+
+.nav-links a:not(.nav-btn){
+  display:none;
 }
+
+.logo{
+  width:96px;
+}
+
+.hero-content{
+  padding-bottom:80px;
+}
+
+h1{
+  font-size:58px;
+}
+
+.hero p{
+  font-size:18px;
+}
+
+.hero-buttons{
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+section{
+  padding:90px 0;
+}
+
+.about-image img,
+.gallery-main img,
+.gallery-side img,
+.contact-image img{
+  height:390px;
+  border-radius:28px;
+}
+
+.about-box,
+.contact-box{
+  padding:34px;
+  border-radius:30px;
+}
+
+.service h3{
+  font-size:34px;
+}
+
+.contact-item a,
+.contact-item p{
+  font-size:24px;
+}
+
+.footer-inner{
+  flex-direction:column;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
-    <a href="#">
-      <img src="solglimt-logo.PNG" class="logo" alt="Solglimt logo">
-    </a>
+<div class="container nav">
 
-    <nav class="nav-links">
-      <a href="#om">Om oss</a>
-      <a href="#behandlinger">Behandlinger</a>
-      <a href="#galleri">Galleri</a>
-      <a href="#kontakt">Kontakt</a>
-      <a href="mailto:booking@solglimtvelvaere.no" class="nav-btn">Bestill time</a>
-    </nav>
-  </div>
+<a href="#">
+<img src="./solglimt-logo.PNG" class="logo" alt="">
+</a>
+
+<nav class="nav-links">
+<a href="#om">Om oss</a>
+<a href="#behandlinger">Behandlinger</a>
+<a href="#galleri">Galleri</a>
+<a href="#kontakt">Kontakt</a>
+
+<a href="mailto:booking@solglimtvelvaere.no" class="nav-btn">
+Bestill time
+</a>
+</nav>
+
+</div>
 </header>
 
 <section class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="hero-film.mp4" type="video/mp4">
-  </video>
 
-  <div class="hero-overlay"></div>
+<video autoplay muted loop playsinline>
+<source src="./hero-film.mp4" type="video/mp4">
+</video>
 
-  <div class="container hero-content fade">
-    <div class="kicker">SOLGLIMT HUD & VELVÆRE</div>
+<div class="hero-overlay"></div>
 
-    <h1>Et roligere tempo.</h1>
+<div class="container hero-content fade">
 
-    <p>
-      Et varmt pusterom for deg som vil senke skuldrene,
-      ta vare på huden og gi kroppen litt ro.
-    </p>
+<div class="kicker">
+SOLGLIMT HUD & VELVÆRE
+</div>
 
-    <div class="hero-buttons">
-      <a href="mailto:booking@solglimtvelvaere.no" class="btn btn-dark">Bestill time</a>
-      <a href="#behandlinger" class="btn btn-light">Se behandlinger</a>
-    </div>
-  </div>
+<h1>
+Et roligere tempo.
+</h1>
+
+<p>
+Et varmt pusterom for deg som vil senke skuldrene,
+ta vare på huden og gi kroppen litt ro.
+</p>
+
+<div class="hero-buttons">
+
+<a href="mailto:booking@solglimtvelvaere.no" class="btn btn-dark">
+Bestill time
+</a>
+
+<a href="#behandlinger" class="btn btn-light">
+Se behandlinger
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="om">
-  <div class="container about-grid">
-    <div class="about-image fade">
-      <img src="to-stoler.jpg" alt="Rolig venteområde">
-    </div>
 
-    <div class="about-box fade">
-      <div class="kicker">OM OSS</div>
+<div class="container about-grid">
 
-      <h2>Velvære med varme og nærvær.</h2>
+<div class="about-image fade">
+<img src="./to-stoler.jpg" alt="">
+</div>
 
-      <p>
-        Solglimt Hud & Velvære er et rolig sted med lune omgivelser,
-        myke toner og en behagelig atmosfære.
-      </p>
+<div class="about-box fade">
 
-      <p>
-        Her handler det ikke om å skynde seg videre.
-        Det handler om å stoppe litt opp og bli tatt godt vare på.
-      </p>
-    </div>
-  </div>
+<div class="kicker">
+OM OSS
+</div>
+
+<h2>
+Velvære med varme og nærvær.
+</h2>
+
+<p>
+Solglimt Hud & Velvære er et rolig sted med lune omgivelser,
+myke toner og en behagelig atmosfære.
+</p>
+
+<p>
+Her handler det ikke om å skynde seg videre.
+Det handler om å stoppe litt opp og bli tatt godt vare på.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="services" id="behandlinger">
-  <div class="container">
-    <div class="section-head fade">
-      <div class="kicker">BEHANDLINGER</div>
-      <h2>Rolige behandlinger.</h2>
-      <p>Et enkelt utvalg behandlinger for hud, kropp og velvære.</p>
-    </div>
 
-    <div class="service-list">
-      <div class="service fade">
-        <div class="service-number">01</div>
-        <h3>Massasje</h3>
-        <p>Klassisk massasje med fokus på ro, varme og avslapning.</p>
-        <div class="price">990 kr</div>
-      </div>
+<div class="container">
 
-      <div class="service fade">
-        <div class="service-number">02</div>
-        <h3>Ansiktsbehandling</h3>
-        <p>Fukt, glød og myk pleie i rolige omgivelser.</p>
-        <div class="price">1190 kr</div>
-      </div>
+<div class="section-head fade">
 
-      <div class="service fade">
-        <div class="service-number">03</div>
-        <h3>Hudpleie</h3>
-        <p>Tilpassede behandlinger for hud og velvære.</p>
-        <div class="price">890 kr</div>
-      </div>
+<div class="kicker">
+BEHANDLINGER
+</div>
 
-      <div class="service fade">
-        <div class="service-number">04</div>
-        <h3>Bryn & vipper</h3>
-        <p>Naturlige detaljer med et mykt og rent uttrykk.</p>
-        <div class="price">690 kr</div>
-      </div>
+<h2>
+Rolige behandlinger.
+</h2>
 
-      <div class="service fade">
-        <div class="service-number">05</div>
-        <h3>Spa rituale</h3>
-        <p>En lengre behandling med fokus på ro og nærvær.</p>
-        <div class="price">2290 kr</div>
-      </div>
-    </div>
-  </div>
+<p>
+Et enkelt utvalg behandlinger for hud, kropp og velvære.
+</p>
+
+</div>
+
+<div class="service-list">
+
+<div class="service fade">
+<div class="service-number">01</div>
+<h3>Massasje</h3>
+<p>Klassisk massasje med fokus på ro, varme og avslapning.</p>
+<div class="price">990 kr</div>
+</div>
+
+<div class="service fade">
+<div class="service-number">02</div>
+<h3>Ansiktsbehandling</h3>
+<p>Fukt, glød og myk pleie i rolige omgivelser.</p>
+<div class="price">1190 kr</div>
+</div>
+
+<div class="service fade">
+<div class="service-number">03</div>
+<h3>Hudpleie</h3>
+<p>Tilpassede behandlinger for hud og velvære.</p>
+<div class="price">890 kr</div>
+</div>
+
+<div class="service fade">
+<div class="service-number">04</div>
+<h3>Bryn & vipper</h3>
+<p>Naturlige detaljer med et mykt og rent uttrykk.</p>
+<div class="price">690 kr</div>
+</div>
+
+<div class="service fade">
+<div class="service-number">05</div>
+<h3>Spa rituale</h3>
+<p>En lengre behandling med fokus på ro og nærvær.</p>
+<div class="price">2290 kr</div>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="statement">
-  <div class="container fade">
-    <h2>En liten pause. Et roligere tempo.</h2>
-  </div>
+
+<div class="container fade">
+
+<h2>
+En liten pause.
+Et roligere tempo.
+</h2>
+
+</div>
+
 </section>
 
 <section id="galleri">
-  <div class="container">
-    <div class="section-head fade">
-      <div class="kicker">STEMNING</div>
-      <h2>Lys, varme og rolige detaljer.</h2>
-      <p>Bilder som viser følelsen av Solglimt.</p>
-    </div>
 
-    <div class="gallery-grid">
-      <div class="gallery-main fade">
-        <img src="benk.jpg" alt="Behandlingsrom">
-      </div>
+<div class="container">
 
-      <div class="gallery-side">
-        <img src="handkle.jpg" class="fade" alt="Håndklær og detaljer">
-        <img src="resepsjon.jpg" class="fade" alt="Resepsjon">
-      </div>
-    </div>
-  </div>
+<div class="section-head fade">
+
+<div class="kicker">
+STEMNING
+</div>
+
+<h2>
+Lys, varme og rolige detaljer.
+</h2>
+
+<p>
+Bilder som viser følelsen av Solglimt.
+</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<div class="gallery-main fade">
+<img src="./benk.jpg" alt="">
+</div>
+
+<div class="gallery-side">
+
+<img src="./handkle.jpg" class="fade" alt="">
+<img src="./resepsjon.jpg" class="fade" alt="">
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="kontakt">
-  <div class="container">
-    <div class="contact-box fade">
-      <div>
-        <div class="kicker">KONTAKT</div>
 
-        <h2>Bestill en rolig stund.</h2>
+<div class="container">
 
-        <div class="contact-list">
-          <div class="contact-item">
-            <small>Telefon</small>
-            <a href="tel:48229144">48 22 91 44</a>
-          </div>
+<div class="contact-box fade">
 
-          <div class="contact-item">
-            <small>E-post</small>
-            <a href="mailto:booking@solglimtvelvaere.no">booking@solglimtvelvaere.no</a>
-          </div>
+<div>
 
-          <div class="contact-item">
-            <small>Adresse</small>
-            <p>Storgata 18, Oslo</p>
-          </div>
+<div class="kicker">
+KONTAKT
+</div>
 
-          <div class="contact-item">
-            <small>Instagram</small>
-            <a href="https://instagram.com/solglimtvelvaere" target="_blank">@solglimtvelvaere</a>
-          </div>
-        </div>
-      </div>
+<h2>
+Bestill en rolig stund.
+</h2>
 
-      <div class="contact-image">
-        <img src="to-stoler.jpg" alt="Venteområde">
-      </div>
-    </div>
-  </div>
+<div class="contact-list">
+
+<div class="contact-item">
+<small>Telefon</small>
+<a href="tel:48229144">48 22 91 44</a>
+</div>
+
+<div class="contact-item">
+<small>E-post</small>
+<a href="mailto:booking@solglimtvelvaere.no">
+booking@solglimtvelvaere.no
+</a>
+</div>
+
+<div class="contact-item">
+<small>Adresse</small>
+<p>Storgata 18, Oslo</p>
+</div>
+
+<div class="contact-item">
+<small>Instagram</small>
+<a href="https://instagram.com/solglimtvelvaere" target="_blank">
+@solglimtvelvaere
+</a>
+</div>
+
+</div>
+
+</div>
+
+<div class="contact-image">
+<img src="./to-stoler.jpg" alt="">
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <footer>
-  <div class="container footer-inner">
-    <p>© 2026 Solglimt Hud & Velvære</p>
-    <p>Nordisk velvære i rolige omgivelser.</p>
-  </div>
+
+<div class="container footer-inner">
+
+<p>
+© 2026 Solglimt Hud & Velvære
+</p>
+
+<p>
+Nordisk velvære i rolige omgivelser.
+</p>
+
+</div>
+
 </footer>
 
 <script>
+
 const fades = document.querySelectorAll('.fade');
 
 const observer = new IntersectionObserver((entries)=>{
@@ -527,6 +810,7 @@ const observer = new IntersectionObserver((entries)=>{
 fades.forEach(el=>{
   observer.observe(el);
 });
+
 </script>
 
 </body>
