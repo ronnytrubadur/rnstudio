@@ -51,9 +51,51 @@ color:inherit;
 --shadow:0 30px 90px rgba(0,0,0,.42);
 }
 
-header{
+.demo-bar{
 position:fixed;
 top:0;
+left:0;
+width:100%;
+z-index:1200;
+background:rgba(11,7,5,.92);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(247,239,227,.12);
+}
+
+.demo-bar-inner{
+min-height:44px;
+padding:0 42px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:18px;
+text-align:center;
+font-size:.72rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:rgba(247,239,227,.68);
+}
+
+.demo-bar strong{
+color:#fff;
+font-weight:500;
+}
+
+.demo-bar a{
+color:#f7efe3;
+text-decoration:none;
+border-bottom:1px solid rgba(247,239,227,.32);
+padding-bottom:3px;
+transition:.25s ease;
+}
+
+.demo-bar a:hover{
+color:var(--gold);
+}
+
+header{
+position:fixed;
+top:44px;
 left:0;
 width:100%;
 z-index:1000;
@@ -102,7 +144,7 @@ align-items:center;
 justify-content:center;
 text-align:center;
 overflow:hidden;
-padding:130px 24px 90px;
+padding:170px 24px 90px;
 }
 
 .hero img{
@@ -524,7 +566,18 @@ height:320px;
 }
 
 @media(max-width:760px){
+.demo-bar-inner{
+min-height:auto;
+padding:11px 18px;
+font-size:.58rem;
+letter-spacing:1.2px;
+line-height:1.6;
+gap:8px;
+flex-direction:column;
+}
+
 header{
+top:72px;
 padding:18px 20px;
 align-items:flex-start;
 gap:18px;
@@ -548,7 +601,7 @@ letter-spacing:1.3px;
 .hero{
 text-align:left;
 justify-content:flex-start;
-padding:125px 20px 70px;
+padding:190px 20px 70px;
 }
 
 .hero-content{
@@ -628,8 +681,15 @@ text-align:left;
 
 <body>
 
+<div class="demo-bar">
+<div class="demo-bar-inner">
+<span><strong>Konseptdemo laget av RNS Studio.</strong> Dette er ikke en ekte café.</span>
+<a href="mailto:Ronny.nilsen.studio@gmail.com?subject=Jeg%20%C3%B8nsker%20en%20lignende%20nettside">Vil du ha noe lignende?</a>
+</div>
+</div>
+
 <header>
-<a href="#" class="logo">Kronotop Café</a>
+<a href="index.html" class="logo">Kronotop Café</a>
 
 <nav>
 <a href="index.html">RNS Studio</a>
@@ -848,7 +908,9 @@ RNS Studio kan legge inn ekte bilder, meny, åpningstider, kontaktinfo,
 kart, sosiale medier og eventuelt booking eller bestilling.
 </p>
 
-<a href="index.html" class="button primary">Tilbake til RNS Studio</a>
+<a href="mailto:Ronny.nilsen.studio@gmail.com?subject=Jeg%20%C3%B8nsker%20en%20lignende%20nettside" class="button primary">
+Lag en lignende nettside
+</a>
 </div>
 
 </div>
