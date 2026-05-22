@@ -384,24 +384,39 @@ border-top:1px solid var(--line);
 border-bottom:1px solid var(--line);
 }
 
-.price-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:28px;
+.price-wrapper{
+max-width:920px;
+margin:0 auto;
 }
 
 .price-card{
-background:rgba(255,255,255,.04);
-border:1px solid var(--line);
-border-radius:34px;
-padding:44px 38px;
+background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.028));
+border:1px solid rgba(199,173,131,.35);
+border-radius:38px;
+padding:58px 52px;
+box-shadow:var(--shadow);
 position:relative;
 overflow:hidden;
 }
 
-.price-card.highlight{
-background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
-border-color:rgba(199,173,131,.35);
+.price-card::before{
+content:"";
+position:absolute;
+top:-120px;
+right:-120px;
+width:300px;
+height:300px;
+background:radial-gradient(circle,rgba(199,173,131,.18),transparent 65%);
+pointer-events:none;
+}
+
+.price-top{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:46px;
+align-items:end;
+position:relative;
+z-index:2;
 }
 
 .price-tag{
@@ -414,57 +429,83 @@ margin-bottom:24px;
 
 .price-card h3{
 font-family:'Cormorant Garamond',serif;
-font-size:2.8rem;
+font-size:clamp(3rem,5vw,5rem);
 font-weight:500;
-line-height:1;
-margin-bottom:22px;
+line-height:.98;
+margin-bottom:24px;
 }
 
 .price-card p{
 color:var(--muted);
-line-height:1.85;
-margin-bottom:32px;
+line-height:1.9;
+font-size:1.05rem;
 }
 
-.old-price{
-display:block;
-text-decoration:line-through;
-color:rgba(255,255,255,.38);
-font-size:1rem;
-margin-bottom:8px;
+.price-number{
+text-align:right;
 }
 
-.new-price{
+.price-number span{
 display:block;
-font-size:2rem;
+font-size:.74rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:rgba(255,255,255,.46);
+margin-bottom:14px;
+}
+
+.price-number strong{
+display:block;
+font-size:clamp(2.6rem,5vw,4.7rem);
 font-weight:500;
+line-height:1;
 color:white;
-margin-bottom:8px;
 }
 
-.payment{
+.price-number small{
+display:block;
+margin-top:14px;
+color:rgba(255,255,255,.52);
 font-size:.9rem;
-color:rgba(255,255,255,.54);
 line-height:1.7;
-margin-top:22px;
 }
 
 .includes{
 list-style:none;
-margin-top:26px;
+margin-top:48px;
 display:grid;
-gap:13px;
+grid-template-columns:repeat(2,1fr);
+gap:16px 28px;
+position:relative;
+z-index:2;
 }
 
 .includes li{
-color:rgba(255,255,255,.66);
-font-size:.94rem;
-line-height:1.5;
+color:rgba(255,255,255,.72);
+font-size:.98rem;
+line-height:1.6;
 }
 
 .includes li::before{
 content:"— ";
 color:var(--gold);
+}
+
+.price-note{
+margin-top:44px;
+padding-top:34px;
+border-top:1px solid rgba(255,255,255,.09);
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:32px;
+position:relative;
+z-index:2;
+}
+
+.price-note p{
+font-size:.95rem;
+color:rgba(255,255,255,.58);
+line-height:1.85;
 }
 
 .split-section{
@@ -553,13 +594,22 @@ transform:translateY(0);
 @media(max-width:1050px){
 .demo-grid,
 .process-grid,
-.price-grid,
-.split-section{
+.split-section,
+.price-top,
+.price-note{
 grid-template-columns:1fr;
 }
 
 .demo-image{
 height:340px;
+}
+
+.price-number{
+text-align:left;
+}
+
+.includes{
+grid-template-columns:1fr;
 }
 }
 
@@ -645,18 +695,18 @@ padding:30px 26px;
 font-size:2.55rem;
 }
 
-.price-card,
 .process-box,
-.quote-box{
+.quote-box,
+.price-card{
 padding:32px 26px;
 }
 
 .price-card h3{
-font-size:2.35rem;
+font-size:2.8rem;
 }
 
-.new-price{
-font-size:1.7rem;
+.price-number strong{
+font-size:3rem;
 }
 
 .contact{
@@ -678,7 +728,7 @@ margin-left:0;
 <div class="nav-links">
 <a href="#demoer">Demoer</a>
 <a href="#prosess">Prosess</a>
-<a href="#priser">Priser</a>
+<a href="#priser">Pris</a>
 <a href="#kontakt">Kontakt</a>
 </div>
 </nav>
@@ -887,85 +937,63 @@ Når alt er godkjent, kobles siden opp og blir tilgjengelig for kundene dine.
 <div class="container">
 
 <div class="section-header fade">
-<div class="section-label">Oppstartspriser</div>
-<h2 class="section-title">Redusert pris mens jeg bygger portefølje.</h2>
+<div class="section-label">Oppstartspris</div>
+<h2 class="section-title">Én enkel pakke. Ingen vanskelige valg.</h2>
 <p class="section-text">
-Jeg er i oppstartsfasen med RNS Studio og tilbyr derfor lavere pris på de første prosjektene.
-Du får personlig oppfølging, rolig design og hjelp hele veien til nettsiden er live.
+Jeg er i oppstartsfasen med RNS Studio og tilbyr derfor redusert pris på de første prosjektene.
+Målet er å gjøre prosessen enkel, trygg og oversiktlig.
 </p>
 </div>
 
-<div class="price-grid">
-
+<div class="price-wrapper">
 <div class="price-card fade">
-<div class="price-tag">Enkel nettside</div>
-<h3>En god start</h3>
-<p>
-For små bedrifter, gründere eller prosjekter som trenger en pen, tydelig og mobilvennlig nettside.
-</p>
 
-<span class="old-price">Førpris: 7.900 kr</span>
-<span class="new-price">Oppstartspris: 4.900 kr</span>
+<div class="price-top">
+<div>
+<div class="price-tag">Nettside</div>
+<h3>Moderne nettside for små bedrifter</h3>
+<p>
+For deg som trenger en rolig, tydelig og mobilvennlig nettside med et profesjonelt førsteinntrykk.
+Passer godt for små bedrifter, gründere, kreative prosjekter, salonger, caféer, behandlere og lokale tjenester.
+</p>
+</div>
+
+<div class="price-number">
+<span>Oppstartspris</span>
+<strong>5.900 kr</strong>
+<small>
+50% ved oppstart<br>
+50% før publisering
+</small>
+</div>
+</div>
 
 <ul class="includes">
-<li>Forside med moderne design</li>
-<li>Kontaktinformasjon</li>
-<li>Bilder og tekst</li>
-<li>Tjenester eller enkel prisliste</li>
+<li>Moderne forside med rolig design</li>
 <li>Mobilvennlig oppsett</li>
-<li>Hjelp til publisering</li>
-</ul>
-
-<div class="payment">
-Betaling: 50% ved oppstart og 50% før publisering.
-</div>
-</div>
-
-<div class="price-card highlight fade">
-<div class="price-tag">Premium nettside</div>
-<h3>Mer stemning</h3>
-<p>
-For deg som ønsker mer følelse, større visuelt uttrykk, flere seksjoner og en mer gjennomført identitet.
-</p>
-
-<span class="old-price">Førpris: 12.900 kr</span>
-<span class="new-price">Oppstartspris: 7.900 kr</span>
-
-<ul class="includes">
-<li>Mer gjennomført visuell retning</li>
-<li>Store bilder eller video</li>
-<li>Flere seksjoner</li>
-<li>Behandlinger, meny, tjenester eller galleri</li>
-<li>Rolige animasjoner</li>
+<li>Tekst, bilder og kontaktinformasjon</li>
+<li>Tjenester, priser eller meny</li>
+<li>Galleri eller visuell seksjon</li>
+<li>Kontaktknapp, e-post og telefon</li>
 <li>Preview-link før publisering</li>
 <li>Hjelp til domene og live nettside</li>
+<li>Én runde med justeringer</li>
+<li>Personlig oppfølging hele veien</li>
 </ul>
 
-<div class="payment">
-Betaling: 50% ved oppstart og 50% før publisering.
-</div>
-</div>
-
-<div class="price-card fade">
-<div class="price-tag">Tillegg</div>
-<h3>Etter behov</h3>
+<div class="price-note">
 <p>
-Noen prosjekter trenger litt mer. Da avtaler vi pris før arbeidet starter, slik at alt er ryddig.
+Trenger du flere undersider, logo, video, bookingoppsett eller mer omfattende teksthjelp,
+avtaler vi pris før arbeidet starter.
 </p>
-
-<span class="new-price">Etter avtale</span>
-
-<ul class="includes">
-<li>Ekstra undersider</li>
-<li>Logo eller enkel profil</li>
-<li>Mer omfattende teksthjelp</li>
-<li>Bildebehandling</li>
-<li>Flere endringsrunder</li>
-<li>Vedlikehold og små endringer senere</li>
-</ul>
+<p>
+Du trenger ikke ha alt klart før du tar kontakt. Jeg hjelper deg å finne ut hva siden bør inneholde.
+</p>
 </div>
 
 </div>
+</div>
+
 </div>
 </section>
 
