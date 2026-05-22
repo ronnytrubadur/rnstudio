@@ -2,205 +2,670 @@
 <html lang="no">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>RNS Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RNS Studio | Nettsider som føles ekte</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="RNS Studio lager rolige, moderne og menneskelige nettsider for små bedrifter, gründere og kreative prosjekter. Nettsider som bygger tillit før kunden tar kontakt.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Inter',sans-serif;background:#081018;color:#f5f5f5;overflow-x:hidden;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#071017;
+color:#f7f3ec;
+overflow-x:hidden;
+}
+
+img,video{
+max-width:100%;
+}
+
+a{
+color:inherit;
+}
+
+:root{
+--bg:#071017;
+--dark:#050a0f;
+--soft:#101b24;
+--text:#f7f3ec;
+--muted:rgba(247,243,236,.68);
+--line:rgba(255,255,255,.08);
+--glass:rgba(255,255,255,.045);
+--gold:#c7ad83;
+--shadow:0 30px 90px rgba(0,0,0,.35);
+}
 
 nav{
-position:fixed;top:0;left:0;width:100%;z-index:1000;
-display:flex;justify-content:space-between;align-items:center;
-padding:24px 38px;background:rgba(5,10,18,.28);
-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06);
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:24px 42px;
+background:rgba(5,10,15,.34);
+backdrop-filter:blur(18px);
+border-bottom:1px solid var(--line);
 }
 
 .logo{
 font-family:'Cormorant Garamond',serif;
-font-size:2rem;letter-spacing:5px;color:white;
+font-size:2rem;
+letter-spacing:5px;
+font-weight:500;
+color:white;
+text-decoration:none;
 }
 
-.nav-links{display:flex;gap:26px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
 
 .nav-links a{
-color:rgba(255,255,255,.78);text-decoration:none;
-font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+text-decoration:none;
+font-size:.72rem;
+letter-spacing:2.4px;
+text-transform:uppercase;
+color:rgba(255,255,255,.72);
+transition:.25s ease;
+}
+
+.nav-links a:hover{
+color:white;
 }
 
 .hero{
-position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
-text-align:center;overflow:hidden;padding:20px;
+position:relative;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+padding:120px 24px 80px;
 }
 
 .hero video{
-position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-filter:brightness(.52) saturate(.9) contrast(1.06);
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(.45) saturate(.85) contrast(1.08);
 }
 
 .hero::after{
-content:"";position:absolute;inset:0;
-background:
-linear-gradient(rgba(5,10,18,.10),rgba(5,10,18,.80)),
-radial-gradient(circle at center,rgba(255,255,255,.05),transparent 60%);
+content:"";
+position:absolute;
+inset:0;
 z-index:1;
+background:
+linear-gradient(to bottom,rgba(5,10,15,.25),rgba(5,10,15,.78)),
+radial-gradient(circle at center,rgba(255,255,255,.08),transparent 58%);
 }
 
-.hero-content{position:relative;z-index:2;max-width:980px;}
-
-.hero h1{
-font-family:'Cormorant Garamond',serif;
-font-size:clamp(4.5rem,10vw,8rem);
-font-weight:500;letter-spacing:10px;margin-bottom:12px;
-}
-
-.subtitle{
-font-size:1.1rem;font-weight:300;letter-spacing:2px;
-color:rgba(255,255,255,.82);margin-bottom:34px;
-}
-
-.description{
-max-width:850px;margin:0 auto 48px;
-font-size:1.34rem;line-height:1.9;color:rgba(255,255,255,.88);
-}
-
-.hero-button{
-display:inline-flex;align-items:center;justify-content:center;
-width:320px;height:76px;border-radius:999px;
-border:1px solid rgba(255,255,255,.24);
-background:rgba(255,255,255,.05);backdrop-filter:blur(10px);
-color:white;text-decoration:none;letter-spacing:4px;text-transform:uppercase;
-font-size:.82rem;transition:.3s ease;
-}
-
-.hero-button:hover{transform:translateY(-4px);background:rgba(255,255,255,.10);}
-
-.section{padding:150px 24px;}
-.container{max-width:1300px;margin:0 auto;}
-
-.section-title{
-font-family:'Cormorant Garamond',serif;
-font-size:clamp(3.2rem,6vw,4.8rem);
-text-align:center;margin-bottom:70px;font-weight:500;
-}
-
-.note{
-max-width:850px;margin:0 auto 70px;text-align:center;
-color:rgba(255,255,255,.72);line-height:1.9;font-size:1.08rem;
-}
-
-.cards,.process-grid,.demo-grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:34px;
-}
-
-.card,.process-box,.demo-site{
-background:rgba(255,255,255,.035);
-border:1px solid rgba(255,255,255,.07);
-border-radius:34px;overflow:hidden;
-}
-
-.card,.process-box{padding:46px 38px;}
-
-.card h3,.process-box h3{
-font-size:1.65rem;margin-bottom:18px;
-}
-
-.card p,.process-box p{
-color:rgba(255,255,255,.72);line-height:1.9;margin-bottom:24px;
-}
-
-.price{font-size:1.05rem;line-height:1.85;color:white;}
-.old-price{text-decoration:line-through;color:rgba(255,255,255,.45);}
-.intro-price{font-size:1.25rem;color:white;}
-
-.statement{
-padding:180px 24px;
-background:#050a10;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.05);
-border-bottom:1px solid rgba(255,255,255,.05);
-}
-
-.statement h2{
-font-family:'Cormorant Garamond',serif;
-font-size:clamp(3.8rem,8vw,8rem);
-font-weight:500;
-line-height:.95;
+.hero-content{
+position:relative;
+z-index:2;
 max-width:1050px;
 margin:0 auto;
 }
 
+.kicker{
+font-size:.75rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:rgba(255,255,255,.62);
+margin-bottom:28px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,9vw,8.8rem);
+font-weight:500;
+line-height:.92;
+letter-spacing:2px;
+margin-bottom:34px;
+}
+
+.hero p{
+max-width:820px;
+margin:0 auto 48px;
+font-size:clamp(1.05rem,2vw,1.35rem);
+line-height:1.9;
+color:rgba(255,255,255,.82);
+font-weight:300;
+}
+
+.hero-actions{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:62px;
+padding:0 34px;
+border-radius:999px;
+text-decoration:none;
+font-size:.76rem;
+letter-spacing:2.4px;
+text-transform:uppercase;
+transition:.3s ease;
+}
+
+.button.primary{
+background:#f7f3ec;
+color:#071017;
+}
+
+.button.secondary{
+background:rgba(255,255,255,.055);
+border:1px solid rgba(255,255,255,.18);
+backdrop-filter:blur(10px);
+color:white;
+}
+
+.button:hover{
+transform:translateY(-4px);
+}
+
+.section{
+padding:150px 24px;
+}
+
+.container{
+max-width:1320px;
+margin:0 auto;
+}
+
+.section-header{
+max-width:850px;
+margin:0 auto 74px;
+text-align:center;
+}
+
+.section-label{
+font-size:.74rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:rgba(255,255,255,.48);
+margin-bottom:22px;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.2rem,6vw,5.6rem);
+font-weight:500;
+line-height:1;
+margin-bottom:28px;
+}
+
+.section-text{
+color:var(--muted);
+font-size:1.08rem;
+line-height:1.9;
+}
+
+.statement{
+padding:185px 24px;
+background:#050a0f;
+text-align:center;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+}
+
+.statement-inner{
+max-width:1100px;
+margin:0 auto;
+}
+
+.statement h2{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.4rem,8vw,8.4rem);
+font-weight:500;
+line-height:.95;
+letter-spacing:1px;
+}
+
 .statement p{
-max-width:700px;
-margin:42px auto 0;
-color:rgba(255,255,255,.68);
+max-width:760px;
+margin:46px auto 0;
+color:rgba(255,255,255,.66);
 font-size:1.15rem;
 line-height:1.9;
 }
 
-.demo-site{box-shadow:0 34px 90px rgba(0,0,0,.38);transition:.35s ease;}
-.demo-site:hover{transform:translateY(-7px);border-color:rgba(255,255,255,.16);}
-
-.demo-site img{
-width:100%;height:350px;object-fit:cover;display:block;filter:brightness(.82);
+.demo-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:34px;
 }
 
-.demo-body{padding:34px;}
+.demo-card{
+background:rgba(255,255,255,.035);
+border:1px solid var(--line);
+border-radius:34px;
+overflow:hidden;
+box-shadow:var(--shadow);
+transition:.35s ease;
+}
 
-.demo-label{
-font-size:.72rem;letter-spacing:3px;text-transform:uppercase;
-color:rgba(255,255,255,.55);margin-bottom:18px;
+.demo-card:hover{
+transform:translateY(-8px);
+border-color:rgba(255,255,255,.18);
+}
+
+.demo-image{
+height:390px;
+overflow:hidden;
+background:#111;
+}
+
+.demo-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+filter:brightness(.78) saturate(.92);
+transition:.6s ease;
+}
+
+.demo-card:hover img{
+transform:scale(1.04);
+filter:brightness(.9) saturate(1);
+}
+
+.demo-body{
+padding:38px;
+}
+
+.demo-type{
+font-size:.72rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:rgba(255,255,255,.45);
+margin-bottom:18px;
 }
 
 .demo-body h3{
 font-family:'Cormorant Garamond',serif;
-font-size:3rem;font-weight:500;margin-bottom:18px;
+font-size:3.2rem;
+font-weight:500;
+line-height:1;
+margin-bottom:20px;
 }
 
 .demo-body p{
-color:rgba(255,255,255,.72);line-height:1.9;margin-bottom:28px;
+color:var(--muted);
+line-height:1.9;
+margin-bottom:30px;
 }
 
-.demo-button{
-display:inline-flex;align-items:center;justify-content:center;
-height:54px;padding:0 30px;border-radius:999px;
-border:1px solid rgba(255,255,255,.22);
-background:rgba(255,255,255,.05);color:white;text-decoration:none;
-letter-spacing:2px;text-transform:uppercase;font-size:.76rem;transition:.3s ease;
+.demo-link{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+height:54px;
+padding:0 28px;
+border-radius:999px;
+border:1px solid rgba(255,255,255,.18);
+background:rgba(255,255,255,.04);
+text-decoration:none;
+font-size:.72rem;
+letter-spacing:2.3px;
+text-transform:uppercase;
+transition:.3s ease;
 }
 
-.demo-button:hover{background:white;color:#091018;}
+.demo-link:hover{
+background:white;
+color:#071017;
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.process-box{
+background:rgba(255,255,255,.035);
+border:1px solid var(--line);
+border-radius:30px;
+padding:38px;
+}
 
 .process-number{
-font-size:.78rem;letter-spacing:3px;text-transform:uppercase;
-color:rgba(255,255,255,.45);margin-bottom:20px;
+font-size:.72rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:rgba(255,255,255,.38);
+margin-bottom:22px;
 }
 
-.contact{text-align:center;}
+.process-box h3{
+font-size:1.35rem;
+font-weight:500;
+margin-bottom:16px;
+}
 
-.contact-text{
-max-width:760px;margin:0 auto 34px;color:rgba(255,255,255,.72);
-line-height:1.9;font-size:1.1rem;
+.process-box p{
+color:var(--muted);
+line-height:1.85;
+font-size:.98rem;
+}
+
+.pricing{
+background:#08131b;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+}
+
+.price-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+}
+
+.price-card{
+background:rgba(255,255,255,.04);
+border:1px solid var(--line);
+border-radius:34px;
+padding:44px 38px;
+position:relative;
+overflow:hidden;
+}
+
+.price-card.highlight{
+background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+border-color:rgba(199,173,131,.35);
+}
+
+.price-tag{
+font-size:.72rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:var(--gold);
+margin-bottom:24px;
+}
+
+.price-card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.8rem;
+font-weight:500;
+line-height:1;
+margin-bottom:22px;
+}
+
+.price-card p{
+color:var(--muted);
+line-height:1.85;
+margin-bottom:32px;
+}
+
+.old-price{
+display:block;
+text-decoration:line-through;
+color:rgba(255,255,255,.38);
+font-size:1rem;
+margin-bottom:8px;
+}
+
+.new-price{
+display:block;
+font-size:2rem;
+font-weight:500;
+color:white;
+margin-bottom:8px;
+}
+
+.payment{
+font-size:.9rem;
+color:rgba(255,255,255,.54);
+line-height:1.7;
+margin-top:22px;
+}
+
+.includes{
+list-style:none;
+margin-top:26px;
+display:grid;
+gap:13px;
+}
+
+.includes li{
+color:rgba(255,255,255,.66);
+font-size:.94rem;
+line-height:1.5;
+}
+
+.includes li::before{
+content:"— ";
+color:var(--gold);
+}
+
+.split-section{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:70px;
+align-items:center;
+}
+
+.text-block h2{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.2rem,6vw,5.6rem);
+font-weight:500;
+line-height:1;
+margin-bottom:30px;
+}
+
+.text-block p{
+color:var(--muted);
+line-height:1.95;
+font-size:1.08rem;
+margin-bottom:22px;
+}
+
+.quote-box{
+background:rgba(255,255,255,.04);
+border:1px solid var(--line);
+border-radius:38px;
+padding:58px 46px;
+box-shadow:var(--shadow);
+}
+
+.quote-box p{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(2.3rem,4vw,4.2rem);
+line-height:1.04;
+color:white;
+}
+
+.contact{
+text-align:center;
+background:#050a0f;
+}
+
+.contact .section-text{
+max-width:720px;
+margin:0 auto 36px;
 }
 
 .mail-link{
-display:inline-block;color:white;text-decoration:none;font-size:1.15rem;
-letter-spacing:1px;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:8px;
+display:inline-block;
+text-decoration:none;
+font-size:1.08rem;
+letter-spacing:1px;
+border-bottom:1px solid rgba(255,255,255,.22);
+padding-bottom:10px;
+color:white;
+transition:.25s ease;
 }
 
-@media(max-width:768px){
-nav{padding:18px 20px;align-items:flex-start;}
-.logo{font-size:1.6rem;}
-.nav-links{gap:12px;}
-.nav-links a{font-size:.62rem;letter-spacing:1px;}
-.description{font-size:1.05rem;line-height:1.8;}
-.hero-button{width:100%;max-width:320px;}
-.section{padding:100px 20px;}
-.demo-site img{height:260px;}
-.demo-body h3{font-size:2.4rem;}
+.mail-link:hover{
+color:var(--gold);
+}
+
+footer{
+padding:42px 24px;
+border-top:1px solid var(--line);
+background:#050a0f;
+color:rgba(255,255,255,.42);
+text-align:center;
+font-size:.82rem;
+letter-spacing:1px;
+}
+
+.fade{
+opacity:0;
+transform:translateY(28px);
+transition:opacity .8s ease, transform .8s ease;
+}
+
+.fade.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:1050px){
+.demo-grid,
+.process-grid,
+.price-grid,
+.split-section{
+grid-template-columns:1fr;
+}
+
+.demo-image{
+height:340px;
+}
+}
+
+@media(max-width:760px){
+nav{
+padding:18px 20px;
+align-items:flex-start;
+gap:20px;
+}
+
+.logo{
+font-size:1.55rem;
+letter-spacing:4px;
+}
+
+.nav-links{
+gap:12px;
+justify-content:flex-end;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+font-size:.6rem;
+letter-spacing:1.4px;
+}
+
+.hero{
+padding:130px 20px 70px;
+text-align:left;
+justify-content:flex-start;
+}
+
+.hero-content{
+width:100%;
+}
+
+.hero h1{
+font-size:clamp(4rem,18vw,5.8rem);
+}
+
+.hero p{
+font-size:1rem;
+line-height:1.8;
+margin-left:0;
+}
+
+.hero-actions{
+justify-content:flex-start;
+}
+
+.button{
+width:100%;
+max-width:330px;
+}
+
+.section{
+padding:105px 20px;
+}
+
+.statement{
+padding:120px 20px;
+text-align:left;
+}
+
+.statement p{
+margin-left:0;
+}
+
+.section-header{
+text-align:left;
+margin-bottom:52px;
+}
+
+.demo-image{
+height:270px;
+}
+
+.demo-body{
+padding:30px 26px;
+}
+
+.demo-body h3{
+font-size:2.55rem;
+}
+
+.price-card,
+.process-box,
+.quote-box{
+padding:32px 26px;
+}
+
+.price-card h3{
+font-size:2.35rem;
+}
+
+.new-price{
+font-size:1.7rem;
+}
+
+.contact{
+text-align:left;
+}
+
+.contact .section-text{
+margin-left:0;
+}
 }
 </style>
 </head>
@@ -208,13 +673,13 @@ nav{padding:18px 20px;align-items:flex-start;}
 <body>
 
 <nav>
-<div class="logo">RNS</div>
+<a href="#" class="logo">RNS</a>
 
 <div class="nav-links">
-<a href="#services">Priser</a>
-<a href="#projects">Demoer</a>
-<a href="#process">Prosess</a>
-<a href="#contact">Kontakt</a>
+<a href="#demoer">Demoer</a>
+<a href="#prosess">Prosess</a>
+<a href="#priser">Priser</a>
+<a href="#kontakt">Kontakt</a>
 </div>
 </nav>
 
@@ -223,121 +688,98 @@ nav{padding:18px 20px;align-items:flex-start;}
 <source src="hero.mp4" type="video/mp4">
 </video>
 
-<div class="hero-content">
-<h1>RNS</h1>
+<div class="hero-content fade">
+<div class="kicker">RNS Studio</div>
+<h1>Nettsider som føles ekte.</h1>
+<p>
+Rolige, moderne og menneskelige nettsider for bedrifter som vil bygge tillit
+før kunden tar kontakt.
+</p>
 
-<div class="subtitle">Nettsider som føles ekte.</div>
-
-<div class="description">
-Jeg lager moderne nettsider for bedrifter, gründere og kreative prosjekter som vil ha et profesjonelt førsteinntrykk på nett.
-Du trenger ikke kunne det tekniske — jeg hjelper deg hele veien fra idé til live nettside.
+<div class="hero-actions">
+<a href="#demoer" class="button primary">Se demoer</a>
+<a href="#kontakt" class="button secondary">Ta kontakt</a>
 </div>
-
-<a href="#projects" class="hero-button">Se demoer</a>
 </div>
 </section>
 
 <section class="statement">
-<h2>Ikke alle bedrifter trenger en høylytt nettside.</h2>
+<div class="statement-inner fade">
+<h2>Nettsiden din er det første håndtrykket.</h2>
 <p>
-Noen trenger bare en side som føles riktig — rolig, tydelig, menneskelig og gjennomført.
+Før kunden leser åpningstider, priser eller tjenester, kjenner de stemningen.
+Bilder, luft, typografi og tempo sier noe om hvem du er.
 </p>
-</section>
-
-<section class="section" id="services">
-<div class="container">
-
-<h2 class="section-title">Priser</h2>
-
-<div class="note">
-Akkurat nå tilbyr jeg 30% intropris på de første prosjektene mens jeg bygger portefølje.
-Du får en profesjonell nettside til redusert pris — og jeg hjelper deg helt til siden er live.
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>Standard nettside</h3>
-<p>
-Passer for deg som trenger en moderne og ryddig nettside med kontaktinfo,
-bilder, tjenester, tekst og mobilvennlig design.
-</p>
-<div class="price">
-<span class="old-price">Førpris: 9.900 kr</span><br>
-<span class="intro-price">Intropris: 6.900 kr</span>
-</div>
-</div>
-
-<div class="card">
-<h3>Premium nettside</h3>
-<p>
-For deg som ønsker et mer eksklusivt uttrykk med store bilder,
-video, stemning, animasjoner og mer gjennomført identitet.
-</p>
-<div class="price">
-<span class="old-price">Førpris: 16.000 kr</span><br>
-<span class="intro-price">Intropris: 11.200 kr</span>
-</div>
-</div>
-
-<div class="card">
-<h3>Hva siden kan inneholde</h3>
-<p>
-Booking, menyer, åpningstider, galleri,
-kontaktinformasjon, tjenester, priser,
-video, sosiale medier og mer.
-</p>
-<div class="price">Tilpasses behovet ditt</div>
-</div>
-
-</div>
 </div>
 </section>
 
-<section class="section" id="projects">
+<section class="section" id="demoer">
 <div class="container">
 
-<h2 class="section-title">Demoer</h2>
+<div class="section-header fade">
+<div class="section-label">Demoer / Konsepter</div>
+<h2 class="section-title">Se hva en nettside kan føles som.</h2>
+<p class="section-text">
+Demoene viser ulike uttrykk for ulike bransjer. Ikke ferdige maler, men eksempler
+på stemning, struktur og førsteinntrykk.
+</p>
+</div>
 
 <div class="demo-grid">
 
-<div class="demo-site">
+<div class="demo-card fade">
+<div class="demo-image">
 <img src="kronotop1.jpg" alt="Kronotop Café">
+</div>
 <div class="demo-body">
-<div class="demo-label">Café / Demo</div>
+<div class="demo-type">Café / Demo</div>
 <h3>Kronotop Café</h3>
-<p>Et varmt og moderne cafékonsept med meny, åpningstider, kontakt og stemning.</p>
-<a href="kronotop-cafe.html" class="demo-button">Åpne demo</a>
+<p>
+Et varmt og moderne cafékonsept med meny, åpningstider, kontakt og lun atmosfære.
+</p>
+<a href="kronotop-cafe.html" class="demo-link">Åpne demo</a>
 </div>
 </div>
 
-<div class="demo-site">
+<div class="demo-card fade">
+<div class="demo-image">
 <img src="tattoo1.jpg" alt="Ink Room">
+</div>
 <div class="demo-body">
-<div class="demo-label">Tattoo / Demo</div>
+<div class="demo-type">Tattoo / Demo</div>
 <h3>Ink Room</h3>
-<p>Et mørkt og personlig tattoo-konsept med portfolio, booking og tydelig identitet.</p>
-<a href="ink-room.html" class="demo-button">Åpne demo</a>
+<p>
+Et mørkt og personlig tattoo-konsept med portfolio, booking og tydelig identitet.
+</p>
+<a href="ink-room.html" class="demo-link">Åpne demo</a>
 </div>
 </div>
 
-<div class="demo-site">
+<div class="demo-card fade">
+<div class="demo-image">
 <img src="bar1.jpg" alt="Nord Bar">
+</div>
 <div class="demo-body">
-<div class="demo-label">Cocktailbar / Demo</div>
+<div class="demo-type">Cocktailbar / Demo</div>
 <h3>Nord Bar</h3>
-<p>En cinematic barside med mørke toner, cocktails og lounge-stemning.</p>
-<a href="nord-bar.html" class="demo-button">Åpne demo</a>
+<p>
+En cinematic barside med mørke toner, cocktails, loungefølelse og kveldsstemning.
+</p>
+<a href="nord-bar.html" class="demo-link">Åpne demo</a>
 </div>
 </div>
 
-<div class="demo-site">
+<div class="demo-card fade">
+<div class="demo-image">
 <img src="frisor1.jpg" alt="Luma Studio">
+</div>
 <div class="demo-body">
-<div class="demo-label">Frisør / Demo</div>
+<div class="demo-type">Frisør / Demo</div>
 <h3>Luma Studio</h3>
-<p>Et lyst og elegant frisørkonsept med booking, tjenester og premium salongfølelse.</p>
-<a href="luma-studio.html" class="demo-button">Åpne demo</a>
+<p>
+Et lyst og elegant salongkonsept med tjenester, booking og rolig premiumfølelse.
+</p>
+<a href="luma-studio.html" class="demo-link">Åpne demo</a>
 </div>
 </div>
 
@@ -345,62 +787,208 @@ video, sosiale medier og mer.
 </div>
 </section>
 
-<section class="section" id="process">
+<section class="section">
 <div class="container">
 
-<h2 class="section-title">Hvordan det fungerer</h2>
+<div class="split-section">
+
+<div class="text-block fade">
+<div class="section-label">Førsteinntrykk</div>
+<h2>Folk kjenner siden før de leser den.</h2>
+<p>
+De fleste tenker på nettsiden som en informasjonskanal. Åpningstider, meny,
+adresse og kontaktinfo.
+</p>
+<p>
+Men kunden bestemmer seg ofte lenge før de trykker på kontaktknappen.
+Det skjer i det sekundet siden laster.
+</p>
+<p>
+Store bilder. Rolig tekst. Riktig stemning. Tre sekunder kan være nok til å
+bygge tillit — eller miste den.
+</p>
+</div>
+
+<div class="quote-box fade">
+<p>Nettsiden din selger ikke først. Den overbeviser.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="prosess">
+<div class="container">
+
+<div class="section-header fade">
+<div class="section-label">Prosess</div>
+<h2 class="section-title">En enkel vei til live nettside.</h2>
+<p class="section-text">
+Du trenger ikke kunne det tekniske. Jeg hjelper deg fra idé og innhold
+til preview, justeringer og publisering.
+</p>
+</div>
 
 <div class="process-grid">
 
-<div class="process-box">
+<div class="process-box fade">
 <div class="process-number">01</div>
 <h3>Vi tar en prat</h3>
-<p>Du forteller hva du driver med, hva slags stil du liker og hva nettsiden skal brukes til.</p>
+<p>
+Du forteller hva du driver med, hva slags uttrykk du liker og hva nettsiden skal brukes til.
+</p>
 </div>
 
-<div class="process-box">
+<div class="process-box fade">
 <div class="process-number">02</div>
 <h3>Du sender innhold</h3>
-<p>Du sender bilder, tekst, priser, tjenester, kontaktinformasjon og logo hvis du har. Har du ikke alt klart hjelper jeg deg videre.</p>
+<p>
+Bilder, tekst, tjenester, priser, åpningstider, kontaktinfo og logo hvis du har.
+</p>
 </div>
 
-<div class="process-box">
+<div class="process-box fade">
 <div class="process-number">03</div>
 <h3>Jeg bygger førsteutkast</h3>
-<p>Du får en preview-link du kan åpne på mobil og PC før siden kobles til eget domene.</p>
+<p>
+Du får en preview-link du kan åpne på mobil og PC før siden publiseres live.
+</p>
 </div>
 
-<div class="process-box">
+<div class="process-box fade">
 <div class="process-number">04</div>
-<h3>Vi justerer sammen</h3>
-<p>Vi ser over tekst, bilder, farger og detaljer slik at siden føles riktig for deg og bedriften.</p>
+<h3>Vi justerer</h3>
+<p>
+Vi ser over tekst, bilder, farger og detaljer slik at siden føles riktig.
+</p>
 </div>
 
-<div class="process-box">
+<div class="process-box fade">
 <div class="process-number">05</div>
 <h3>Domene og publisering</h3>
-<p>Du trenger et domene, for eksempel dittfirma.no. Har du ikke dette fra før hjelper jeg deg med kjøp og oppsett.</p>
+<p>
+Jeg hjelper deg med oppsett mot eget domene, for eksempel dittfirma.no.
+</p>
 </div>
 
-<div class="process-box">
+<div class="process-box fade">
 <div class="process-number">06</div>
-<h3>Live nettside</h3>
-<p>Jeg hjelper deg helt til nettsiden er live på domenet ditt. Du trenger ikke forstå alt det tekniske.</p>
+<h3>Siden går live</h3>
+<p>
+Når alt er godkjent, kobles siden opp og blir tilgjengelig for kundene dine.
+</p>
 </div>
 
 </div>
 </div>
 </section>
 
-<section class="section contact" id="contact">
+<section class="section pricing" id="priser">
 <div class="container">
 
-<h2 class="section-title">Kontakt</h2>
+<div class="section-header fade">
+<div class="section-label">Oppstartspriser</div>
+<h2 class="section-title">Redusert pris mens jeg bygger portefølje.</h2>
+<p class="section-text">
+Jeg er i oppstartsfasen med RNS Studio og tilbyr derfor lavere pris på de første prosjektene.
+Du får personlig oppfølging, rolig design og hjelp hele veien til nettsiden er live.
+</p>
+</div>
 
-<div class="contact-text">
-Vil du ha en moderne nettside til intropris?
-Send meg en melding med hva du driver med,
-så ser vi på hva som passer.
+<div class="price-grid">
+
+<div class="price-card fade">
+<div class="price-tag">Enkel nettside</div>
+<h3>En god start</h3>
+<p>
+For små bedrifter, gründere eller prosjekter som trenger en pen, tydelig og mobilvennlig nettside.
+</p>
+
+<span class="old-price">Førpris: 7.900 kr</span>
+<span class="new-price">Oppstartspris: 4.900 kr</span>
+
+<ul class="includes">
+<li>Forside med moderne design</li>
+<li>Kontaktinformasjon</li>
+<li>Bilder og tekst</li>
+<li>Tjenester eller enkel prisliste</li>
+<li>Mobilvennlig oppsett</li>
+<li>Hjelp til publisering</li>
+</ul>
+
+<div class="payment">
+Betaling: 50% ved oppstart og 50% før publisering.
+</div>
+</div>
+
+<div class="price-card highlight fade">
+<div class="price-tag">Premium nettside</div>
+<h3>Mer stemning</h3>
+<p>
+For deg som ønsker mer følelse, større visuelt uttrykk, flere seksjoner og en mer gjennomført identitet.
+</p>
+
+<span class="old-price">Førpris: 12.900 kr</span>
+<span class="new-price">Oppstartspris: 7.900 kr</span>
+
+<ul class="includes">
+<li>Mer gjennomført visuell retning</li>
+<li>Store bilder eller video</li>
+<li>Flere seksjoner</li>
+<li>Behandlinger, meny, tjenester eller galleri</li>
+<li>Rolige animasjoner</li>
+<li>Preview-link før publisering</li>
+<li>Hjelp til domene og live nettside</li>
+</ul>
+
+<div class="payment">
+Betaling: 50% ved oppstart og 50% før publisering.
+</div>
+</div>
+
+<div class="price-card fade">
+<div class="price-tag">Tillegg</div>
+<h3>Etter behov</h3>
+<p>
+Noen prosjekter trenger litt mer. Da avtaler vi pris før arbeidet starter, slik at alt er ryddig.
+</p>
+
+<span class="new-price">Etter avtale</span>
+
+<ul class="includes">
+<li>Ekstra undersider</li>
+<li>Logo eller enkel profil</li>
+<li>Mer omfattende teksthjelp</li>
+<li>Bildebehandling</li>
+<li>Flere endringsrunder</li>
+<li>Vedlikehold og små endringer senere</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="statement">
+<div class="statement-inner fade">
+<h2>Tillit bygges i stillhet. Ikke i støy.</h2>
+<p>
+RNS Studio lager nettsider som gir rom for det ekte:
+stemningen, menneskene, arbeidet og følelsen bak virksomheten.
+</p>
+</div>
+</section>
+
+<section class="section contact" id="kontakt">
+<div class="container">
+
+<div class="section-header fade">
+<div class="section-label">Kontakt</div>
+<h2 class="section-title">Vil du lage en nettside som føles riktig?</h2>
+<p class="section-text">
+Send meg en melding med hva du driver med, så ser vi på hva som passer.
+Du trenger ikke ha alt klart før du tar kontakt.
+</p>
 </div>
 
 <a href="mailto:Ronny.nilsen.studio@gmail.com" class="mail-link">
@@ -409,6 +997,22 @@ Ronny.nilsen.studio@gmail.com
 
 </div>
 </section>
+
+<footer>
+© 2026 RNS Studio · Nettsider som føles ekte
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+},{threshold:0.12});
+
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
