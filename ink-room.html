@@ -52,9 +52,51 @@ color:inherit;
 --shadow:0 34px 90px rgba(0,0,0,.55);
 }
 
-header{
+.demo-bar{
 position:fixed;
 top:0;
+left:0;
+width:100%;
+z-index:1200;
+background:rgba(4,4,5,.92);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(243,240,234,.12);
+}
+
+.demo-bar-inner{
+min-height:44px;
+padding:0 42px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:18px;
+text-align:center;
+font-size:.72rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:rgba(243,240,234,.68);
+}
+
+.demo-bar strong{
+color:#fff;
+font-weight:500;
+}
+
+.demo-bar a{
+color:#f3f0ea;
+text-decoration:none;
+border-bottom:1px solid rgba(243,240,234,.32);
+padding-bottom:3px;
+transition:.25s ease;
+}
+
+.demo-bar a:hover{
+color:var(--accent);
+}
+
+header{
+position:fixed;
+top:44px;
 left:0;
 width:100%;
 z-index:1000;
@@ -103,7 +145,7 @@ align-items:center;
 justify-content:center;
 text-align:center;
 overflow:hidden;
-padding:130px 24px 90px;
+padding:170px 24px 90px;
 }
 
 .hero img{
@@ -517,7 +559,18 @@ height:320px;
 }
 
 @media(max-width:760px){
+.demo-bar-inner{
+min-height:auto;
+padding:11px 18px;
+font-size:.58rem;
+letter-spacing:1.2px;
+line-height:1.6;
+gap:8px;
+flex-direction:column;
+}
+
 header{
+top:72px;
 padding:18px 20px;
 align-items:flex-start;
 gap:18px;
@@ -541,7 +594,7 @@ letter-spacing:1.3px;
 .hero{
 text-align:left;
 justify-content:flex-start;
-padding:125px 20px 70px;
+padding:190px 20px 70px;
 }
 
 .hero-content{
@@ -621,8 +674,15 @@ text-align:left;
 
 <body>
 
+<div class="demo-bar">
+<div class="demo-bar-inner">
+<span><strong>Konseptdemo laget av RNS Studio.</strong> Dette er ikke et ekte tattoo-studio.</span>
+<a href="mailto:Ronny.nilsen.studio@gmail.com?subject=Jeg%20%C3%B8nsker%20en%20lignende%20nettside">Vil du ha noe lignende?</a>
+</div>
+</div>
+
 <header>
-<a href="#" class="logo">Ink Room</a>
+<a href="index.html" class="logo">Ink Room</a>
 
 <nav>
 <a href="index.html">RNS Studio</a>
@@ -841,7 +901,9 @@ artistpresentasjon, FAQ, priser, sosiale medier og kontaktinformasjon.
 Designet kan gjøres mørkere, mer minimalistisk eller mer eksklusivt etter studioets stil.
 </p>
 
-<a href="index.html" class="button primary">Tilbake til RNS Studio</a>
+<a href="mailto:Ronny.nilsen.studio@gmail.com?subject=Jeg%20%C3%B8nsker%20en%20lignende%20nettside" class="button primary">
+Lag en lignende nettside
+</a>
 </div>
 
 </div>
