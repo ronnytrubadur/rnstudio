@@ -6,10 +6,13 @@
 
 <title>Nord Bar | Demo by RNS Studio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Nord Bar er en fiktiv demoside laget av RNS Studio for å vise hvordan en bar, lounge eller restaurant kan fremstå mørk, eksklusiv og profesjonell på nett.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -21,10 +24,32 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#08090c;
-color:#f5f5f5;
 font-family:'Inter',sans-serif;
+background:#070608;
+color:#f5eee4;
 overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+color:inherit;
+}
+
+:root{
+--bg:#070608;
+--dark:#030304;
+--wine:#120b0d;
+--soft:#1b1213;
+--text:#f5eee4;
+--muted:rgba(245,238,228,.66);
+--line:rgba(255,255,255,.085);
+--gold:#c48c52;
+--amber:#e0a164;
+--shadow:0 34px 90px rgba(0,0,0,.58);
 }
 
 header{
@@ -32,97 +57,111 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:24px 40px;
+z-index:1000;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:1000;
-background:rgba(5,5,8,0.35);
-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.07);
+padding:24px 42px;
+background:rgba(3,3,4,.42);
+backdrop-filter:blur(18px);
+border-bottom:1px solid var(--line);
 }
 
 .logo{
 font-family:'Cormorant Garamond',serif;
 font-size:2rem;
-font-weight:600;
+font-weight:500;
+letter-spacing:1px;
+text-decoration:none;
+color:white;
 }
 
 nav{
 display:flex;
-gap:24px;
+gap:28px;
+align-items:center;
 }
 
 nav a{
-color:white;
 text-decoration:none;
-font-size:0.74rem;
-letter-spacing:2px;
+font-size:.72rem;
+letter-spacing:2.4px;
 text-transform:uppercase;
-opacity:0.85;
+color:rgba(255,255,255,.70);
+transition:.25s ease;
+}
+
+nav a:hover{
+color:white;
 }
 
 .hero{
-height:100vh;
 position:relative;
+min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 overflow:hidden;
+padding:130px 24px 90px;
 }
 
 .hero img{
 position:absolute;
+inset:0;
 width:100%;
 height:100%;
 object-fit:cover;
-filter:brightness(0.34) contrast(1.08) saturate(0.95);
+filter:brightness(.32) contrast(1.12) saturate(.92);
 }
 
-.hero-overlay{
+.hero::after{
+content:"";
 position:absolute;
 inset:0;
+z-index:1;
 background:
-linear-gradient(to bottom, rgba(5,5,8,0.12), rgba(5,5,8,0.88)),
-radial-gradient(circle at center, rgba(255,180,120,0.08), transparent 60%);
+linear-gradient(to bottom,rgba(3,3,4,.16),rgba(3,3,4,.92)),
+radial-gradient(circle at center,rgba(224,161,100,.12),transparent 58%);
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-max-width:920px;
-padding:20px;
+max-width:990px;
+margin:0 auto;
 }
 
 .kicker{
-font-size:0.76rem;
+font-size:.74rem;
 letter-spacing:4px;
 text-transform:uppercase;
-opacity:0.72;
-margin-bottom:22px;
+color:rgba(255,255,255,.60);
+margin-bottom:28px;
 }
 
 .hero h1{
 font-family:'Cormorant Garamond',serif;
-font-size:6rem;
+font-size:clamp(4.4rem,10vw,9.2rem);
 font-weight:500;
-margin-bottom:20px;
+line-height:.90;
+letter-spacing:1px;
+margin-bottom:34px;
 }
 
 .hero p{
-font-size:1.14rem;
-line-height:1.9;
 max-width:760px;
-margin:auto;
-opacity:0.9;
+margin:0 auto 46px;
+font-size:clamp(1.04rem,2vw,1.26rem);
+line-height:1.9;
+color:rgba(255,255,255,.80);
+font-weight:300;
 }
 
 .hero-actions{
-margin-top:42px;
 display:flex;
-gap:18px;
 justify-content:center;
+gap:18px;
 flex-wrap:wrap;
 }
 
@@ -130,212 +169,369 @@ flex-wrap:wrap;
 display:inline-flex;
 align-items:center;
 justify-content:center;
-height:62px;
-padding:0 38px;
+min-height:62px;
+padding:0 34px;
 border-radius:999px;
-border:1px solid rgba(255,255,255,0.25);
-color:white;
 text-decoration:none;
-letter-spacing:2px;
+font-size:.74rem;
+letter-spacing:2.4px;
 text-transform:uppercase;
-font-size:0.76rem;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-transition:0.3s ease;
+transition:.3s ease;
 }
 
-.button:hover{
-background:white;
-color:#08090c;
+.button.primary{
+background:#f5eee4;
+color:#070608;
 }
 
 .button.secondary{
-background:transparent;
+background:rgba(255,255,255,.055);
+border:1px solid rgba(255,255,255,.20);
+backdrop-filter:blur(10px);
+color:white;
+}
+
+.button:hover{
+transform:translateY(-4px);
 }
 
 .section{
-padding:120px 8%;
+padding:145px 24px;
+}
+
+.container{
+max-width:1280px;
+margin:0 auto;
+}
+
+.section-header{
+max-width:830px;
+margin:0 auto 72px;
+text-align:center;
+}
+
+.section-label{
+font-size:.72rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:rgba(245,238,228,.42);
+margin-bottom:22px;
 }
 
 .section-title{
 font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-text-align:center;
-margin-bottom:34px;
+font-size:clamp(3.2rem,6vw,5.8rem);
 font-weight:500;
+line-height:.98;
+margin-bottom:28px;
 }
 
-.section-intro{
-max-width:760px;
-margin:0 auto 70px;
-text-align:center;
+.section-text{
+color:var(--muted);
+font-size:1.06rem;
 line-height:1.9;
-color:rgba(255,255,255,0.72);
 }
 
-.grid{
+.statement{
+padding:180px 24px;
+background:#030304;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+text-align:center;
+}
+
+.statement-inner{
+max-width:1080px;
+margin:0 auto;
+}
+
+.statement h2{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.4rem,8vw,8rem);
+font-weight:500;
+line-height:.95;
+}
+
+.statement p{
+max-width:760px;
+margin:44px auto 0;
+color:rgba(245,238,228,.64);
+font-size:1.14rem;
+line-height:1.9;
+}
+
+.split{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.image-frame{
+border-radius:38px;
+overflow:hidden;
+box-shadow:var(--shadow);
+border:1px solid var(--line);
+background:#111;
+}
+
+.image-frame img{
+width:100%;
+height:680px;
+object-fit:cover;
+filter:brightness(.82) contrast(1.08) saturate(.9);
+}
+
+.text-block h2{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.2rem,6vw,5.6rem);
+font-weight:500;
+line-height:1;
+margin-bottom:30px;
+}
+
+.text-block p{
+color:var(--muted);
+font-size:1.06rem;
+line-height:1.95;
+margin-bottom:22px;
+}
+
+.small-list{
+display:grid;
+gap:16px;
+margin-top:34px;
+}
+
+.small-list div{
+padding:22px 0;
+border-top:1px solid var(--line);
+color:rgba(245,238,228,.74);
+line-height:1.7;
+}
+
+.small-list span{
+display:block;
+font-size:.7rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:var(--gold);
+margin-bottom:8px;
+}
+
+.drink-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
 gap:28px;
 }
 
-.card{
-background:rgba(255,255,255,0.035);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:30px;
-overflow:hidden;
-backdrop-filter:blur(12px);
+.drink-card{
+background:rgba(255,255,255,.035);
+border:1px solid var(--line);
+border-radius:34px;
+padding:40px 36px;
+box-shadow:0 24px 70px rgba(0,0,0,.30);
+transition:.3s ease;
 }
 
-.card img{
-width:100%;
-height:330px;
-object-fit:cover;
+.drink-card:hover{
+transform:translateY(-6px);
+border-color:rgba(224,161,100,.30);
+}
+
+.drink-card span{
 display:block;
-filter:brightness(0.85) contrast(1.05);
-}
-
-.card-content{
-padding:30px;
-}
-
-.card h3{
-font-family:'Cormorant Garamond',serif;
-font-size:2.15rem;
-margin-bottom:16px;
-font-weight:500;
-}
-
-.card p{
-line-height:1.9;
-opacity:0.86;
-font-size:0.98rem;
-}
-
-.menu-list{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:26px;
-}
-
-.menu-item{
-padding:34px;
-border-radius:28px;
-background:rgba(255,255,255,0.035);
-border:1px solid rgba(255,255,255,0.08);
-}
-
-.menu-item span{
-display:block;
-font-size:0.72rem;
+font-size:.72rem;
 letter-spacing:3px;
 text-transform:uppercase;
-opacity:0.55;
-margin-bottom:16px;
+color:var(--gold);
+margin-bottom:22px;
 }
 
-.menu-item h3{
+.drink-card h3{
 font-family:'Cormorant Garamond',serif;
-font-size:2rem;
+font-size:2.45rem;
 font-weight:500;
-margin-bottom:14px;
+line-height:1;
+margin-bottom:20px;
 }
 
-.menu-item p{
-line-height:1.8;
-opacity:0.76;
-margin-bottom:18px;
+.drink-card p{
+color:var(--muted);
+line-height:1.85;
+margin-bottom:26px;
 }
 
 .price{
 font-size:1rem;
 letter-spacing:1px;
-opacity:0.95;
+color:rgba(255,255,255,.86);
 }
 
-.info{
+.gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:34px;
+grid-template-columns:1.1fr .9fr;
+gap:28px;
 }
 
-.info-box{
-padding:40px;
-border-radius:30px;
-background:rgba(255,255,255,0.035);
-border:1px solid rgba(255,255,255,0.08);
+.gallery-main,
+.gallery-side{
+border-radius:38px;
+overflow:hidden;
+border:1px solid var(--line);
+box-shadow:var(--shadow);
+background:#111;
 }
 
-.info-box h4{
+.gallery-main img{
+width:100%;
+height:760px;
+object-fit:cover;
+filter:brightness(.82) contrast(1.08) saturate(.9);
+}
+
+.gallery-side{
+display:grid;
+grid-template-rows:1fr 1fr;
+}
+
+.gallery-side img{
+width:100%;
+height:380px;
+object-fit:cover;
+filter:brightness(.80) contrast(1.08) saturate(.9);
+}
+
+.booking{
+background:#030304;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+}
+
+.booking-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:26px;
+}
+
+.booking-box{
+background:rgba(255,255,255,.035);
+border:1px solid var(--line);
+border-radius:32px;
+padding:42px 36px;
+}
+
+.booking-box h3{
 font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-margin-bottom:18px;
+font-size:2.55rem;
+font-weight:500;
+line-height:1;
+margin-bottom:24px;
 }
 
-.info-box p{
+.booking-box p{
+color:var(--muted);
 line-height:1.9;
-opacity:0.88;
 }
 
 .demo-note{
-max-width:900px;
+max-width:960px;
 margin:0 auto;
-padding:48px;
-border-radius:34px;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.09);
+padding:58px 52px;
+border-radius:38px;
+background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+border:1px solid rgba(224,161,100,.26);
+box-shadow:var(--shadow);
 text-align:center;
 }
 
 .demo-note h2{
 font-family:'Cormorant Garamond',serif;
-font-size:3rem;
+font-size:clamp(3rem,5vw,5rem);
 font-weight:500;
-margin-bottom:18px;
-}
-
-.demo-note p{
-line-height:1.9;
-opacity:0.78;
+line-height:1;
 margin-bottom:28px;
 }
 
+.demo-note p{
+max-width:740px;
+margin:0 auto 36px;
+color:var(--muted);
+line-height:1.9;
+font-size:1.04rem;
+}
+
 footer{
-padding:90px 20px;
+padding:95px 24px;
 text-align:center;
-border-top:1px solid rgba(255,255,255,0.08);
+background:#030304;
+border-top:1px solid var(--line);
 }
 
 footer h2{
 font-family:'Cormorant Garamond',serif;
-font-size:3rem;
-margin-bottom:20px;
+font-size:clamp(3rem,6vw,5rem);
+font-weight:500;
+line-height:1;
+margin-bottom:24px;
 }
 
 footer p{
-opacity:0.78;
-max-width:700px;
-margin:auto auto 24px;
-line-height:1.8;
+max-width:680px;
+margin:0 auto 30px;
+color:var(--muted);
+line-height:1.9;
 }
 
 footer a{
-color:white;
 text-decoration:none;
-border-bottom:1px solid rgba(255,255,255,0.4);
-padding-bottom:4px;
+border-bottom:1px solid rgba(245,238,228,.28);
+padding-bottom:8px;
+transition:.25s ease;
 }
 
-@media(max-width:768px){
+footer a:hover{
+color:var(--gold);
+}
 
+.fade{
+opacity:0;
+transform:translateY(28px);
+transition:opacity .8s ease, transform .8s ease;
+}
+
+.fade.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:1050px){
+.split,
+.drink-grid,
+.gallery,
+.booking-grid{
+grid-template-columns:1fr;
+}
+
+.image-frame img,
+.gallery-main img{
+height:520px;
+}
+
+.gallery-side img{
+height:320px;
+}
+}
+
+@media(max-width:760px){
 header{
 padding:18px 20px;
 align-items:flex-start;
-gap:16px;
+gap:18px;
 }
 
 .logo{
-font-size:1.5rem;
+font-size:1.45rem;
 }
 
 nav{
@@ -345,44 +541,95 @@ justify-content:flex-end;
 }
 
 nav a{
-font-size:0.62rem;
-letter-spacing:1px;
+font-size:.6rem;
+letter-spacing:1.3px;
+}
+
+.hero{
+text-align:left;
+justify-content:flex-start;
+padding:125px 20px 70px;
+}
+
+.hero-content{
+width:100%;
 }
 
 .hero h1{
-font-size:3.8rem;
+font-size:clamp(4rem,18vw,5.8rem);
 }
 
 .hero p{
 font-size:1rem;
+line-height:1.8;
+margin-left:0;
+}
+
+.hero-actions{
+justify-content:flex-start;
+}
+
+.button{
+width:100%;
+max-width:330px;
 }
 
 .section{
-padding:90px 20px;
+padding:105px 20px;
 }
 
-.section-title{
-font-size:3rem;
+.section-header{
+text-align:left;
+margin-bottom:52px;
 }
 
-.card img{
-height:240px;
+.statement{
+padding:120px 20px;
+text-align:left;
 }
 
+.statement p{
+margin-left:0;
+}
+
+.image-frame,
+.gallery-main,
+.gallery-side,
 .demo-note{
-padding:34px 24px;
+border-radius:28px;
 }
 
+.image-frame img,
+.gallery-main img{
+height:380px;
 }
 
+.gallery-side img{
+height:260px;
+}
+
+.drink-card,
+.booking-box,
+.demo-note{
+padding:32px 26px;
+}
+
+.drink-card h3,
+.booking-box h3{
+font-size:2.25rem;
+}
+
+footer{
+text-align:left;
+}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
-<div class="logo">Nord Bar</div>
+<a href="#" class="logo">Nord Bar</a>
 
 <nav>
 <a href="index.html">RNS Studio</a>
@@ -390,31 +637,27 @@ padding:34px 24px;
 <a href="#booking">Booking</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
-
 </header>
 
 <section class="hero">
 
-<img src="bar1.jpg" alt="Nord Bar">
+<img src="bar1.jpg" alt="Nord Bar cocktailbar">
 
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
+<div class="hero-content fade">
 
 <div class="kicker">
-Cocktails · Lounge · Events · Åpent hver uke
+Cocktails · Lounge · Events · Late evenings
 </div>
 
 <h1>Nord Bar</h1>
 
 <p>
-En mørk og eksklusiv baropplevelse med cocktails,
-lounge-stemning og et uttrykk som får gjesten til å kjenne atmosfæren
-før de kommer inn døren.
+En mørk og lun cocktailbar for kvelder som skal vare litt lenger.
+En god barside skal ikke bare vise åpningstider. Den skal gi gjesten lyst til å booke bord.
 </p>
 
 <div class="hero-actions">
-<a href="#meny" class="button">Se drinker</a>
+<a href="#meny" class="button primary">Se drinker</a>
 <a href="#booking" class="button secondary">Book bord</a>
 </div>
 
@@ -422,66 +665,78 @@ før de kommer inn døren.
 
 </section>
 
+<section class="statement">
+<div class="statement-inner fade">
+<h2>Stemningen starter før gjesten kommer inn.</h2>
+<p>
+Lys, mørke toner, detaljer, bilder og tempo gjør at en bar føles eksklusiv,
+varm og verdt et besøk — lenge før første drink står på bordet.
+</p>
+</div>
+</section>
+
 <section class="section">
+<div class="container">
 
-<h2 class="section-title">En kveld folk husker</h2>
+<div class="split">
 
-<p class="section-intro">
-Denne demosiden viser hvordan en bar, restaurant eller lounge kan bruke bilder,
-stemning, meny og tydelig booking til å fremstå mer eksklusiv og profesjonell på nett.
-</p>
+<div class="image-frame fade">
+<img src="bar2.jpg" alt="Cocktail hos Nord Bar">
+</div>
 
-<div class="grid">
+<div class="text-block fade">
+<div class="section-label">Opplevelse</div>
+<h2>En kveld handler ikke bare om menyen.</h2>
 
-<div class="card">
-<img src="bar1.jpg" alt="Nord Bar stemning">
-<div class="card-content">
-<h3>Atmosfære</h3>
 <p>
-Store bilder, mørke toner og rolig tekst gir følelsen av stedet med én gang.
-Det gjør baren mer minneverdig og mer fristende å besøke.
+Nord Bar er laget som et eksempel på hvordan en cocktailbar, lounge eller restaurant
+kan bruke nettsiden til å bygge forventning før gjesten tar kontakt.
 </p>
-</div>
-</div>
 
-<div class="card">
-<img src="bar2.jpg" alt="Nord Bar cocktails">
-<div class="card-content">
-<h3>Cocktails</h3>
 <p>
-En moderne barside bør vise signaturdrinker, detaljer og opplevelsen rundt besøket —
-ikke bare åpningstider.
+Siden gir rom til atmosfæren: lyset, glassene, menneskene, musikken og følelsen av å komme inn et sted som er gjennomført.
 </p>
-</div>
+
+<div class="small-list">
+
+<div>
+<span>Atmosfære</span>
+Mørke bilder, varme toner og store flater gir siden en cinematic følelse.
 </div>
 
-<div class="card">
-<img src="bar3.jpg" alt="Nord Bar lounge">
-<div class="card-content">
-<h3>Booking</h3>
-<p>
-Tydelige knapper, åpningstider og kontakt gjør det enkelt for gjesten å reservere bord
-eller spørre om arrangement.
-</p>
+<div>
+<span>Booking</span>
+Åpningstider, kontakt og bordreservasjon er enkle å finne.
 </div>
+
+<div>
+<span>Førsteinntrykk</span>
+Et gjennomført uttrykk gjør stedet mer minneverdig og mer fristende å besøke.
 </div>
 
 </div>
 
+</div>
+
+</div>
+</div>
 </section>
 
 <section class="section" id="meny">
+<div class="container">
 
-<h2 class="section-title">Signaturdrinker</h2>
-
-<p class="section-intro">
-Menyen kan tilpasses med ekte drinker, priser, mat, vinliste,
-events eller kampanjer.
+<div class="section-header fade">
+<div class="section-label">Signaturdrinker</div>
+<h2 class="section-title">Menyen skal skape forventning.</h2>
+<p class="section-text">
+For barer og restauranter bør menyen være mer enn en liste.
+Den bør gi gjesten en liten smak av kvelden før de kommer.
 </p>
+</div>
 
-<div class="menu-list">
+<div class="drink-grid">
 
-<div class="menu-item">
+<div class="drink-card fade">
 <span>Signature</span>
 <h3>Nordic Old Fashioned</h3>
 <p>
@@ -490,7 +745,7 @@ Røyk, sitrus og varme toner. En mørk klassiker med nordisk kant.
 <div class="price">165 kr</div>
 </div>
 
-<div class="menu-item">
+<div class="drink-card fade">
 <span>Fresh</span>
 <h3>Midnight Sour</h3>
 <p>
@@ -499,7 +754,7 @@ Syrlig, elegant og balansert. Perfekt før maten eller sent på kvelden.
 <div class="price">155 kr</div>
 </div>
 
-<div class="menu-item">
+<div class="drink-card fade">
 <span>Alcohol free</span>
 <h3>Blue Hour</h3>
 <p>
@@ -509,17 +764,53 @@ En alkoholfri signatur med urter, bær og frisk bitterhet.
 </div>
 
 </div>
-
+</div>
 </section>
 
-<section class="section" id="booking">
+<section class="section">
+<div class="container">
 
-<h2 class="section-title">Booking</h2>
+<div class="section-header fade">
+<div class="section-label">Stemning</div>
+<h2 class="section-title">Bildene gjør kvelden virkelig.</h2>
+<p class="section-text">
+For en bar, restaurant eller lounge er atmosfæren ofte grunnen til at folk velger stedet.
+Derfor bør nettsiden vise følelsen, ikke bare forklare den.
+</p>
+</div>
 
-<div class="info">
+<div class="gallery fade">
 
-<div class="info-box">
-<h4>Åpningstider</h4>
+<div class="gallery-main">
+<img src="bar3.jpg" alt="Lounge hos Nord Bar">
+</div>
+
+<div class="gallery-side">
+<img src="bar1.jpg" alt="Nord Bar atmosfære">
+<img src="bar2.jpg" alt="Cocktails hos Nord Bar">
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section booking" id="booking">
+<div class="container">
+
+<div class="section-header fade">
+<div class="section-label">Booking</div>
+<h2 class="section-title">Gjør det lett å si ja.</h2>
+<p class="section-text">
+En god barside gjør veien fra interesse til bordreservasjon kort.
+Gjesten skal raskt finne åpningstider, kontakt og mulighet for booking.
+</p>
+</div>
+
+<div class="booking-grid">
+
+<div class="booking-box fade">
+<h3>Åpningstider</h3>
 <p>
 Torsdag: 18:00–01:00<br>
 Fredag: 18:00–02:00<br>
@@ -528,16 +819,16 @@ Søndag: Lounge & events
 </p>
 </div>
 
-<div class="info-box">
-<h4>Bord og events</h4>
+<div class="booking-box fade">
+<h3>Bord og events</h3>
 <p>
-Book bord for små grupper, date night,
-firmaevent eller private kvelder.
+Book bord for små grupper, date night, firmaevent eller private kvelder.
+Vi hjelper gjerne med opplegg for større grupper.
 </p>
 </div>
 
-<div class="info-box">
-<h4>Kontakt</h4>
+<div class="booking-box fade">
+<h3>Kontakt</h3>
 <p>
 booking@nordbar.no<br>
 +47 48 22 91 40<br>
@@ -547,24 +838,24 @@ Havnepromenaden 8, Trondheim
 
 </div>
 
+</div>
 </section>
 
 <section class="section">
+<div class="container">
 
-<div class="demo-note">
-
-<h2>Hva kunden kan få</h2>
-
+<div class="demo-note fade">
+<h2>Dette er en RNS Studio-demo.</h2>
 <p>
-Denne demosiden kan tilpasses ekte barer, restauranter og utesteder med meny,
+Denne siden kan tilpasses ekte barer, restauranter og utesteder med meny,
 booking, events, åpningstider, kart, galleri, sosiale medier og kontaktinformasjon.
 Designet kan gjøres mørkt, eksklusivt, varmt eller mer energisk etter stedet.
 </p>
 
-<a href="index.html" class="button">Tilbake til RNS Studio</a>
-
+<a href="index.html" class="button primary">Tilbake til RNS Studio</a>
 </div>
 
+</div>
 </section>
 
 <footer id="kontakt">
@@ -572,13 +863,25 @@ Designet kan gjøres mørkt, eksklusivt, varmt eller mer energisk etter stedet.
 <h2>Nord Bar</h2>
 
 <p>
-Dette er en fiktiv demoside laget av RNS Studio for å vise hvordan en cocktailbar,
-lounge eller restaurant kan fremstå mer levende, profesjonell og salgsbar på nett.
+En fiktiv bar-demo laget for å vise hvordan en cocktailbar, lounge eller restaurant
+kan fremstå mer levende, profesjonell og fristende på nett.
 </p>
 
 <a href="mailto:booking@nordbar.no">booking@nordbar.no</a>
 
 </footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+},{threshold:0.12});
+
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
