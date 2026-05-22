@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Preview | RNS Studio</title>
+
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Skjult preview-side for RNS Studio-kunder.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#071017;
+color:#f7f3ec;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+:root{
+--bg:#071017;
+--dark:#050a0f;
+--text:#f7f3ec;
+--muted:rgba(247,243,236,.68);
+--line:rgba(255,255,255,.08);
+--gold:#c7ad83;
+--shadow:0 30px 90px rgba(0,0,0,.35);
+}
+
+.page{
+min-height:100vh;
+position:relative;
+overflow:hidden;
+padding:70px 24px;
+}
+
+.page::before{
+content:"";
+position:fixed;
+inset:-20%;
+background:
+radial-gradient(circle at 20% 18%,rgba(199,173,131,.18),transparent 32%),
+radial-gradient(circle at 85% 70%,rgba(255,255,255,.07),transparent 34%),
+linear-gradient(145deg,#071017,#050a0f);
+z-index:0;
+}
+
+.page::after{
+content:"";
+position:fixed;
+inset:0;
+background:
+linear-gradient(to bottom,rgba(5,10,15,.08),rgba(5,10,15,.78));
+z-index:1;
+pointer-events:none;
+}
+
+.inner{
+position:relative;
+z-index:2;
+width:100%;
+max-width:1180px;
+margin:0 auto;
+}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:24px;
+margin-bottom:110px;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+letter-spacing:5px;
+font-weight:500;
+text-decoration:none;
+color:white;
+}
+
+.status{
+font-size:.72rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:rgba(255,255,255,.50);
+border:1px solid var(--line);
+border-radius:999px;
+padding:12px 17px;
+background:rgba(255,255,255,.035);
+backdrop-filter:blur(12px);
+}
+
+.hero{
+max-width:880px;
+margin-bottom:82px;
+}
+
+.kicker{
+font-size:.74rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:rgba(255,255,255,.48);
+margin-bottom:30px;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,9vw,8.2rem);
+font-weight:500;
+line-height:.92;
+letter-spacing:1px;
+margin-bottom:34px;
+}
+
+.hero p{
+max-width:760px;
+font-size:clamp(1.05rem,2vw,1.25rem);
+line-height:1.9;
+color:var(--muted);
+font-weight:300;
+}
+
+.preview-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:34px;
+align-items:stretch;
+}
+
+.card{
+background:rgba(255,255,255,.045);
+border:1px solid var(--line);
+border-radius:36px;
+padding:46px;
+box-shadow:var(--shadow);
+backdrop-filter:blur(14px);
+}
+
+.card-label{
+font-size:.72rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:var(--gold);
+margin-bottom:26px;
+}
+
+.card h2{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(2.8rem,5vw,4.6rem);
+font-weight:500;
+line-height:1;
+margin-bottom:26px;
+}
+
+.card p{
+color:var(--muted);
+line-height:1.9;
+margin-bottom:34px;
+}
+
+.empty{
+border:1px dashed rgba(255,255,255,.18);
+background:rgba(255,255,255,.026);
+}
+
+.button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:58px;
+padding:0 32px;
+border-radius:999px;
+background:#f7f3ec;
+color:#071017;
+text-decoration:none;
+font-size:.74rem;
+letter-spacing:2.4px;
+text-transform:uppercase;
+transition:.3s ease;
+}
+
+.button:hover{
+transform:translateY(-4px);
+}
+
+.info{
+display:grid;
+gap:0;
+}
+
+.info-item{
+padding:22px 0;
+border-bottom:1px solid var(--line);
+}
+
+.info-item:first-child{
+padding-top:0;
+}
+
+.info-item:last-child{
+border-bottom:none;
+padding-bottom:0;
+}
+
+.info-item span{
+display:block;
+font-size:.68rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:rgba(255,255,255,.40);
+margin-bottom:9px;
+}
+
+.info-item p{
+color:rgba(255,255,255,.72);
+line-height:1.75;
+margin:0;
+}
+
+.note{
+margin-top:34px;
+padding-top:28px;
+border-top:1px solid var(--line);
+color:rgba(255,255,255,.48);
+font-size:.92rem;
+line-height:1.8;
+}
+
+.footer{
+margin-top:82px;
+color:rgba(255,255,255,.38);
+font-size:.82rem;
+line-height:1.8;
+}
+
+.fade{
+opacity:0;
+transform:translateY(28px);
+animation:fadeIn .8s ease forwards;
+}
+
+.fade.delay{
+animation-delay:.14s;
+}
+
+.fade.delay-two{
+animation-delay:.26s;
+}
+
+@keyframes fadeIn{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:900px){
+.top{
+align-items:flex-start;
+flex-direction:column;
+margin-bottom:80px;
+}
+
+.preview-grid{
+grid-template-columns:1fr;
+}
+
+.card{
+padding:34px 28px;
+}
+}
+
+@media(max-width:600px){
+.page{
+padding:52px 20px;
+}
+
+.logo{
+font-size:1.6rem;
+}
+
+.status{
+font-size:.62rem;
+letter-spacing:2px;
+}
+
+h1{
+font-size:clamp(4rem,18vw,5.8rem);
+}
+
+.hero{
+margin-bottom:54px;
+}
+
+.card h2{
+font-size:2.8rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+<div class="inner">
+
+<div class="top fade">
+<a href="/" class="logo">RNS</a>
+<div class="status">Skjult kundepreview</div>
+</div>
+
+<section class="hero fade delay">
+<div class="kicker">RNS Studio / Preview</div>
+
+<h1>Nettsider under arbeid.</h1>
+
+<p>
+Dette er en skjult preview-side for RNS Studio-kunder. Her kan førsteutkast,
+endringer og ferdige kundesider vises før de kobles til kundens eget domene.
+</p>
+</section>
+
+<section class="preview-grid">
+
+<div class="card empty fade delay-two">
+<div class="card-label">Aktiv preview</div>
+
+<h2>Ingen aktiv kundeside her akkurat nå.</h2>
+
+<p>
+Når en ny kundeside er klar for gjennomgang, får kunden en egen direkte link.
+Denne siden brukes kun som et rolig mellomrom for preview og testing.
+</p>
+
+<a href="/" class="button">Tilbake til RNS Studio</a>
+
+<div class="note">
+Denne siden er ikke linket fra forsiden og er satt til noindex/nofollow.
+</div>
+</div>
+
+<div class="card fade delay-two">
+<div class="card-label">Hvordan preview brukes</div>
+
+<div class="info">
+
+<div class="info-item">
+<span>01</span>
+<p>Kunden sender tekst, bilder, logo, kontaktinfo og ønsket innhold.</p>
+</div>
+
+<div class="info-item">
+<span>02</span>
+<p>Jeg bygger førsteutkast og legger det på en skjult preview-link.</p>
+</div>
+
+<div class="info-item">
+<span>03</span>
+<p>Kunden ser siden på mobil og PC, og sender ønskede justeringer.</p>
+</div>
+
+<div class="info-item">
+<span>04</span>
+<p>Når alt er godkjent, kobles siden til kundens eget domene.</p>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<div class="footer">
+© 2026 RNS Studio · Skjult preview-side · Ikke ment som offentlig forside
+</div>
+
+</div>
+
+</main>
+
+</body>
+</html>
