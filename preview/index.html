@@ -150,17 +150,6 @@ nav a:hover{ color:var(--green); }
 .welcome-image{ border-radius:16px; overflow:hidden; box-shadow:var(--shadow); }
 .welcome-image img{ width:100%; height:560px; object-fit:cover; }
 
-/* ── PAKKER ── */
-.packages-section{ background:var(--bg-alt); }
-.packages-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; align-items:stretch; }
-.package{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:34px 30px; display:flex; flex-direction:column; box-shadow:var(--shadow); }
-.package h3{ font-size:1.5rem; font-weight:800; margin-bottom:8px; color:var(--ink); }
-.package-sub{ color:var(--muted); font-size:.95rem; margin-bottom:24px; line-height:1.55; }
-.package ul{ list-style:none; display:grid; gap:12px; margin-bottom:28px; flex-grow:1; }
-.package li{ display:flex; align-items:flex-start; gap:10px; font-size:.96rem; color:var(--ink); line-height:1.5; }
-.package li .chk{ color:var(--green); margin-top:3px; }
-.package .pkg-btn{ min-height:52px; border-radius:9px; display:flex; align-items:center; gap:8px; justify-content:center; text-decoration:none; font-size:.94rem; font-weight:700; transition:.2s; background:var(--accent); color:#fff; }
-.package .pkg-btn:hover{ background:#16303b; transform:translateY(-2px); }
 
 /* ── PRISER ── */
 .price-section{ background:var(--bg); }
@@ -263,7 +252,7 @@ footer a:hover{ color:#fff; }
 /* ── RESPONSIVE ── */
 @media(max-width:1000px){
   .hero-inner, .welcome-grid, .split, .gallery-grid, .booking-grid{ grid-template-columns:1fr; }
-  .services-grid, .packages-grid{ grid-template-columns:1fr; }
+  .services-grid{ grid-template-columns:1fr; }
   .trust-bar-inner{ grid-template-columns:repeat(2,1fr); gap:22px; }
   .price-heading, .price-line{ grid-template-columns:1.4fr repeat(3,1fr); }
   .gallery-main img{ height:420px; }
@@ -285,7 +274,7 @@ footer a:hover{ color:#fff; }
   .section-header{ text-align:left; margin-bottom:36px; }
   .welcome-image img, .image-box img, .gallery-main img{ height:300px; }
   .gallery-side img{ height:190px; }
-  .service-card, .booking-card, .contact-info-card, .package{ padding:26px 22px; }
+  .service-card, .booking-card, .contact-info-card{ padding:26px 22px; }
   .price-board{ overflow-x:auto; }
   .price-heading, .price-line{ min-width:700px; grid-template-columns:1.35fr repeat(3,1fr); }
   .price-heading div, .price-line div{ padding:13px 14px; }
@@ -313,7 +302,6 @@ footer a:hover{ color:#fff; }
     </a>
     <nav>
       <a href="#om-oss">Om oss</a>
-      <a href="#pakker">Pakker</a>
       <a href="#priser">Priser</a>
       <a href="#tjenester">Tjenester</a>
       <a href="#bestill">Bestill time</a>
@@ -343,7 +331,7 @@ footer a:hover{ color:#fff; }
           <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           Send SMS
         </a>
-        <a href="#pakker" class="big-button price">Se pakker</a>
+        <a href="#priser" class="big-button price">Se priser</a>
         <a href="#bestill" class="big-button map">Finn oss</a>
       </div>
     </div>
@@ -422,55 +410,6 @@ footer a:hover{ color:#fff; }
   </div>
 </section>
 
-<section class="section packages-section" id="pakker">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Pakker</div>
-      <h2 class="section-title">Velg en pakke som passer</h2>
-      <p class="section-text">
-        Våre mest populære behandlinger samlet i enkle pakker. Ring eller send SMS for pris,
-        den avhenger av bilstørrelse og avtales med deg.
-      </p>
-    </div>
-
-    <div class="packages-grid">
-      <div class="package">
-        <h3>Ukesvasken</h3>
-        <div class="package-sub">For deg som vil ha bilen ren utvendig, raskt og greit.</div>
-        <ul>
-          <li><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Utvendig håndvask</li>
-          <li><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Felgrens</li>
-          <li><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tørk og kontroll</li>
-        </ul>
-        <a href="sms:41113113?body=Hei!%20Jeg%20vil%20bestille%20Ukesvasken." class="pkg-btn">Bestill Ukesvasken</a>
-      </div>
-
-      <div class="package">
-        <h3>Komplettpakken</h3>
-        <div class="package-sub">Den komplette vasken, ren bil både inni og utenpå.</div>
-        <ul>
-          <li><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Utvendig håndvask</li>
-          <li><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Innvendig vask og støvsuging</li>
-          <li><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Avfetting og insektfjerning</li>
-          <li><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rene ruter</li>
-        </ul>
-        <a href="sms:41113113?body=Hei!%20Jeg%20vil%20bestille%20Komplettpakken." class="pkg-btn">Bestill Komplettpakken</a>
-      </div>
-
-      <div class="package">
-        <h3>Som ny</h3>
-        <div class="package-sub">Full oppfriskning for bilen som trenger litt ekstra.</div>
-        <ul>
-          <li><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Super inn- og utvendig vask</li>
-          <li><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Grundig interiørarbeid</li>
-          <li><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Skinnbehandling ved skinninteriør</li>
-        </ul>
-        <a href="sms:41113113?body=Hei!%20Jeg%20vil%20bestille%20Som%20ny-pakken." class="pkg-btn">Bestill Som ny</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section price-section" id="priser">
   <div class="container">
     <div class="section-header">
@@ -512,7 +451,6 @@ footer a:hover{ color:#fff; }
         <div class="price-group-title">Polering</div>
         <div class="price-line"><div>Utvendig vask med polering</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
         <div class="price-line"><div>Lakkrens og polering</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
-        <div class="price-line"><div>Fjerning av dekor</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
         <div class="price-line"><div>Rubbing / fjerning av riper</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
       </div>
 
@@ -686,12 +624,13 @@ footer a:hover{ color:#fff; }
           <div class="field">
             <label for="tjeneste">Hva ønsker du?</label>
             <select id="tjeneste">
-              <option>Ukesvasken (utvendig)</option>
-              <option>Komplettpakken (inn- og utvendig)</option>
-              <option>Som ny (full oppfriskning)</option>
+              <option>Utvendig håndvask</option>
+              <option>Innvendig vask</option>
+              <option>Inn- og utvendig vask</option>
+              <option>Super inn- og utvendig vask</option>
               <option>Polering</option>
               <option>Innvendig rens</option>
-              <option>Hjulskift</option>
+              <option>Sesongskift av hjul</option>
               <option>Annet / usikker</option>
             </select>
           </div>
