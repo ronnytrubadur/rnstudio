@@ -6,60 +6,73 @@
 
 <title>Lade Arena Bilvask & Bilpleie AS | Bilvask og bilpleie i Trondheim</title>
 
-<meta name="description" content="Lade Arena Bilvask & Bilpleie AS tilbyr bilvask, innvendig vask, utvendig vask, polering, interiørrens, sesongskift og bildekor på Lade Arena i Trondheim. Ring eller send SMS for time." />
+<meta name="description" content="Profesjonell bilvask og bilpleie på Lade Arena i Trondheim. Innvendig vask, utvendig vask, polering, interiørrens, hjulskift og bildekor. Ring 41 11 31 13 for time." />
+
+<meta property="og:title" content="Lade Arena Bilvask & Bilpleie AS" />
+<meta property="og:description" content="Profesjonell bilvask og bilpleie på Lade Arena i Trondheim. Ring 41 11 31 13." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nb_NO" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoBodyShop",
+  "name": "Lade Arena Bilvask & Bilpleie AS",
+  "image": "bilde1.jpg",
+  "telephone": "+4741113113",
+  "email": "ladebilvask@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Haakon VIIs gate 12",
+    "postalCode": "7041",
+    "addressLocality": "Trondheim",
+    "addressCountry": "NO"
+  },
+  "openingHours": ["Mo-Sa 09:00-17:00"],
+  "priceRange": "Kr 320–3690",
+  "description": "Profesjonell bilvask og bilpleie på Lade Arena i Trondheim. Innvendig vask, utvendig vask, polering, interiørrens og hjulskift."
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
 
-html{
-  scroll-behavior:smooth;
+:root{
+  --bg:#f7f3ec;
+  --bg-alt:#efe8db;
+  --card:#ffffff;
+  --ink:#1a2832;
+  --muted:rgba(26,40,50,.66);
+  --line:rgba(26,40,50,.12);
+  --gold:#a6804a;
+  --green:#2fa866;
+  --dark:#11202b;
+  --shadow:0 24px 70px rgba(26,40,50,.10);
 }
 
 body{
   font-family:'Inter',sans-serif;
-  background:#0c1822;
-  color:#f7f3ec;
+  background:var(--bg);
+  color:var(--ink);
   overflow-x:hidden;
   font-size:18px;
 }
 
-img{
-  max-width:100%;
-  display:block;
-}
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
 
-a{
-  color:inherit;
-}
-
-:root{
-  --bg:#0c1822;
-  --dark:#071017;
-  --soft:#132331;
-  --cream:#f7f3ec;
-  --muted:rgba(247,243,236,.72);
-  --line:rgba(255,255,255,.12);
-  --gold:#c7ad83;
-  --green:#2fa866;
-  --shadow:0 30px 90px rgba(0,0,0,.34);
-}
-
+/* ── TOPBAR ── */
 .topbar{
-  background:#071017;
+  background:var(--dark);
   color:rgba(247,243,236,.82);
-  border-bottom:1px solid var(--line);
   padding:12px 22px;
   font-size:.95rem;
 }
-
 .topbar-inner{
   max-width:1240px;
   margin:0 auto;
@@ -68,20 +81,17 @@ a{
   gap:16px;
   flex-wrap:wrap;
 }
+.topbar strong{ color:white; }
 
-.topbar strong{
-  color:white;
-}
-
+/* ── HEADER ── */
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(12,24,34,.86);
+  background:rgba(247,243,236,.9);
   backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line);
 }
-
 .header-inner{
   max-width:1240px;
   margin:0 auto;
@@ -91,875 +101,309 @@ header{
   align-items:center;
   gap:22px;
 }
-
-.logo{
-  text-decoration:none;
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-
+.logo{ text-decoration:none; display:flex; flex-direction:column; gap:6px; }
 .logo strong{
   font-family:'Cormorant Garamond',serif;
-  font-size:2rem;
-  line-height:1;
-  font-weight:600;
-  letter-spacing:.4px;
+  font-size:2rem; line-height:1; font-weight:600; letter-spacing:.4px;
+  color:var(--ink);
 }
-
 .logo span{
-  font-size:.72rem;
-  letter-spacing:2.8px;
-  text-transform:uppercase;
-  color:rgba(247,243,236,.58);
+  font-size:.72rem; letter-spacing:2.8px; text-transform:uppercase;
+  color:var(--muted);
 }
-
-nav{
-  display:flex;
-  align-items:center;
-  gap:26px;
-}
-
+nav{ display:flex; align-items:center; gap:26px; }
 nav a{
-  text-decoration:none;
-  font-size:.72rem;
-  letter-spacing:2.3px;
-  text-transform:uppercase;
-  color:rgba(247,243,236,.72);
-  font-weight:700;
-  transition:.25s ease;
+  text-decoration:none; font-size:.72rem; letter-spacing:2.3px;
+  text-transform:uppercase; color:var(--muted); font-weight:700; transition:.25s ease;
 }
-
-nav a:hover{
-  color:white;
-}
-
+nav a:hover{ color:var(--ink); }
 .header-call{
-  min-height:50px;
-  padding:0 22px;
-  border-radius:999px;
-  background:#f7f3ec;
-  color:#071017;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  font-size:.76rem;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  font-weight:800;
+  min-height:50px; padding:0 22px; border-radius:999px;
+  background:var(--dark); color:#fff; text-decoration:none;
+  display:inline-flex; align-items:center; justify-content:center;
+  font-size:.76rem; letter-spacing:2px; text-transform:uppercase; font-weight:800;
+  transition:.2s ease;
 }
+.header-call:hover{ background:#1c3645; }
 
+/* ── HERO ── */
 .hero{
-  position:relative;
-  min-height:84vh;
-  display:flex;
-  align-items:center;
-  padding:105px 22px 85px;
-  overflow:hidden;
-  background:#0c1822;
+  position:relative; min-height:84vh; display:flex; align-items:center;
+  padding:100px 22px 90px; overflow:hidden; background:var(--dark);
 }
-
 .hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
+  content:""; position:absolute; inset:0;
   background:
-    linear-gradient(90deg,rgba(7,16,23,.88) 0%,rgba(7,16,23,.76) 50%,rgba(7,16,23,.32) 100%),
+    linear-gradient(90deg,rgba(17,32,43,.86) 0%,rgba(17,32,43,.7) 52%,rgba(17,32,43,.32) 100%),
     url("bilde1.jpg") center/cover no-repeat;
 }
-
 .hero::after{
-  content:"";
-  position:absolute;
-  inset:auto 0 0 0;
-  height:210px;
-  background:linear-gradient(to bottom,transparent,#0c1822);
+  content:""; position:absolute; inset:auto 0 0 0; height:160px;
+  background:linear-gradient(to bottom,transparent,var(--bg));
 }
-
 .hero-inner{
-  position:relative;
-  z-index:2;
-  max-width:1240px;
-  width:100%;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:70px;
-  align-items:center;
+  position:relative; z-index:2; max-width:1240px; width:100%; margin:0 auto;
+  display:grid; grid-template-columns:1.05fr .95fr; gap:70px; align-items:center;
 }
-
 .kicker{
-  font-size:.74rem;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  color:rgba(247,243,236,.68);
-  margin-bottom:28px;
+  font-size:.74rem; letter-spacing:4px; text-transform:uppercase;
+  color:#d8bd8f; margin-bottom:28px;
 }
-
 .hero h1{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(4rem,8vw,7.7rem);
-  line-height:.9;
-  font-weight:600;
-  letter-spacing:1px;
-  margin-bottom:34px;
+  font-size:clamp(3.8rem,7.5vw,7.2rem); line-height:.92; font-weight:600;
+  letter-spacing:.5px; margin-bottom:30px; color:#fff;
 }
-
+.hero h1 em{ font-style:normal; color:#d8bd8f; }
 .hero p{
-  max-width:760px;
-  font-size:clamp(1.05rem,2vw,1.3rem);
-  line-height:1.85;
-  color:rgba(247,243,236,.84);
-  margin-bottom:42px;
+  max-width:600px; font-size:clamp(1rem,1.8vw,1.2rem); line-height:1.9;
+  color:rgba(247,243,236,.86); margin-bottom:44px;
 }
-
-.action-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:16px;
-  max-width:720px;
-}
-
+.action-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; max-width:560px; }
 .big-button{
-  min-height:72px;
-  border-radius:999px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:0 24px;
-  text-decoration:none;
-  font-size:1rem;
-  letter-spacing:1.4px;
-  text-transform:uppercase;
-  font-weight:900;
-  transition:.25s ease;
-  box-shadow:0 22px 60px rgba(0,0,0,.28);
+  min-height:68px; border-radius:999px; display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:0 22px; text-decoration:none; font-size:.88rem;
+  letter-spacing:1.6px; text-transform:uppercase; font-weight:800; transition:.25s ease;
+  box-shadow:0 18px 50px rgba(0,0,0,.22);
 }
+.big-button:hover{ transform:translateY(-3px); }
+.big-button.call{ background:#f7f3ec; color:#11202b; }
+.big-button.sms{ background:var(--green); color:#fff; }
+.big-button.price{ background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.28); color:#fff; }
+.big-button.map{ background:rgba(216,189,143,.18); border:1px solid rgba(216,189,143,.42); color:#fff; }
 
-.big-button:hover{
-  transform:translateY(-3px);
-}
-
-.big-button.call{
-  background:#f7f3ec;
-  color:#071017;
-}
-
-.big-button.sms{
-  background:var(--green);
-  color:white;
-}
-
-.big-button.price{
-  background:rgba(255,255,255,.09);
-  border:1px solid rgba(255,255,255,.20);
-  color:white;
-}
-
-.big-button.map{
-  background:rgba(199,173,131,.18);
-  border:1px solid rgba(199,173,131,.38);
-  color:white;
-}
-
+/* ── INFO CARD ── */
 .info-card{
-  background:rgba(255,255,255,.075);
-  border:1px solid rgba(255,255,255,.16);
-  border-radius:34px;
-  padding:38px;
-  backdrop-filter:blur(16px);
-  box-shadow:var(--shadow);
+  background:rgba(255,255,255,.97); border:1px solid rgba(255,255,255,.5);
+  border-radius:34px; padding:38px; box-shadow:0 30px 80px rgba(0,0,0,.28);
 }
-
 .info-card h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:3rem;
-  line-height:1;
-  font-weight:600;
-  margin-bottom:28px;
+  font-family:'Cormorant Garamond',serif; font-size:2.8rem; line-height:1;
+  font-weight:600; margin-bottom:28px; color:var(--ink);
 }
-
-.info-list{
-  display:grid;
-}
-
+.info-list{ display:grid; }
 .info-row{
-  display:grid;
-  grid-template-columns:46px 1fr;
-  gap:16px;
-  padding:20px 0;
-  border-top:1px solid rgba(255,255,255,.12);
+  display:grid; grid-template-columns:46px 1fr; gap:16px; padding:20px 0;
+  border-top:1px solid var(--line);
 }
-
-.info-row:first-child{
-  border-top:0;
-  padding-top:0;
-}
-
+.info-row:first-child{ border-top:0; padding-top:0; }
 .icon{
-  width:46px;
-  height:46px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(199,173,131,.18);
-  color:var(--gold);
-  font-weight:900;
+  width:46px; height:46px; border-radius:50%; display:flex; align-items:center;
+  justify-content:center; background:rgba(166,128,74,.12); color:var(--gold);
+  font-weight:900; font-size:1.1rem;
 }
+.info-row strong{ display:block; color:var(--ink); margin-bottom:5px; font-size:1rem; }
+.info-row span, .info-row a{ color:var(--muted); line-height:1.65; text-decoration:none; font-size:.97rem; }
+.info-row a:hover{ color:var(--ink); }
 
-.info-row strong{
-  display:block;
-  color:white;
-  margin-bottom:6px;
-  font-size:1.05rem;
+/* ── TRUST BAR ── */
+.trust-bar{ background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:42px 22px; }
+.trust-bar-inner{ max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.trust-item{
+  display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;
+  padding:24px 16px; border-radius:20px; background:var(--card); border:1px solid var(--line);
+  box-shadow:0 8px 30px rgba(26,40,50,.05);
 }
+.trust-icon{ font-size:1.6rem; }
+.trust-item strong{ font-size:1rem; color:var(--ink); font-weight:700; }
+.trust-item span{ font-size:.88rem; color:var(--muted); line-height:1.55; }
 
-.info-row span,
-.info-row a{
-  color:rgba(247,243,236,.72);
-  line-height:1.6;
-  text-decoration:none;
-}
-
-.info-row a:hover{
-  color:white;
-}
-
-.contact-strip{
-  background:#071017;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:58px 22px;
-}
-
+/* ── CONTACT STRIP ── */
+.contact-strip{ background:var(--dark); padding:64px 22px; }
 .contact-strip-inner{
-  max-width:1240px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:34px;
-  align-items:center;
+  max-width:1240px; margin:0 auto; display:grid; grid-template-columns:1fr auto;
+  gap:34px; align-items:center;
 }
-
 .contact-strip h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(3rem,5vw,5.2rem);
-  line-height:.96;
-  font-weight:600;
-  margin-bottom:18px;
+  font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,4.5vw,4.8rem);
+  line-height:.96; font-weight:600; margin-bottom:18px; color:#fff;
 }
-
-.contact-strip p{
-  color:rgba(247,243,236,.72);
-  line-height:1.8;
-  max-width:720px;
-}
-
-.contact-buttons{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
+.contact-strip p{ color:rgba(247,243,236,.74); line-height:1.8; max-width:620px; font-size:1.05rem; }
+.contact-buttons{ display:flex; gap:14px; flex-wrap:wrap; }
 .contact-buttons a{
-  min-height:66px;
-  padding:0 30px;
-  border-radius:999px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  font-size:.9rem;
-  letter-spacing:1.8px;
-  text-transform:uppercase;
-  font-weight:900;
+  min-height:64px; padding:0 28px; border-radius:999px; display:flex; align-items:center;
+  justify-content:center; text-decoration:none; font-size:.88rem; letter-spacing:1.8px;
+  text-transform:uppercase; font-weight:900; transition:.2s ease; white-space:nowrap;
 }
+.contact-buttons a:hover{ transform:translateY(-2px); }
+.contact-buttons .call{ background:#f7f3ec; color:#11202b; }
+.contact-buttons .sms{ background:var(--green); color:#fff; }
 
-.contact-buttons .call{
-  background:#f7f3ec;
-  color:#071017;
-}
-
-.contact-buttons .sms{
-  background:var(--green);
-  color:white;
-}
-
-.section{
-  padding:125px 22px;
-}
-
-.container{
-  max-width:1240px;
-  margin:0 auto;
-}
-
-.section-header{
-  max-width:850px;
-  margin:0 auto 62px;
-  text-align:center;
-}
-
-.section-label{
-  font-size:.72rem;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  color:rgba(247,243,236,.48);
-  margin-bottom:20px;
-}
-
+/* ── SECTIONS ── */
+.section{ padding:120px 22px; }
+.container{ max-width:1240px; margin:0 auto; }
+.section-header{ max-width:850px; margin:0 auto 62px; text-align:center; }
+.section-label{ font-size:.72rem; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
 .section-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(3.2rem,6vw,5.8rem);
-  line-height:.96;
-  font-weight:600;
-  margin-bottom:28px;
+  font-family:'Cormorant Garamond',serif; font-size:clamp(3rem,5.5vw,5.4rem);
+  line-height:.96; font-weight:600; margin-bottom:26px; color:var(--ink);
 }
+.section-text{ color:var(--muted); line-height:1.85; font-size:1.07rem; }
 
-.section-text{
-  color:var(--muted);
-  line-height:1.85;
-  font-size:1.08rem;
-}
-
-.welcome{
-  background:#0c1822;
-}
-
-.welcome-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:70px;
-  align-items:center;
-}
-
+/* ── OM OSS ── */
+.welcome-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:70px; align-items:center; }
 .welcome-text h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(3.4rem,6vw,6.2rem);
-  line-height:.95;
-  font-weight:600;
-  margin-bottom:34px;
+  font-family:'Cormorant Garamond',serif; font-size:clamp(3.2rem,5.5vw,5.8rem);
+  line-height:.95; font-weight:600; margin-bottom:30px; color:var(--ink);
 }
-
-.welcome-text p{
-  color:var(--muted);
-  line-height:1.95;
-  font-size:1.1rem;
-  margin-bottom:28px;
-}
-
-.welcome-list{
-  display:grid;
-  gap:14px;
-  margin-top:32px;
-  max-width:520px;
-}
-
+.welcome-text p{ color:var(--muted); line-height:1.95; font-size:1.08rem; margin-bottom:24px; }
+.welcome-list{ display:grid; gap:0; margin-top:32px; }
 .welcome-list div{
-  border-top:1px solid var(--line);
-  padding:18px 0;
-  color:rgba(247,243,236,.88);
-  font-weight:700;
+  border-top:1px solid var(--line); padding:17px 0; color:var(--ink);
+  font-weight:600; font-size:1rem; display:flex; align-items:center; gap:12px;
 }
+.welcome-list div::before{ content:"✓"; color:var(--green); font-weight:900; font-size:.9rem; flex-shrink:0; }
+.welcome-image{ border-radius:38px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); }
+.welcome-image img{ width:100%; height:640px; object-fit:cover; }
 
-.welcome-image{
-  border-radius:38px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
-}
-
-.welcome-image img{
-  width:100%;
-  height:650px;
-  object-fit:cover;
-  filter:brightness(.9) contrast(1.04) saturate(.94);
-}
-
-.price-section{
-  background:#10202c;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
+/* ── PRISER ── */
+.price-section{ background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 .notice{
-  max-width:950px;
-  margin:0 auto 34px;
-  background:rgba(199,173,131,.14);
-  border:1px solid rgba(199,173,131,.34);
-  border-radius:26px;
-  padding:26px 30px;
-  line-height:1.75;
-  color:rgba(247,243,236,.82);
-  text-align:center;
+  max-width:950px; margin:0 auto 34px; background:rgba(166,128,74,.1);
+  border:1px solid rgba(166,128,74,.3); border-radius:24px; padding:24px 28px;
+  line-height:1.75; color:var(--ink); text-align:center; font-size:1rem;
 }
-
-.notice strong{
-  color:white;
-}
-
-.price-board{
-  background:rgba(255,255,255,.045);
-  border:1px solid var(--line);
-  border-radius:34px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-}
-
-.price-heading{
-  display:grid;
-  grid-template-columns:1.45fr repeat(3,1fr);
-  background:#071017;
-  border-bottom:1px solid var(--line);
-}
-
+.notice strong{ color:var(--gold); }
+.price-board{ background:var(--card); border:1px solid var(--line); border-radius:34px; overflow:hidden; box-shadow:var(--shadow); }
+.price-heading{ display:grid; grid-template-columns:1.45fr repeat(3,1fr); background:var(--dark); }
 .price-heading div{
-  padding:24px 24px;
-  font-size:.78rem;
-  letter-spacing:2.2px;
-  text-transform:uppercase;
-  color:rgba(247,243,236,.70);
-  font-weight:800;
-  border-left:1px solid rgba(255,255,255,.09);
+  padding:22px 22px; font-size:.76rem; letter-spacing:2px; text-transform:uppercase;
+  color:rgba(247,243,236,.8); font-weight:800; border-left:1px solid rgba(255,255,255,.1);
 }
-
-.price-heading div:first-child{
-  border-left:0;
-}
-
-.price-heading small{
-  display:block;
-  margin-top:6px;
-  color:rgba(247,243,236,.48);
-  font-size:.65rem;
-  letter-spacing:1.2px;
-  line-height:1.45;
-}
-
-.price-group{
-  border-top:1px solid var(--line);
-}
-
-.price-group:first-of-type{
-  border-top:0;
-}
-
+.price-heading div:first-child{ border-left:0; }
+.price-heading small{ display:block; margin-top:6px; color:rgba(247,243,236,.5); font-size:.64rem; letter-spacing:1px; line-height:1.45; }
+.price-group{ border-top:1px solid var(--line); }
+.price-group:first-of-type{ border-top:0; }
 .price-group-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.6rem;
-  line-height:1;
-  font-weight:600;
-  padding:30px 34px;
-  background:rgba(7,16,23,.78);
-  color:white;
+  font-family:'Cormorant Garamond',serif; font-size:2.4rem; line-height:1; font-weight:600;
+  padding:28px 32px; background:var(--bg); color:var(--ink); border-bottom:1px solid var(--line);
 }
+.price-line{ display:grid; grid-template-columns:1.45fr repeat(3,1fr); border-top:1px solid var(--line); }
+.price-line:first-of-type{ border-top:0; }
+.price-line:hover{ background:rgba(26,40,50,.02); }
+.price-line div{ padding:18px 22px; line-height:1.45; border-left:1px solid var(--line); font-size:.97rem; }
+.price-line div:first-child{ border-left:0; color:var(--ink); font-weight:600; }
+.price-line div:not(:first-child){ color:var(--ink); font-weight:800; white-space:nowrap; }
 
-.price-line{
-  display:grid;
-  grid-template-columns:1.45fr repeat(3,1fr);
-  border-top:1px solid rgba(255,255,255,.09);
-}
-
-.price-line div{
-  padding:20px 24px;
-  line-height:1.45;
-  border-left:1px solid rgba(255,255,255,.09);
-}
-
-.price-line div:first-child{
-  border-left:0;
-  color:rgba(247,243,236,.88);
-  font-weight:700;
-}
-
-.price-line div:not(:first-child){
-  color:#f7f3ec;
-  font-weight:800;
-  white-space:nowrap;
-}
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:26px;
-}
-
+/* ── TJENESTER ── */
+.services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .service-card{
-  background:rgba(255,255,255,.055);
-  border:1px solid var(--line);
-  border-radius:30px;
-  padding:34px;
-  transition:.3s ease;
+  background:var(--card); border:1px solid var(--line); border-radius:28px; padding:32px;
+  transition:.3s ease; box-shadow:0 8px 30px rgba(26,40,50,.04);
 }
+.service-card:hover{ transform:translateY(-5px); border-color:rgba(166,128,74,.4); box-shadow:0 20px 50px rgba(26,40,50,.1); }
+.service-icon{ font-size:1.7rem; margin-bottom:20px; }
+.service-card h3{ font-family:'Cormorant Garamond',serif; font-size:2.1rem; line-height:1; font-weight:600; margin-bottom:14px; color:var(--ink); }
+.service-card p{ color:var(--muted); line-height:1.8; font-size:.97rem; }
 
-.service-card:hover{
-  transform:translateY(-6px);
-  border-color:rgba(199,173,131,.38);
-}
+/* ── GALLERI ── */
+.gallery-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:22px; }
+.gallery-main{ border-radius:34px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); }
+.gallery-main img{ width:100%; height:740px; object-fit:cover; }
+.gallery-side{ display:grid; grid-template-rows:1fr 1fr; gap:22px; }
+.gallery-side div{ border-radius:34px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); }
+.gallery-side img{ width:100%; height:359px; object-fit:cover; }
 
-.service-number{
-  font-size:.72rem;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:22px;
-}
-
-.service-card h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.35rem;
-  line-height:1;
-  font-weight:600;
-  margin-bottom:18px;
-}
-
-.service-card p{
-  color:var(--muted);
-  line-height:1.8;
-  font-size:1rem;
-}
-
-.gallery-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:26px;
-}
-
-.gallery-main,
-.gallery-side{
-  border-radius:38px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
-}
-
-.gallery-main img{
-  width:100%;
-  height:760px;
-  object-fit:cover;
-  filter:brightness(.9) contrast(1.04) saturate(.94);
-}
-
-.gallery-side{
-  display:grid;
-  grid-template-rows:1fr 1fr;
-  gap:0;
-}
-
-.gallery-side img{
-  width:100%;
-  height:380px;
-  object-fit:cover;
-  filter:brightness(.9) contrast(1.04) saturate(.94);
-}
-
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
-}
-
-.image-box{
-  border-radius:38px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:#111;
-  box-shadow:var(--shadow);
-}
-
-.image-box img{
-  width:100%;
-  height:640px;
-  object-fit:cover;
-  filter:brightness(.9) contrast(1.04) saturate(.94);
-}
-
+/* ── SPLIT ── */
+.split{ display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; }
+.image-box{ border-radius:38px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); }
+.image-box img{ width:100%; height:620px; object-fit:cover; }
 .text-card h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(3.2rem,5vw,5.2rem);
-  line-height:.96;
-  font-weight:600;
-  margin-bottom:30px;
+  font-family:'Cormorant Garamond',serif; font-size:clamp(3rem,4.5vw,4.8rem);
+  line-height:.96; font-weight:600; margin-bottom:28px; color:var(--ink);
 }
-
-.text-card p{
-  color:var(--muted);
-  line-height:1.9;
-  margin-bottom:22px;
-}
-
-.simple-list{
-  display:grid;
-  gap:14px;
-  margin-top:32px;
-}
-
+.text-card p{ color:var(--muted); line-height:1.9; margin-bottom:20px; font-size:1.05rem; }
+.simple-list{ display:grid; gap:0; margin-top:32px; }
 .simple-list div{
-  padding:20px 0;
-  border-top:1px solid var(--line);
-  color:rgba(247,243,236,.82);
-  line-height:1.6;
+  padding:18px 0; border-top:1px solid var(--line); color:var(--ink);
+  line-height:1.6; display:flex; align-items:center; gap:12px; font-size:1rem;
 }
+.simple-list strong{ color:var(--green); font-size:1rem; }
 
-.simple-list strong{
-  color:var(--gold);
-}
+/* ── FAQ ── */
+.faq-list{ max-width:860px; margin:0 auto; }
+.faq-item{ border-top:1px solid var(--line); padding:28px 0; }
+.faq-item:last-child{ border-bottom:1px solid var(--line); }
+.faq-q{ font-size:1.12rem; font-weight:700; color:var(--ink); margin-bottom:14px; line-height:1.4; }
+.faq-a{ color:var(--muted); line-height:1.85; font-size:1rem; }
 
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
-}
-
-.contact-card{
-  background:rgba(255,255,255,.055);
-  border:1px solid var(--line);
-  border-radius:34px;
-  padding:42px;
-  box-shadow:0 20px 60px rgba(0,0,0,.16);
-}
-
-.contact-card h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.7rem;
-  line-height:1;
-  font-weight:600;
-  margin-bottom:28px;
-}
-
-.contact-card p,
-.contact-card a{
-  color:var(--muted);
-  line-height:1.85;
-  text-decoration:none;
-}
-
-.contact-card a:hover{
-  color:white;
-}
-
+/* ── KONTAKT ── */
+.contact-section{ background:var(--bg-alt); border-top:1px solid var(--line); }
+.contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+.contact-card{ background:var(--card); border:1px solid var(--line); border-radius:34px; padding:40px; box-shadow:var(--shadow); }
+.contact-card h3{ font-family:'Cormorant Garamond',serif; font-size:2.5rem; line-height:1; font-weight:600; margin-bottom:26px; color:var(--ink); }
+.contact-card p, .contact-card a{ color:var(--muted); line-height:1.85; text-decoration:none; font-size:1rem; }
+.contact-card a:hover{ color:var(--ink); }
 .large-link{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:62px;
-  margin-top:16px;
-  padding:0 22px;
-  border-radius:999px;
-  background:#f7f3ec;
-  color:#071017!important;
-  font-weight:900;
-  text-decoration:none;
-  text-align:center;
+  display:flex; align-items:center; justify-content:center; min-height:60px; margin-top:14px;
+  padding:0 22px; border-radius:999px; background:var(--dark); color:#fff!important;
+  font-weight:900; text-decoration:none; text-align:center; font-size:.88rem;
+  letter-spacing:1.4px; text-transform:uppercase; transition:.2s ease;
 }
+.large-link:hover{ background:#1c3645; transform:translateY(-2px); }
+.large-link.sms{ background:var(--green); color:#fff!important; }
+.large-link.sms:hover{ background:#28976f; }
 
-.large-link.sms{
-  background:var(--green);
-  color:white!important;
-}
-
+/* ── FOOTER ── */
 footer{
-  padding:52px 22px 100px;
-  background:#071017;
-  border-top:1px solid var(--line);
-  color:rgba(247,243,236,.52);
-  text-align:center;
-  line-height:1.8;
-  font-size:.9rem;
+  padding:52px 22px 100px; background:var(--dark); border-top:1px solid var(--line);
+  color:rgba(247,243,236,.5); text-align:center; line-height:1.9; font-size:.88rem;
 }
+footer strong{ color:rgba(247,243,236,.78); }
+footer a{ color:inherit; }
 
+/* ── MOBIL FAST BUNN ── */
 .mobile-bar{
-  position:fixed;
-  left:0;
-  right:0;
-  bottom:0;
-  z-index:3000;
-  display:none;
-  grid-template-columns:1fr 1fr;
-  background:#071017;
-  border-top:1px solid var(--line);
-  box-shadow:0 -20px 60px rgba(0,0,0,.40);
+  position:fixed; left:0; right:0; bottom:0; z-index:3000; display:none;
+  grid-template-columns:1fr 1fr; background:var(--dark); border-top:1px solid rgba(255,255,255,.1);
+  box-shadow:0 -20px 60px rgba(0,0,0,.3);
 }
-
 .mobile-bar a{
-  min-height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  font-weight:900;
-  font-size:1rem;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
+  min-height:72px; display:flex; align-items:center; justify-content:center;
+  text-decoration:none; font-weight:900; font-size:.95rem; letter-spacing:1.4px; text-transform:uppercase;
 }
+.mobile-bar .call{ background:#f7f3ec; color:#11202b; }
+.mobile-bar .sms{ background:var(--green); color:#fff; }
 
-.mobile-bar .call{
-  background:#f7f3ec;
-  color:#071017;
-}
-
-.mobile-bar .sms{
-  background:var(--green);
-  color:white;
-}
-
+/* ── RESPONSIVE ── */
 @media(max-width:1050px){
-  .hero-inner,
-  .contact-strip-inner,
-  .welcome-grid,
-  .split,
-  .contact-grid,
-  .gallery-grid{
-    grid-template-columns:1fr;
-  }
-
-  .services-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .price-heading,
-  .price-line{
-    grid-template-columns:1.4fr repeat(3,1fr);
-  }
-
-  .gallery-main img,
-  .gallery-side img{
-    height:420px;
-  }
+  .hero-inner, .contact-strip-inner, .welcome-grid, .split, .contact-grid, .gallery-grid{ grid-template-columns:1fr; }
+  .services-grid{ grid-template-columns:1fr 1fr; }
+  .trust-bar-inner{ grid-template-columns:repeat(2,1fr); }
+  .price-heading, .price-line{ grid-template-columns:1.4fr repeat(3,1fr); }
+  .gallery-main img{ height:460px; }
+  .gallery-side img{ height:300px; }
 }
-
 @media(max-width:760px){
-  body{
-    font-size:17px;
-  }
-
-  .topbar-inner{
-    display:grid;
-    gap:7px;
-  }
-
-  .header-inner{
-    padding:18px 20px;
-    display:block;
-  }
-
-  .logo strong{
-    font-size:1.55rem;
-  }
-
-  nav,
-  .header-call{
-    display:none;
-  }
-
-  .hero{
-    min-height:auto;
-    padding:70px 20px 70px;
-  }
-
-  .hero::before{
-    background:
-      linear-gradient(to bottom,rgba(7,16,23,.78),rgba(7,16,23,.82)),
-      url("bilde1.jpg") center/cover no-repeat;
-  }
-
-  .hero h1{
-    font-size:clamp(3.7rem,18vw,5.3rem);
-  }
-
-  .hero p{
-    font-size:1.03rem;
-  }
-
-  .action-grid{
-    grid-template-columns:1fr;
-  }
-
-  .big-button{
-    min-height:68px;
-    font-size:.95rem;
-  }
-
-  .info-card{
-    padding:28px;
-    border-radius:28px;
-  }
-
-  .info-card h2{
-    font-size:2.5rem;
-  }
-
-  .section{
-    padding:92px 20px;
-  }
-
-  .section-header{
-    text-align:left;
-    margin-bottom:44px;
-  }
-
-  .section-title,
-  .welcome-text h2{
-    font-size:clamp(3rem,14vw,4.4rem);
-  }
-
-  .welcome-image,
-  .image-box,
-  .gallery-main,
-  .gallery-side{
-    border-radius:28px;
-  }
-
-  .welcome-image img,
-  .image-box img,
-  .gallery-main img,
-  .gallery-side img{
-    height:360px;
-  }
-
-  .services-grid{
-    grid-template-columns:1fr;
-  }
-
-  .service-card,
-  .contact-card{
-    padding:30px 26px;
-    border-radius:28px;
-  }
-
-  .price-board{
-    border-radius:28px;
-    overflow-x:auto;
-  }
-
-  .price-heading,
-  .price-line{
-    min-width:780px;
-    grid-template-columns:1.35fr repeat(3,1fr);
-  }
-
-  .price-heading div,
-  .price-line div{
-    padding:18px 18px;
-  }
-
-  .price-group-title{
-    min-width:780px;
-    font-size:2.2rem;
-    padding:26px;
-  }
-
-  .contact-buttons a{
-    width:100%;
-  }
-
-  .mobile-bar{
-    display:grid;
-  }
+  body{ font-size:17px; }
+  .topbar-inner{ display:grid; gap:6px; font-size:.86rem; }
+  .header-inner{ padding:18px 20px; display:block; }
+  .logo strong{ font-size:1.5rem; }
+  nav, .header-call{ display:none; }
+  .hero{ min-height:auto; padding:72px 20px 72px; }
+  .hero::before{ background:linear-gradient(to bottom,rgba(17,32,43,.78),rgba(17,32,43,.86)),url("bilde1.jpg") center/cover no-repeat; }
+  .hero h1{ font-size:clamp(3.5rem,17vw,5rem); }
+  .hero p{ font-size:1rem; }
+  .action-grid{ grid-template-columns:1fr; max-width:100%; }
+  .big-button{ min-height:66px; font-size:.9rem; }
+  .trust-bar-inner{ grid-template-columns:1fr; }
+  .info-card{ padding:26px; border-radius:26px; }
+  .info-card h2{ font-size:2.3rem; }
+  .section{ padding:84px 20px; }
+  .section-header{ text-align:left; margin-bottom:42px; }
+  .section-title, .welcome-text h2{ font-size:clamp(2.8rem,13vw,4.2rem); }
+  .welcome-image, .image-box, .gallery-main, .gallery-side div{ border-radius:24px; }
+  .welcome-image img, .image-box img, .gallery-main img{ height:320px; }
+  .gallery-side img{ height:200px; }
+  .services-grid{ grid-template-columns:1fr; }
+  .service-card, .contact-card{ padding:26px 22px; border-radius:24px; }
+  .price-board{ border-radius:24px; overflow-x:auto; }
+  .price-heading, .price-line{ min-width:740px; grid-template-columns:1.35fr repeat(3,1fr); }
+  .price-heading div, .price-line div{ padding:16px 16px; }
+  .price-group-title{ min-width:740px; font-size:2rem; padding:22px 24px; }
+  .contact-buttons, .contact-buttons a{ width:100%; }
+  .contact-strip-inner{ grid-template-columns:1fr; }
+  .mobile-bar{ display:grid; }
 }
 </style>
 </head>
@@ -968,181 +412,169 @@ footer{
 
 <div class="topbar">
   <div class="topbar-inner">
-    <span><strong>Adresse:</strong> Haakon VIIs gate 12, 7041 Trondheim</span>
+    <span><strong>Adresse:</strong> Haakon VIIs gate 12, 7041 Trondheim (Lade Arena)</span>
     <span><strong>Åpent:</strong> Mandag–lørdag 09:00–17:00</span>
-    <span><strong>Telefon:</strong> 41 11 31 13</span>
+    <span><strong>Tlf:</strong> <a href="tel:41113113" style="color:inherit;">41 11 31 13</a></span>
   </div>
 </div>
 
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
-      <strong>Lade Arena Bilvask & Bilpleie AS</strong>
-      <span>Bilvask og bilpleie på Lade Arena</span>
+      <strong>Lade Arena Bilvask & Bilpleie</strong>
+      <span>Profesjonell bilvask i Trondheim</span>
     </a>
-
     <nav>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#om-oss">Om oss</a>
       <a href="#priser">Priser</a>
       <a href="#tjenester">Tjenester</a>
-      <a href="#finnoss">Finn oss</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
-
-    <a href="tel:41113113" class="header-call">Ring nå</a>
+    <a href="tel:41113113" class="header-call">Ring 41 11 31 13</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="hero-inner">
-
     <div>
-      <div class="kicker">Bilvask · Bilpleie · Polering · Dekkskift</div>
-
-      <h1>Bilvask og bilpleie på Lade Arena.</h1>
-
+      <div class="kicker">Bilvask · Bilpleie · Polering · Hjulskift · Trondheim</div>
+      <h1>Bilen din fortjener skikkelig <em>behandling.</em></h1>
       <p>
-        Vi hjelper med innvendig vask, utvendig vask, polering og klargjøring av bil.
-        Ring eller send SMS for time.
+        Vi vasker, pleier og klargjør bilen din på Lade Arena i Trondheim.
+        Innvendig, utvendig eller begge deler – du bestemmer.
+        Ring eller send SMS for å avtale tid.
       </p>
-
       <div class="action-grid">
-        <a href="tel:41113113" class="big-button call">Trykk her for å ringe</a>
-        <a href="sms:41113113" class="big-button sms">Trykk her for SMS</a>
+        <a href="tel:41113113" class="big-button call">📞 Ring oss nå</a>
+        <a href="sms:41113113" class="big-button sms">💬 Send SMS</a>
         <a href="#priser" class="big-button price">Se priser</a>
-        <a href="#finnoss" class="big-button map">Finn oss</a>
+        <a href="#kontakt" class="big-button map">Finn oss</a>
       </div>
     </div>
 
     <div class="info-card" id="kontakt">
-      <h2>Kontakt</h2>
-
+      <h2>Kontakt oss</h2>
       <div class="info-list">
-
         <div class="info-row">
-          <div class="icon">☎</div>
-          <div>
-            <strong>Telefon</strong>
-            <a href="tel:41113113">41 11 31 13</a>
-          </div>
+          <div class="icon">📞</div>
+          <div><strong>Telefon / SMS</strong><a href="tel:41113113">41 11 31 13</a></div>
         </div>
-
         <div class="info-row">
-          <div class="icon">✉</div>
-          <div>
-            <strong>E-post</strong>
-            <a href="mailto:ladebilvask@gmail.com">ladebilvask@gmail.com</a>
-          </div>
+          <div class="icon">✉️</div>
+          <div><strong>E-post</strong><a href="mailto:ladebilvask@gmail.com">ladebilvask@gmail.com</a></div>
         </div>
-
         <div class="info-row">
-          <div class="icon">⌚</div>
-          <div>
-            <strong>Åpningstider</strong>
-            <span>Mandag–lørdag: 09:00–17:00</span>
-          </div>
+          <div class="icon">🕘</div>
+          <div><strong>Åpningstider</strong><span>Mandag–lørdag: 09:00–17:00<br>Søndag: Stengt</span></div>
         </div>
-
         <div class="info-row">
-          <div class="icon">⌖</div>
-          <div>
-            <strong>Adresse</strong>
-            <span>Haakon VIIs gate 12, 7041 Trondheim<br>Ligger på Lade Arena</span>
-          </div>
+          <div class="icon">📍</div>
+          <div><strong>Adresse</strong><span>Haakon VIIs gate 12, 7041 Trondheim<br>Vi holder til på Lade Arena</span></div>
         </div>
-
       </div>
     </div>
-
   </div>
 </section>
+
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-icon">🤝</div>
+      <strong>Lokal bedrift i Trondheim</strong>
+      <span>Vi kjenner kundene våre og bryr oss om resultatet</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🚗</div>
+      <strong>Alle biltyper</strong>
+      <span>Personbil, SUV, varebil, Tesla og 7-seter</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">💰</div>
+      <strong>10% rabatt</strong>
+      <span>For studenter og pensjonister</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">📱</div>
+      <strong>Enkel bestilling</strong>
+      <span>Ring eller SMS – du får svar raskt</span>
+    </div>
+  </div>
+</div>
 
 <section class="contact-strip">
   <div class="contact-strip-inner">
-
     <div>
-      <h2>Bestill time enkelt.</h2>
+      <h2>Klar for en ren bil?</h2>
       <p>
-        Trykk på knappen for å ringe eller sende SMS.
-        Fortell hvilken bil du har og hva du ønsker gjort.
+        Ring eller send SMS, så finner vi en tid som passer deg.
+        Fortell hva slags bil du har og hva du ønsker gjort – så setter vi opp et tilbud.
       </p>
     </div>
-
     <div class="contact-buttons">
-      <a href="tel:41113113" class="call">Ring nå</a>
-      <a href="sms:41113113" class="sms">Send SMS</a>
+      <a href="tel:41113113" class="call">📞 Ring nå</a>
+      <a href="sms:41113113" class="sms">💬 Send SMS</a>
     </div>
-
   </div>
 </section>
 
-<section class="section welcome">
+<section class="section" id="om-oss">
   <div class="container">
-
     <div class="welcome-grid">
-
       <div class="welcome-text">
-        <div class="section-label">Velkommen</div>
-        <h2>Velkommen til Lade Arena Bilvask og Bilpleie AS</h2>
-
+        <div class="section-label">Om oss</div>
+        <h2>Vi er Lade Arena Bilvask og Bilpleie.</h2>
         <p>
-          Lade Arena Bilvask og Bilpleie AS hjelper deg med å ta vare på bilen din.
-          Trenger den en vask utvendig, innvendig eller kanskje en polering?
+          Vi holder til i parkeringskjelleren på Lade Arena i Trondheim og hjelper folk med å ta vare på bilen sin.
+          Enten du bare trenger en rask utvendig vask, en grundig innvendig rengjøring eller en skikkelig polering – vi tar jobben seriøst.
         </p>
-
         <p>
-          Stikk innom oss eller slå på tråden. Vi holder til i parkeringskjelleren
-          på Lade Arena.
+          Hos oss vet du hva du betaler. Prisene ligger synlig på siden, og den endelige prisen avtaler vi alltid med deg før vi setter i gang. Ingen overraskelser.
         </p>
-
         <div class="welcome-list">
-          <div>Bilvask</div>
-          <div>Bilpleie</div>
-          <div>Polering</div>
-          <div>Dekkskift</div>
+          <div>Profesjonell håndvask – ikke tunnelvask</div>
+          <div>Innvendig rens og skinnbehandling</div>
+          <div>Polering og lakkrens</div>
+          <div>Hjulskift og sesongklargjøring</div>
+          <div>Bildekor og fjerning av logo</div>
         </div>
       </div>
-
       <div class="welcome-image">
-        <img src="bilde2.jpg" alt="Bilpleie hos Lade Arena Bilvask">
+        <img src="bilde2.jpg" alt="Profesjonell bilpleie hos Lade Arena Bilvask i Trondheim">
       </div>
-
     </div>
-
   </div>
 </section>
 
 <section class="section price-section" id="priser">
   <div class="container">
-
     <div class="section-header">
       <div class="section-label">Priser</div>
-      <h2 class="section-title">Priser</h2>
+      <h2 class="section-title">Enkle priser – ingen skjulte kostnader.</h2>
       <p class="section-text">
-        Prisene er fra-priser og kan variere etter bilstørrelse og hvor mye arbeid som trengs.
+        Alle priser er fra-priser. Endelig pris avhenger av bilstørrelse og hvor mye arbeid som trengs.
+        Vi avtaler alltid pris med deg før vi starter.
       </p>
     </div>
 
     <div class="notice">
-      <strong>10% rabatt for pensjonister og studenter.</strong><br>
-      Endelig pris avtales før arbeidet starter.
+      🎓 <strong>10% rabatt for studenter og pensjonister.</strong><br>
+      Endelig pris avtales alltid med deg før arbeidet begynner.
     </div>
 
     <div class="price-board">
-
       <div class="price-heading">
         <div>Behandling</div>
         <div>Liten personbil</div>
-        <div>Mellomstor personbil <small>SUV / STV / Tesla / kombi</small></div>
-        <div>Stor personbil <small>Stor SUV / vare / 7-seter</small></div>
+        <div>Mellomstor personbil <small>SUV / STV / Tesla / Kombi</small></div>
+        <div>Stor personbil <small>Stor SUV / Varebil / 7-seter</small></div>
       </div>
 
       <div class="price-group">
         <div class="price-group-title">Bilvask</div>
-
         <div class="price-line"><div>Utvendig håndvask</div><div>Fra 320 kr</div><div>Fra 390 kr</div><div>Fra 490 kr</div></div>
         <div class="price-line"><div>Innvendig vask</div><div>Fra 340 kr</div><div>Fra 440 kr</div><div>Fra 540 kr</div></div>
         <div class="price-line"><div>Inn- og utvendig vask</div><div>Fra 590 kr</div><div>Fra 690 kr</div><div>Fra 790 kr</div></div>
-        <div class="price-line"><div>Super inn- og utvendig vask</div><div>Fra 1300 kr</div><div>Fra 1500 kr</div><div>Fra 1700 kr</div></div>
+        <div class="price-line"><div>Super inn- og utvendig vask</div><div>Fra 1 300 kr</div><div>Fra 1 500 kr</div><div>Fra 1 700 kr</div></div>
         <div class="price-line"><div>Avfetting</div><div>100 kr</div><div>125 kr</div><div>150 kr</div></div>
         <div class="price-line"><div>Insektfjerning</div><div>100 kr</div><div>125 kr</div><div>150 kr</div></div>
         <div class="price-line"><div>Underspyling</div><div>70 kr</div><div>80 kr</div><div>80 kr</div></div>
@@ -1153,7 +585,6 @@ footer{
 
       <div class="price-group">
         <div class="price-group-title">Polering</div>
-
         <div class="price-line"><div>Utvendig vask med polering</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
         <div class="price-line"><div>Lakkrens og polering</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
         <div class="price-line"><div>Fjerning av dekor</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
@@ -1162,191 +593,212 @@ footer{
 
       <div class="price-group">
         <div class="price-group-title">Interiør</div>
-
-        <div class="price-line"><div>Innvendig rens</div><div>Fra 2590 kr</div><div>Fra 2990 kr</div><div>Fra 3690 kr</div></div>
+        <div class="price-line"><div>Innvendig rens</div><div>Fra 2 590 kr</div><div>Fra 2 990 kr</div><div>Fra 3 690 kr</div></div>
         <div class="price-line"><div>Skinnbehandling</div><div>500 kr</div><div>500 kr</div><div>700 kr</div></div>
       </div>
 
       <div class="price-group">
         <div class="price-group-title">Sesongskift av hjul</div>
-
         <div class="price-line"><div>Skifte av 4 hjul</div><div>350 kr</div><div>400 kr</div><div>450 kr</div></div>
         <div class="price-line"><div>Vask av 4 hjul</div><div>200 kr</div><div>200 kr</div><div>200 kr</div></div>
       </div>
 
       <div class="price-group">
         <div class="price-group-title">Bildekor</div>
-
         <div class="price-line"><div>Fjerning og montering av logo / dekor</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
       </div>
-
     </div>
-
   </div>
 </section>
 
 <section class="section" id="tjenester">
   <div class="container">
-
     <div class="section-header">
       <div class="section-label">Tjenester</div>
       <h2 class="section-title">Hva kan vi hjelpe deg med?</h2>
       <p class="section-text">
-        Bilvask, bilpleie, polering, interiør, bildekor, hjulskift og sesongklargjøring.
+        Fra en rask utvendig vask til en grundig innvendig rens – vi tilpasser oss det du trenger.
       </p>
     </div>
 
     <div class="services-grid">
-
-      <div class="service-card"><div class="service-number">01</div><h3>Utvendig vask</h3><p>Håndvask og enkel klargjøring når bilen trenger å bli ren utvendig.</p></div>
-      <div class="service-card"><div class="service-number">02</div><h3>Innvendig vask</h3><p>Støvsuging og rengjøring inne i bilen etter behov.</p></div>
-      <div class="service-card"><div class="service-number">03</div><h3>Innvendig og utvendig</h3><p>En mer komplett vask for deg som ønsker bilen ren både inni og utenpå.</p></div>
-      <div class="service-card"><div class="service-number">04</div><h3>Polering</h3><p>For bedre glans og penere helhetsinntrykk. Pris avtales etter bil og behov.</p></div>
-      <div class="service-card"><div class="service-number">05</div><h3>Interiør og skinn</h3><p>Rens, skinnbehandling og grundigere arbeid inne i bilen.</p></div>
-      <div class="service-card"><div class="service-number">06</div><h3>Bildekor</h3><p>Fjerning og montering av logo eller dekor. Pris avtales etter arbeid.</p></div>
-      <div class="service-card"><div class="service-number">07</div><h3>Hjul og sesong</h3><p>Skifte av hjul, vask av hjul og enkel hjelp ved sesongskift.</p></div>
-
+      <div class="service-card">
+        <div class="service-icon">🚿</div>
+        <h3>Utvendig håndvask</h3>
+        <p>Vi vasker bilen for hånd – ikke i en tunnelvask. Det gir et bedre resultat og skåner lakken på bilen din.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪣</div>
+        <h3>Innvendig vask</h3>
+        <p>Støvsuging, rengjøring av dashbord og overflater, og grundig gjennomgang av interiøret. Bilen lukter og føles ren igjen.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Inn- og utvendig vask</h3>
+        <p>Den komplette vasken – både inni og utenpå. Perfekt når bilen trenger en skikkelig oppfriskning.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💎</div>
+        <h3>Polering og lakkrens</h3>
+        <p>Fjerner matt lakkoverflate, mikroriper og solskader. Bilen får tilbake glansen og lyser opp som ny.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛋️</div>
+        <h3>Interiørrens og skinn</h3>
+        <p>Grundig innvendig rens av hele kupeen. Vi tilbyr også skinnbehandling som gjenoppliver og beskytter skinnet.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>Bildekor</h3>
+        <p>Montering og fjerning av logo, dekor og folie. Vi gjør jobben riktig uten å skade lakken.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>Hjulskift og sesong</h3>
+        <p>Vi bytter hjul og vasker felgene dine. Praktisk å gjøre samtidig med en vask – spar en tur til verkstedet.</p>
+      </div>
     </div>
-
   </div>
 </section>
 
-<section class="section">
+<section class="section" style="padding-top:0;">
   <div class="container">
-
     <div class="gallery-grid">
-
       <div class="gallery-main">
-        <img src="bilde3.jpg" alt="Interiørrens og bilpleie">
+        <img src="bilde3.jpg" alt="Innvendig rens og bilpleie hos Lade Arena Bilvask Trondheim">
       </div>
-
       <div class="gallery-side">
-        <img src="bilde4.jpg" alt="Vask av hjul">
-        <img src="bilde5.jpg" alt="Bilvask med skum">
+        <div><img src="bilde4.jpg" alt="Vask av hjul og felger"></div>
+        <div><img src="bilde5.jpg" alt="Utvendig bilvask med skum"></div>
       </div>
-
     </div>
-
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-
     <div class="split">
-
       <div class="image-box">
-        <img src="bilde6.jpg" alt="Bilvask og bilpleie">
+        <img src="bilde6.jpg" alt="Bilvask og bilpleie på Lade Arena i Trondheim">
       </div>
-
       <div class="text-card">
         <div class="section-label">Lade Arena</div>
-        <h2>Lever bilen mens du gjør andre ærender.</h2>
-
+        <h2>Lever bilen – gjør andre ting.</h2>
         <p>
-          Vi holder til på Lade Arena i Trondheim. Det gjør det enkelt å levere bilen
-          mens du er i området.
+          Vi holder til i parkeringskjelleren på Lade Arena, sentralt i Trondheim.
+          Det gjør det enkelt å levere bilen og bruke ventetiden på handel, trening eller kaffe.
         </p>
-
         <p>
-          Ring eller send SMS på forhånd, så finner vi en tid som passer.
+          Kontakt oss på telefon eller SMS, så finner vi en tid som passer. Vi er fleksible og svarer raskt.
         </p>
-
         <div class="simple-list">
           <div><strong>✓</strong> Enkel bestilling på telefon eller SMS</div>
-          <div><strong>✓</strong> Priser synlig på siden</div>
-          <div><strong>✓</strong> Sentralt på Lade Arena</div>
-          <div><strong>✓</strong> 10% rabatt for student og pensjonist</div>
+          <div><strong>✓</strong> Tydelige priser – ingen skjulte kostnader</div>
+          <div><strong>✓</strong> Sentralt beliggende på Lade Arena</div>
+          <div><strong>✓</strong> 10% rabatt for studenter og pensjonister</div>
+          <div><strong>✓</strong> Vi avtaler pris med deg før vi begynner</div>
         </div>
       </div>
-
     </div>
+  </div>
+</section>
 
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="gallery-grid">
+      <div class="gallery-main">
+        <img src="bilde7.jpg" alt="Profesjonell bilpleie i Trondheim">
+      </div>
+      <div class="gallery-side">
+        <div><img src="bilde8.jpg" alt="Detaljvask og polering av bil"></div>
+        <div><img src="bilde9.jpg" alt="Bilvask resultater hos Lade Arena"></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-
-    <div class="gallery-grid">
-
-      <div class="gallery-main">
-        <img src="bilde7.jpg" alt="Bilpleie arbeid">
-      </div>
-
-      <div class="gallery-side">
-        <img src="bilde8.jpg" alt="Detaljvask bil">
-        <img src="bilde9.jpg" alt="Bilvask hos Lade Arena">
-      </div>
-
+    <div class="section-header">
+      <div class="section-label">Vanlige spørsmål</div>
+      <h2 class="section-title">Spørsmål og svar.</h2>
     </div>
-
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Hvordan bestiller jeg time?</div>
+        <div class="faq-a">Ring oss på 41 11 31 13 eller send en SMS. Fortell hva slags bil du har og hva du ønsker gjort, så finner vi en tid som passer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Hva koster det?</div>
+        <div class="faq-a">Prisene varierer etter bilstørrelse og valgt behandling. Se prislisten vår på denne siden. Endelig pris avtaler vi alltid med deg før vi setter i gang – ingen overraskelser.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Hvor lang tid tar det?</div>
+        <div class="faq-a">En enkel utvendig vask tar gjerne 30–60 minutter. En mer grundig innvendig rens kan ta 2–4 timer avhengig av bil og tilstand. Vi gir deg et estimat når du bestiller.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Gjelder rabatten for studenter automatisk?</div>
+        <div class="faq-a">Bare vis studentbeviset ditt eller nevn at du er student eller pensjonist når du bestiller, så ordner vi 10% rabatt.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Hva slags biler tar dere?</div>
+        <div class="faq-a">Vi tar alle typer personbiler – fra kompaktbiler til store SUV-er, varebiler, Tesla og 7-setere. Prisen justeres etter bilstørrelse.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Kan bedrifter med firmabiler bruke dere?</div>
+        <div class="faq-a">Absolutt. Ta kontakt på telefon eller e-post, så kan vi se på en fast avtale som passer for din bedrift.</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section" id="finnoss">
+<section class="section contact-section" id="finnoss">
   <div class="container">
-
     <div class="section-header">
       <div class="section-label">Finn oss</div>
       <h2 class="section-title">Adresse og åpningstider.</h2>
       <p class="section-text">
-        Ring, send SMS eller kom innom oss på Lade Arena.
+        Vi holder til i parkeringskjelleren på Lade Arena. Ring oss gjerne på forhånd, så er vi klare når du kommer.
       </p>
     </div>
 
     <div class="contact-grid">
-
       <div class="contact-card">
         <h3>Adresse</h3>
-
         <p>
           Lade Arena Bilvask & Bilpleie AS<br>
           Haakon VIIs gate 12<br>
-          7041 Trondheim<br>
-          Ligger på Lade Arena
+          7041 Trondheim<br><br>
+          Vi holder til i parkeringskjelleren på Lade Arena.
         </p>
-
-        <a class="large-link" href="https://www.google.com/maps/search/?api=1&query=Haakon+VIIs+gate+12+7041+Trondheim" target="_blank" rel="noopener">
-          Åpne kart
+        <a class="large-link" href="https://www.google.com/maps/search/?api=1&query=Haakon+VIIs+gate+12+7041+Trondheim" target="_blank" rel="noopener noreferrer">
+          📍 Åpne i Google Maps
         </a>
       </div>
 
       <div class="contact-card">
         <h3>Kontakt</h3>
-
-        <p>
-          Telefon:<br>
-          <a href="tel:41113113">41 11 31 13</a>
-        </p>
-
-        <a class="large-link" href="tel:41113113">Trykk her for å ringe</a>
-        <a class="large-link sms" href="sms:41113113">Trykk her for SMS</a>
-
-        <p style="margin-top:24px;">
-          E-post:<br>
-          <a href="mailto:ladebilvask@gmail.com">ladebilvask@gmail.com</a>
-        </p>
-
-        <p style="margin-top:24px;">
-          Åpningstider:<br>
-          Mandag–lørdag: 09:00–17:00
-        </p>
+        <p><strong style="color:var(--ink);">Telefon og SMS</strong><br><a href="tel:41113113">41 11 31 13</a></p>
+        <a class="large-link" href="tel:41113113">📞 Ring oss nå</a>
+        <a class="large-link sms" href="sms:41113113">💬 Send SMS</a>
+        <p style="margin-top:22px;"><strong style="color:var(--ink);">E-post</strong><br><a href="mailto:ladebilvask@gmail.com">ladebilvask@gmail.com</a></p>
+        <p style="margin-top:22px;"><strong style="color:var(--ink);">Åpningstider</strong><br>Mandag–lørdag: 09:00–17:00<br>Søndag: Stengt</p>
       </div>
-
     </div>
-
   </div>
 </section>
 
 <footer>
-  Lade Arena Bilvask & Bilpleie AS<br>
-  Haakon VIIs gate 12, 7041 Trondheim · Telefon 41 11 31 13 · ladebilvask@gmail.com
+  <strong>Lade Arena Bilvask & Bilpleie AS</strong><br>
+  Haakon VIIs gate 12, 7041 Trondheim<br>
+  Telefon: <a href="tel:41113113">41 11 31 13</a> · E-post: <a href="mailto:ladebilvask@gmail.com">ladebilvask@gmail.com</a><br><br>
+  Åpent mandag–lørdag 09:00–17:00<br><br>
+  © 2025 Lade Arena Bilvask & Bilpleie AS · Alle rettigheter forbeholdt
 </footer>
 
 <div class="mobile-bar">
-  <a href="tel:41113113" class="call">Ring nå</a>
-  <a href="sms:41113113" class="sms">Send SMS</a>
+  <a href="tel:41113113" class="call">📞 Ring nå</a>
+  <a href="sms:41113113" class="sms">💬 Send SMS</a>
 </div>
 
 </body>
