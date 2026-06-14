@@ -7,6 +7,18 @@
 
 <meta name="description" content="RNS Studio lager rolige, moderne og menneskelige nettsider for små bedrifter, gründere og kreative prosjekter. Nettsider som bygger tillit før kunden tar kontakt.">
 
+<meta property="og:title" content="RNS Studio | Nettsider som føles ekte">
+<meta property="og:description" content="Rolige, moderne og menneskelige nettsider for små bedrifter, gründere og kreative prosjekter.">
+<meta property="og:image" content="https://rnstudio.no/og-image.jpg">
+<meta property="og:url" content="https://rnstudio.no">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -60,6 +72,7 @@ justify-content:space-between;
 align-items:center;
 padding:24px 42px;
 background:rgba(5,10,15,.34);
+-webkit-backdrop-filter:blur(18px);
 backdrop-filter:blur(18px);
 border-bottom:1px solid var(--line);
 }
@@ -184,6 +197,7 @@ color:#071017;
 .button.secondary{
 background:rgba(255,255,255,.055);
 border:1px solid rgba(255,255,255,.18);
+-webkit-backdrop-filter:blur(10px);
 backdrop-filter:blur(10px);
 color:white;
 }
@@ -804,13 +818,31 @@ text-align:left;
 margin-left:0;
 }
 }
+
+@media(prefers-reduced-motion:reduce){
+html{
+scroll-behavior:auto;
+}
+
+.fade{
+opacity:1;
+transform:none;
+transition:none;
+}
+
+.button:hover,
+.mail-link:hover,
+.demo-card:hover{
+transform:none;
+}
+}
 </style>
 </head>
 
 <body>
 
-<nav>
-<a href="#" class="logo">RNS</a>
+<nav aria-label="Hovedmeny">
+<a href="#hero" class="logo" aria-label="RNS Studio – til toppen">RNS</a>
 
 <div class="nav-links">
 <a href="#demoer">Demoer</a>
@@ -820,8 +852,8 @@ margin-left:0;
 </div>
 </nav>
 
-<section class="hero">
-<video autoplay muted loop playsinline>
+<section class="hero" id="hero">
+<video autoplay muted loop playsinline poster="hero-poster.jpg" aria-hidden="true">
 <source src="hero.mp4" type="video/mp4">
 </video>
 
@@ -871,7 +903,7 @@ De er ikke ekte kundecaser, men eksempler på hva RNS Studio kan bygge for ulike
 
 <div class="demo-card fade">
 <div class="demo-image">
-<img src="kronotop1.jpg" alt="Kronotop Café">
+<img src="kronotop1.jpg" alt="Kronotop Café – konseptdemo" loading="lazy" width="800" height="600">
 </div>
 <div class="demo-body">
 <div class="demo-type">Konseptdemo · Café / Restaurant</div>
@@ -890,7 +922,7 @@ En lun café-demo med varme toner, tydelig meny og en atmosfære som gjør at gj
 
 <div class="demo-card fade">
 <div class="demo-image">
-<img src="tattoo1.jpg" alt="Ink Room">
+<img src="tattoo1.jpg" alt="Ink Room – konseptdemo" loading="lazy" width="800" height="600">
 </div>
 <div class="demo-body">
 <div class="demo-type">Konseptdemo · Tattoo / Studio</div>
@@ -909,7 +941,7 @@ Et mørkt og personlig studiokonsept der portfolio, booking og trygghet får rom
 
 <div class="demo-card fade">
 <div class="demo-image">
-<img src="bar1.jpg" alt="Nord Bar">
+<img src="bar1.jpg" alt="Nord Bar – konseptdemo" loading="lazy" width="800" height="600">
 </div>
 <div class="demo-body">
 <div class="demo-type">Konseptdemo · Bar / Lounge</div>
@@ -928,7 +960,7 @@ En cinematic bar-demo med mørke flater, varme detaljer, signaturdrinker og tyde
 
 <div class="demo-card fade">
 <div class="demo-image">
-<img src="frisor1.jpg" alt="Luma Studio">
+<img src="frisor1.jpg" alt="Luma Studio – konseptdemo" loading="lazy" width="800" height="600">
 </div>
 <div class="demo-body">
 <div class="demo-type">Konseptdemo · Salong / Velvære</div>
@@ -1050,7 +1082,7 @@ Når alt er godkjent, kobles siden opp og blir tilgjengelig for kundene dine.
 
 <div class="section-header fade">
 <div class="section-label">Oppstartspris</div>
-<h2 class="section-title">Én enkel pakke. Ingen vanskelige valg.</h2>
+<h2 class="section-title">Én enkel pakke.</h2>
 <p class="section-text">
 Jeg er i oppstartsfasen med RNS Studio og tilbyr derfor redusert pris på de første prosjektene.
 Målet er å gjøre prosessen enkel, trygg og oversiktlig.
