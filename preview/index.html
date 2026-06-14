@@ -271,10 +271,16 @@ footer a:hover{ color:#fff; }
   .welcome-image img, .image-box img, .gallery-main img{ height:300px; }
   .gallery-side img{ height:190px; }
   .service-card, .booking-card, .contact-info-card{ padding:26px 22px; }
-  .price-board{ overflow-x:auto; }
-  .price-heading, .price-line{ min-width:700px; grid-template-columns:1.35fr repeat(3,1fr); }
-  .price-heading div, .price-line div{ padding:13px 14px; }
-  .price-group-title{ min-width:700px; }
+  .price-board{ overflow:visible; border:0; background:transparent; box-shadow:none; border-radius:0; }
+  .price-heading{ display:none; }
+  .price-group{ border-top:0; margin-bottom:26px; }
+  .price-group-title{ background:transparent; color:var(--ink); border:0; padding:0 0 12px; font-size:1.18rem; min-width:0; }
+  .price-line{ display:block; background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:10px; min-width:0; grid-template-columns:none; }
+  .price-line:hover{ background:#fff; }
+  .price-line div{ border:0; padding:0; }
+  .price-line div:first-child{ font-weight:700; font-size:1.02rem; color:var(--ink); margin-bottom:6px; }
+  .price-line div:not(:first-child){ display:flex; justify-content:space-between; gap:14px; align-items:baseline; padding:8px 0; border-top:1px solid var(--line); font-weight:700; font-size:.95rem; white-space:normal; }
+  .price-line div:not(:first-child)::before{ content:attr(data-label); color:var(--muted); font-weight:500; }
   .mobile-bar{ display:grid; }
 }
 </style>
@@ -415,40 +421,40 @@ footer a:hover{ color:#fff; }
 
       <div class="price-group">
         <div class="price-group-title">Bilvask</div>
-        <div class="price-line"><div>Utvendig håndvask</div><div>Fra 320 kr</div><div>Fra 390 kr</div><div>Fra 490 kr</div></div>
-        <div class="price-line"><div>Innvendig vask</div><div>Fra 340 kr</div><div>Fra 440 kr</div><div>Fra 540 kr</div></div>
-        <div class="price-line"><div>Inn- og utvendig vask</div><div>Fra 590 kr</div><div>Fra 690 kr</div><div>Fra 790 kr</div></div>
-        <div class="price-line"><div>Super inn- og utvendig vask</div><div>Fra 1300 kr</div><div>Fra 1500 kr</div><div>Fra 1700 kr</div></div>
-        <div class="price-line"><div>Avfetting</div><div>100 kr</div><div>125 kr</div><div>150 kr</div></div>
-        <div class="price-line"><div>Insektfjerning</div><div>100 kr</div><div>125 kr</div><div>150 kr</div></div>
-        <div class="price-line"><div>Underspyling</div><div>70 kr</div><div>80 kr</div><div>80 kr</div></div>
-        <div class="price-line"><div>Skiboks</div><div>70 kr</div><div>70 kr</div><div>70 kr</div></div>
-        <div class="price-line"><div>Motorvask</div><div>400 kr</div><div>400 kr</div><div>400 kr</div></div>
-        <div class="price-line"><div>Fjerning av dyrehår</div><div>Fra 300 kr</div><div>Fra 500 kr</div><div>Fra 500 kr</div></div>
+        <div class="price-line"><div>Utvendig håndvask</div><div data-label="Liten">Fra 320 kr</div><div data-label="Mellomstor">Fra 390 kr</div><div data-label="Stor">Fra 490 kr</div></div>
+        <div class="price-line"><div>Innvendig vask</div><div data-label="Liten">Fra 340 kr</div><div data-label="Mellomstor">Fra 440 kr</div><div data-label="Stor">Fra 540 kr</div></div>
+        <div class="price-line"><div>Inn- og utvendig vask</div><div data-label="Liten">Fra 590 kr</div><div data-label="Mellomstor">Fra 690 kr</div><div data-label="Stor">Fra 790 kr</div></div>
+        <div class="price-line"><div>Super inn- og utvendig vask</div><div data-label="Liten">Fra 1300 kr</div><div data-label="Mellomstor">Fra 1500 kr</div><div data-label="Stor">Fra 1700 kr</div></div>
+        <div class="price-line"><div>Avfetting</div><div data-label="Liten">100 kr</div><div data-label="Mellomstor">125 kr</div><div data-label="Stor">150 kr</div></div>
+        <div class="price-line"><div>Insektfjerning</div><div data-label="Liten">100 kr</div><div data-label="Mellomstor">125 kr</div><div data-label="Stor">150 kr</div></div>
+        <div class="price-line"><div>Underspyling</div><div data-label="Liten">70 kr</div><div data-label="Mellomstor">80 kr</div><div data-label="Stor">80 kr</div></div>
+        <div class="price-line"><div>Skiboks</div><div data-label="Liten">70 kr</div><div data-label="Mellomstor">70 kr</div><div data-label="Stor">70 kr</div></div>
+        <div class="price-line"><div>Motorvask</div><div data-label="Liten">400 kr</div><div data-label="Mellomstor">400 kr</div><div data-label="Stor">400 kr</div></div>
+        <div class="price-line"><div>Fjerning av dyrehår</div><div data-label="Liten">Fra 300 kr</div><div data-label="Mellomstor">Fra 500 kr</div><div data-label="Stor">Fra 500 kr</div></div>
       </div>
 
       <div class="price-group">
         <div class="price-group-title">Polering</div>
-        <div class="price-line"><div>Utvendig vask med polering</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
-        <div class="price-line"><div>Lakkrens og polering</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
-        <div class="price-line"><div>Rubbing / fjerning av riper</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
+        <div class="price-line"><div>Utvendig vask med polering</div><div data-label="Liten">Pris etter avtale</div><div data-label="Mellomstor">Pris etter avtale</div><div data-label="Stor">Pris etter avtale</div></div>
+        <div class="price-line"><div>Lakkrens og polering</div><div data-label="Liten">Pris etter avtale</div><div data-label="Mellomstor">Pris etter avtale</div><div data-label="Stor">Pris etter avtale</div></div>
+        <div class="price-line"><div>Rubbing / fjerning av riper</div><div data-label="Liten">Pris etter avtale</div><div data-label="Mellomstor">Pris etter avtale</div><div data-label="Stor">Pris etter avtale</div></div>
       </div>
 
       <div class="price-group">
         <div class="price-group-title">Interiør</div>
-        <div class="price-line"><div>Innvendig rens</div><div>Fra 2590 kr</div><div>Fra 2990 kr</div><div>Fra 3690 kr</div></div>
-        <div class="price-line"><div>Skinnbehandling</div><div>500 kr</div><div>500 kr</div><div>700 kr</div></div>
+        <div class="price-line"><div>Innvendig rens</div><div data-label="Liten">Fra 2590 kr</div><div data-label="Mellomstor">Fra 2990 kr</div><div data-label="Stor">Fra 3690 kr</div></div>
+        <div class="price-line"><div>Skinnbehandling</div><div data-label="Liten">500 kr</div><div data-label="Mellomstor">500 kr</div><div data-label="Stor">700 kr</div></div>
       </div>
 
       <div class="price-group">
         <div class="price-group-title">Sesongskift av hjul</div>
-        <div class="price-line"><div>Skifte av 4 hjul</div><div>350 kr</div><div>400 kr</div><div>450 kr</div></div>
-        <div class="price-line"><div>Vask av 4 hjul</div><div>200 kr</div><div>200 kr</div><div>200 kr</div></div>
+        <div class="price-line"><div>Skifte av 4 hjul</div><div data-label="Liten">350 kr</div><div data-label="Mellomstor">400 kr</div><div data-label="Stor">450 kr</div></div>
+        <div class="price-line"><div>Vask av 4 hjul</div><div data-label="Liten">200 kr</div><div data-label="Mellomstor">200 kr</div><div data-label="Stor">200 kr</div></div>
       </div>
 
       <div class="price-group">
         <div class="price-group-title">Bildekor</div>
-        <div class="price-line"><div>Fjerning og montering av logo / dekor</div><div>Pris etter avtale</div><div>Pris etter avtale</div><div>Pris etter avtale</div></div>
+        <div class="price-line"><div>Fjerning og montering av logo / dekor</div><div data-label="Liten">Pris etter avtale</div><div data-label="Mellomstor">Pris etter avtale</div><div data-label="Stor">Pris etter avtale</div></div>
       </div>
     </div>
   </div>
