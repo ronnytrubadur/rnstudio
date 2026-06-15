@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Nord Bar | Demo by RNS Studio</title>
+<title>Nord Bar | Demo fra RNstudio</title>
 
-<meta name="description" content="Nord Bar er en fiktiv demoside laget av RNS Studio for å vise hvordan en bar, lounge eller restaurant kan fremstå mørk, eksklusiv og profesjonell på nett.">
+<meta name="description" content="Nord Bar er en fiktiv demoside laget av RNstudio for å vise hvordan en bar, lounge eller restaurant kan fremstå stemningsfull, eksklusiv og profesjonell på nett.">
+
+<meta name="robots" content="noindex, nofollow">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +27,8 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Inter',sans-serif;
-background:#070608;
-color:#f5eee4;
+background:#160e15;
+color:#f6ecef;
 overflow-x:hidden;
 }
 
@@ -40,15 +42,15 @@ color:inherit;
 }
 
 :root{
---bg:#070608;
---dark:#030304;
---wine:#120b0d;
---soft:#1b1213;
---text:#f5eee4;
---muted:rgba(245,238,228,.66);
+--bg:#160e15;
+--dark:#0d070c;
+--wine:#221019;
+--soft:#281520;
+--text:#f6ecef;
+--muted:rgba(246,236,239,.66);
 --line:rgba(255,255,255,.085);
---gold:#c48c52;
---amber:#e0a164;
+--gold:#cf9a82;
+--amber:#e7b39b;
 --shadow:0 34px 90px rgba(0,0,0,.58);
 }
 
@@ -58,9 +60,9 @@ top:0;
 left:0;
 width:100%;
 z-index:1200;
-background:rgba(3,3,4,.92);
+background:rgba(13,7,12,.92);
 backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(245,238,228,.12);
+border-bottom:1px solid rgba(246,236,239,.12);
 }
 
 .demo-bar-inner{
@@ -74,7 +76,7 @@ text-align:center;
 font-size:.72rem;
 letter-spacing:2px;
 text-transform:uppercase;
-color:rgba(245,238,228,.68);
+color:rgba(246,236,239,.70);
 }
 
 .demo-bar strong{
@@ -83,9 +85,9 @@ font-weight:500;
 }
 
 .demo-bar a{
-color:#f5eee4;
+color:#f6ecef;
 text-decoration:none;
-border-bottom:1px solid rgba(245,238,228,.32);
+border-bottom:1px solid rgba(246,236,239,.32);
 padding-bottom:3px;
 transition:.25s ease;
 }
@@ -104,7 +106,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:24px 42px;
-background:rgba(3,3,4,.42);
+background:rgba(13,7,12,.50);
 backdrop-filter:blur(18px);
 border-bottom:1px solid var(--line);
 }
@@ -154,7 +156,7 @@ inset:0;
 width:100%;
 height:100%;
 object-fit:cover;
-filter:brightness(.32) contrast(1.12) saturate(.92);
+filter:brightness(.36) contrast(1.10) saturate(.95);
 }
 
 .hero::after{
@@ -163,8 +165,8 @@ position:absolute;
 inset:0;
 z-index:1;
 background:
-linear-gradient(to bottom,rgba(3,3,4,.16),rgba(3,3,4,.92)),
-radial-gradient(circle at center,rgba(224,161,100,.12),transparent 58%);
+linear-gradient(to bottom,rgba(13,7,12,.18),rgba(13,7,12,.94)),
+radial-gradient(circle at center,rgba(207,154,130,.16),transparent 58%);
 }
 
 .hero-content{
@@ -222,8 +224,8 @@ transition:.3s ease;
 }
 
 .button.primary{
-background:#f5eee4;
-color:#070608;
+background:#f6ecef;
+color:#160e15;
 }
 
 .button.secondary{
@@ -256,7 +258,7 @@ text-align:center;
 font-size:.72rem;
 letter-spacing:4px;
 text-transform:uppercase;
-color:rgba(245,238,228,.42);
+color:rgba(246,236,239,.42);
 margin-bottom:22px;
 }
 
@@ -276,7 +278,7 @@ line-height:1.9;
 
 .statement{
 padding:180px 24px;
-background:#030304;
+background:#0d070c;
 border-top:1px solid var(--line);
 border-bottom:1px solid var(--line);
 text-align:center;
@@ -297,7 +299,7 @@ line-height:.95;
 .statement p{
 max-width:760px;
 margin:44px auto 0;
-color:rgba(245,238,228,.64);
+color:rgba(246,236,239,.64);
 font-size:1.14rem;
 line-height:1.9;
 }
@@ -314,14 +316,14 @@ border-radius:38px;
 overflow:hidden;
 box-shadow:var(--shadow);
 border:1px solid var(--line);
-background:#111;
+background:#221019;
 }
 
 .image-frame img{
 width:100%;
 height:680px;
 object-fit:cover;
-filter:brightness(.82) contrast(1.08) saturate(.9);
+filter:brightness(.84) contrast(1.06) saturate(.95);
 }
 
 .text-block h2{
@@ -348,7 +350,7 @@ margin-top:34px;
 .small-list div{
 padding:22px 0;
 border-top:1px solid var(--line);
-color:rgba(245,238,228,.74);
+color:rgba(246,236,239,.74);
 line-height:1.7;
 }
 
@@ -378,7 +380,7 @@ transition:.3s ease;
 
 .drink-card:hover{
 transform:translateY(-6px);
-border-color:rgba(224,161,100,.30);
+border-color:rgba(207,154,130,.32);
 }
 
 .drink-card span{
@@ -422,14 +424,14 @@ border-radius:38px;
 overflow:hidden;
 border:1px solid var(--line);
 box-shadow:var(--shadow);
-background:#111;
+background:#221019;
 }
 
 .gallery-main img{
 width:100%;
 height:760px;
 object-fit:cover;
-filter:brightness(.82) contrast(1.08) saturate(.9);
+filter:brightness(.84) contrast(1.06) saturate(.95);
 }
 
 .gallery-side{
@@ -441,11 +443,11 @@ grid-template-rows:1fr 1fr;
 width:100%;
 height:380px;
 object-fit:cover;
-filter:brightness(.80) contrast(1.08) saturate(.9);
+filter:brightness(.82) contrast(1.06) saturate(.95);
 }
 
 .booking{
-background:#030304;
+background:#0d070c;
 border-top:1px solid var(--line);
 border-bottom:1px solid var(--line);
 }
@@ -482,7 +484,7 @@ margin:0 auto;
 padding:58px 52px;
 border-radius:38px;
 background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
-border:1px solid rgba(224,161,100,.26);
+border:1px solid rgba(207,154,130,.28);
 box-shadow:var(--shadow);
 text-align:center;
 }
@@ -506,7 +508,7 @@ font-size:1.04rem;
 footer{
 padding:95px 24px;
 text-align:center;
-background:#030304;
+background:#0d070c;
 border-top:1px solid var(--line);
 }
 
@@ -527,7 +529,7 @@ line-height:1.9;
 
 footer a{
 text-decoration:none;
-border-bottom:1px solid rgba(245,238,228,.28);
+border-bottom:1px solid rgba(246,236,239,.28);
 padding-bottom:8px;
 transition:.25s ease;
 }
@@ -683,7 +685,7 @@ text-align:left;
 
 <div class="demo-bar">
 <div class="demo-bar-inner">
-<span><strong>Konseptdemo laget av RNS Studio.</strong> Dette er ikke en ekte bar.</span>
+<span><strong>Konseptdemo laget av RNstudio.</strong> Dette er ikke en ekte bar.</span>
 <a href="mailto:Ronny.nilsen.studio@gmail.com?subject=Jeg%20%C3%B8nsker%20en%20lignende%20nettside">Vil du ha noe lignende?</a>
 </div>
 </div>
@@ -692,7 +694,7 @@ text-align:left;
 <a href="index.html" class="logo">Nord Bar</a>
 
 <nav>
-<a href="index.html">RNS Studio</a>
+<a href="index.html">RNstudio</a>
 <a href="#meny">Meny</a>
 <a href="#booking">Booking</a>
 <a href="#kontakt">Kontakt</a>
@@ -712,7 +714,7 @@ Cocktails · Lounge · Events · Late evenings
 <h1>Nord Bar</h1>
 
 <p>
-En mørk og lun cocktailbar for kvelder som skal vare litt lenger.
+En lun og stemningsfull cocktailbar for kvelder som skal vare litt lenger.
 En god barside skal ikke bare vise åpningstider. Den skal gi gjesten lyst til å booke bord.
 </p>
 
@@ -761,7 +763,7 @@ Siden gir rom til atmosfæren: lyset, glassene, menneskene, musikken og følelse
 
 <div>
 <span>Atmosfære</span>
-Mørke bilder, varme toner og store flater gir siden en cinematic følelse.
+Mørke flater, varme toner og store bilder gir siden en stemningsfull, filmatisk dybde.
 </div>
 
 <div>
@@ -800,7 +802,7 @@ Den bør gi gjesten en liten smak av kvelden før de kommer.
 <span>Signature</span>
 <h3>Nordic Old Fashioned</h3>
 <p>
-Røyk, sitrus og varme toner. En mørk klassiker med nordisk kant.
+R�yk, sitrus og varme toner. En mørk klassiker med nordisk kant.
 </p>
 <div class="price">165 kr</div>
 </div>
@@ -905,7 +907,7 @@ Havnepromenaden 8, Trondheim
 <div class="container">
 
 <div class="demo-note fade">
-<h2>Dette er en RNS Studio-demo.</h2>
+<h2>Dette er en RNstudio-demo.</h2>
 <p>
 Denne siden kan tilpasses ekte barer, restauranter og utesteder med meny,
 booking, events, åpningstider, kart, galleri, sosiale medier og kontaktinformasjon.
