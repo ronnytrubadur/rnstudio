@@ -1,1 +1,732 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<title>Bilvask og bilpleie i Trondheim | Lade Arena Bilvask & Bilpleie AS</title>
+
+<meta name="description" content="Bilvask og bilpleie på Lade Arena i Trondheim. Håndvask, innvendig vask, polering, interiørrens og hjulskift. Fra-priser. Ring eller send SMS til 41 11 31 13." />
+<meta name="keywords" content="bilvask Trondheim, bilpleie Trondheim, innvendig vask Trondheim, utvendig vask Trondheim, polering Trondheim, bilrens Trondheim, klargjøring bil Trondheim, Lade Arena bilvask" />
+
+<meta property="og:title" content="Lade Arena Bilvask & Bilpleie AS" />
+<meta property="og:description" content="Bilvask og bilpleie på Lade Arena i Trondheim. Ring 41 11 31 13." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nb_NO" />
+<meta property="og:url" content="https://trondheim-bilvask.no/" />
+<meta property="og:image" content="https://trondheim-bilvask.no/bilvask7.jpg" />
+
+<!-- Domene: trondheim-bilvask.no -->
+<link rel="canonical" href="https://trondheim-bilvask.no/" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoWash",
+  "name": "Lade Arena Bilvask & Bilpleie AS",
+  "url": "https://trondheim-bilvask.no/",
+  "image": "https://trondheim-bilvask.no/bilvask7.jpg",
+  "telephone": "+4741113113",
+  "email": "ladebilvask@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Haakon VIIs gate 12",
+    "postalCode": "7041",
+    "addressLocality": "Trondheim",
+    "addressCountry": "NO"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "09:00",
+    "closes": "17:00"
+  }],
+  "priceRange": "Kr 320-3690",
+  "areaServed": "Trondheim",
+  "description": "Bilvask og bilpleie på Lade Arena i Trondheim."
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+:root{
+  --bg:#f6f3ec;
+  --bg-alt:#ece5d8;
+  --card:#ffffff;
+  --ink:#15242e;
+  --muted:#5a6b74;
+  --line:rgba(21,36,46,.12);
+  --accent:#1d3a47;
+  --green:#2e9e62;
+  --dark:#15242e;
+  --shadow:0 18px 50px rgba(21,36,46,.08);
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  overflow-x:hidden;
+  font-size:18px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+svg{ flex-shrink:0; }
+.btn-ico{ width:18px; height:18px; }
+
+h1,h2,h3{ letter-spacing:-.02em; }
+
+/* ── TOPBAR ── */
+.topbar{ background:var(--dark); color:rgba(246,243,236,.8); padding:11px 22px; font-size:.9rem; }
+.topbar-inner{ max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:center; }
+.topbar strong{ color:#fff; font-weight:600; }
+.topbar a{ text-decoration:none; }
+
+/* ── HEADER ── */
+header{ position:sticky; top:0; z-index:1000; background:rgba(246,243,236,.94); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
+.header-inner{ max-width:1180px; margin:0 auto; padding:18px 22px; display:flex; justify-content:space-between; align-items:center; gap:22px; }
+.logo{ text-decoration:none; display:flex; flex-direction:column; gap:3px; }
+.logo strong{ font-size:1.32rem; line-height:1.1; font-weight:800; letter-spacing:-.02em; color:var(--ink); }
+.logo span{ font-size:.72rem; letter-spacing:.5px; color:var(--muted); font-weight:500; }
+nav{ display:flex; align-items:center; gap:30px; }
+nav a{ text-decoration:none; font-size:.95rem; color:var(--ink); font-weight:600; transition:.2s; }
+nav a:hover{ color:var(--green); }
+.header-call{ min-height:46px; padding:0 20px; border-radius:8px; background:var(--green); color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:8px; justify-content:center; font-size:.92rem; font-weight:700; transition:.2s; }
+.header-call:hover{ background:#268653; }
+
+/* ── HERO ── */
+.hero{ position:relative; min-height:90vh; display:flex; align-items:flex-end; padding:0 22px 60px; overflow:hidden; background:var(--dark); }
+.hero::before{ content:""; position:absolute; inset:0; background:linear-gradient(to top,rgba(21,36,46,.55) 0%,rgba(21,36,46,.12) 42%,rgba(21,36,46,.22) 100%),url("bilvask7.jpg") center/cover no-repeat; }
+.hero-panel{ position:relative; z-index:2; max-width:1180px; width:100%; margin:0 auto; }
+.hero-card{ background:rgba(255,255,255,.96); backdrop-filter:blur(10px); border-radius:20px; padding:42px 46px; max-width:600px; box-shadow:0 30px 80px rgba(21,36,46,.35); }
+.kicker{ font-size:.82rem; letter-spacing:.5px; color:var(--green); margin-bottom:14px; font-weight:700; }
+.hero h1{ font-size:clamp(2.2rem,4.4vw,3.5rem); line-height:1.08; font-weight:800; margin-bottom:16px; color:var(--ink); }
+.hero p{ font-size:1.06rem; line-height:1.62; color:#3c4f58; margin-bottom:28px; }
+.hero-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+.hero-actions a{ min-height:56px; padding:0 26px; border-radius:11px; display:inline-flex; align-items:center; gap:9px; justify-content:center; text-decoration:none; font-size:.98rem; font-weight:700; transition:.2s; }
+.hero-actions .ring{ background:var(--accent); color:#fff; }
+.hero-actions .ring:hover{ background:#16303b; transform:translateY(-2px); }
+.hero-actions .sms{ background:var(--green); color:#fff; }
+.hero-actions .sms:hover{ background:#268653; transform:translateY(-2px); }
+.hero-actions .msg{ background:#0084ff; color:#fff; }
+.hero-actions .msg:hover{ background:#0073e6; transform:translateY(-2px); }
+.hero-links{ margin-top:20px; padding-top:20px; border-top:1px solid var(--line); display:flex; gap:22px; flex-wrap:wrap; }
+.hero-links a{ color:var(--accent); text-decoration:none; font-weight:600; font-size:.95rem; display:inline-flex; align-items:center; gap:7px; transition:.2s; }
+.hero-links a:hover{ color:var(--green); }
+
+/* ── INFO CARD ── */
+.info-card{ background:#fff; border-radius:16px; padding:34px; box-shadow:0 24px 60px rgba(0,0,0,.26); }
+.info-card h2{ font-size:1.6rem; font-weight:800; margin-bottom:22px; color:var(--ink); }
+.info-list{ display:grid; }
+.info-row{ display:grid; grid-template-columns:42px 1fr; gap:15px; padding:17px 0; border-top:1px solid var(--line); }
+.info-row:first-child{ border-top:0; padding-top:0; }
+.icon{ width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; background:var(--bg); color:var(--accent); }
+.info-row strong{ display:block; color:var(--ink); margin-bottom:3px; font-size:.95rem; font-weight:700; }
+.info-row span, .info-row a{ color:var(--muted); line-height:1.5; text-decoration:none; font-size:.93rem; }
+.info-row a:hover{ color:var(--green); }
+
+/* ── TRUST BAR ── */
+.trust-bar{ background:#fff; border-bottom:1px solid var(--line); padding:34px 22px; }
+.trust-bar-inner{ max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:30px; }
+.trust-item{ display:flex; align-items:flex-start; gap:13px; }
+.trust-item .tico{ color:var(--accent); margin-top:2px; }
+.trust-item strong{ display:block; font-size:.96rem; color:var(--ink); font-weight:700; margin-bottom:3px; }
+.trust-item span{ font-size:.86rem; color:var(--muted); line-height:1.45; }
+
+/* ── SECTIONS ── */
+.section{ padding:90px 22px; }
+.container{ max-width:1180px; margin:0 auto; }
+.section-header{ max-width:720px; margin:0 auto 50px; text-align:center; }
+.section-label{ font-size:.85rem; letter-spacing:.5px; color:var(--green); margin-bottom:12px; font-weight:700; }
+.section-title{ font-size:clamp(2rem,3.6vw,2.9rem); line-height:1.1; font-weight:800; margin-bottom:18px; color:var(--ink); }
+.section-text{ color:var(--muted); line-height:1.7; font-size:1.05rem; }
+
+/* ── OM OSS ── */
+.welcome-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center; }
+.welcome-text h2{ font-size:clamp(2rem,3.6vw,2.9rem); line-height:1.1; font-weight:800; margin-bottom:22px; color:var(--ink); }
+.welcome-text p{ color:var(--muted); line-height:1.75; font-size:1.05rem; margin-bottom:18px; }
+.welcome-list{ display:grid; gap:0; margin-top:26px; }
+.welcome-list div{ border-top:1px solid var(--line); padding:14px 0; color:var(--ink); font-weight:600; font-size:.98rem; display:flex; align-items:center; gap:11px; }
+.welcome-list .chk{ color:var(--green); }
+.welcome-image{ border-radius:16px; overflow:hidden; box-shadow:var(--shadow); }
+.welcome-image img{ width:100%; height:500px; object-fit:cover; }
+
+
+/* ── PRISER ── */
+.price-section{ background:var(--bg); }
+.notice{ max-width:920px; margin:0 auto 28px; background:#fff; border:1px solid var(--line); border-left:3px solid var(--green); border-radius:10px; padding:18px 24px; line-height:1.6; color:var(--ink); font-size:.96rem; }
+.notice strong{ color:var(--ink); }
+.price-board{ background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:var(--shadow); }
+.price-heading{ display:grid; grid-template-columns:1.45fr repeat(3,1fr); background:var(--dark); }
+.price-heading div{ padding:18px 20px; font-size:.84rem; color:#fff; font-weight:700; border-left:1px solid rgba(255,255,255,.1); }
+.price-heading div:first-child{ border-left:0; }
+.price-heading small{ display:block; margin-top:5px; color:rgba(255,255,255,.55); font-size:.72rem; font-weight:400; line-height:1.4; }
+.price-group{ border-top:1px solid var(--line); }
+.price-group:first-of-type{ border-top:0; }
+.price-group-title{ font-size:1.05rem; font-weight:800; padding:16px 24px; background:var(--bg-alt); color:var(--ink); border-bottom:1px solid var(--line); }
+.price-line{ display:grid; grid-template-columns:1.45fr repeat(3,1fr); border-top:1px solid var(--line); }
+.price-line:first-of-type{ border-top:0; }
+.price-line:hover{ background:#faf8f3; }
+.price-line div{ padding:15px 20px; line-height:1.4; border-left:1px solid var(--line); font-size:.95rem; }
+.price-line div:first-child{ border-left:0; color:var(--ink); font-weight:500; }
+.price-line div:not(:first-child){ color:var(--ink); font-weight:700; white-space:nowrap; }
+.price-line div.avtale{ grid-column:2 / -1; color:var(--muted); font-weight:600; white-space:normal; }
+
+/* ── TJENESTER ── */
+.services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.service-card{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:30px; transition:.2s; }
+.service-card:hover{ box-shadow:var(--shadow); transform:translateY(-3px); }
+.service-ico{ width:44px; height:44px; border-radius:10px; background:var(--bg); color:var(--accent); display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+.service-card h3{ font-size:1.22rem; font-weight:800; margin-bottom:10px; color:var(--ink); }
+.service-card p{ color:var(--muted); line-height:1.6; font-size:.94rem; }
+
+/* ── GALLERI ── */
+.gallery-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:18px; }
+.gallery-main{ border-radius:16px; overflow:hidden; box-shadow:var(--shadow); }
+.gallery-main img{ width:100%; height:620px; object-fit:cover; }
+.gallery-side{ display:grid; grid-template-rows:1fr 1fr; gap:18px; }
+.gallery-side div{ border-radius:16px; overflow:hidden; box-shadow:var(--shadow); }
+.gallery-side img{ width:100%; height:301px; object-fit:cover; }
+
+/* ── SPLIT ── */
+.split{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.image-box{ border-radius:16px; overflow:hidden; box-shadow:var(--shadow); }
+.image-box img{ width:100%; height:520px; object-fit:cover; }
+.text-card h2{ font-size:clamp(1.9rem,3.4vw,2.7rem); line-height:1.1; font-weight:800; margin-bottom:22px; color:var(--ink); }
+.text-card p{ color:var(--muted); line-height:1.75; margin-bottom:16px; font-size:1.02rem; }
+.simple-list{ display:grid; gap:0; margin-top:26px; }
+.simple-list div{ padding:14px 0; border-top:1px solid var(--line); color:var(--ink); line-height:1.5; display:flex; align-items:center; gap:11px; font-size:.98rem; }
+.simple-list .chk{ color:var(--green); }
+
+/* ── FAQ ── */
+.faq-list{ max-width:800px; margin:0 auto; }
+.faq-item{ border-top:1px solid var(--line); padding:24px 0; }
+.faq-item:last-child{ border-bottom:1px solid var(--line); }
+.faq-q{ font-size:1.08rem; font-weight:700; color:var(--ink); margin-bottom:10px; line-height:1.4; }
+.faq-a{ color:var(--muted); line-height:1.65; font-size:.97rem; }
+
+/* ── BESTILL / KONTAKT ── */
+.booking-section{ background:var(--bg-alt); }
+.booking-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; }
+.booking-card{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:36px; box-shadow:var(--shadow); }
+.booking-card h3{ font-size:1.4rem; font-weight:800; margin-bottom:8px; color:var(--ink); }
+.booking-card .lead{ color:var(--muted); line-height:1.6; margin-bottom:24px; font-size:.96rem; }
+.field{ margin-bottom:16px; }
+.field label{ display:block; font-size:.88rem; font-weight:600; color:var(--ink); margin-bottom:6px; }
+.field input, .field select, .field textarea{ width:100%; padding:13px 14px; border:1px solid var(--line); border-radius:9px; background:var(--bg); font-family:inherit; font-size:1rem; color:var(--ink); transition:.2s; }
+.field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color:var(--green); background:#fff; }
+.field textarea{ resize:vertical; min-height:84px; }
+.submit-btn{ width:100%; min-height:56px; border:none; border-radius:9px; background:var(--green); color:#fff; font-family:inherit; font-size:1rem; font-weight:700; cursor:pointer; transition:.2s; display:flex; align-items:center; gap:8px; justify-content:center; }
+.submit-btn:hover{ background:#268653; }
+.form-note{ font-size:.85rem; color:var(--muted); text-align:center; margin-top:13px; line-height:1.5; }
+.map-box{ border-radius:14px; overflow:hidden; box-shadow:var(--shadow); height:100%; min-height:420px; }
+.map-box iframe{ width:100%; height:100%; min-height:420px; border:0; display:block; }
+.contact-info-card{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:32px 36px; box-shadow:var(--shadow); margin-top:24px; }
+.contact-info-card h3{ font-size:1.25rem; font-weight:800; margin-bottom:18px; color:var(--ink); }
+.ci-row{ display:flex; gap:13px; padding:13px 0; border-top:1px solid var(--line); align-items:flex-start; }
+.ci-row:first-of-type{ border-top:0; padding-top:0; }
+.ci-row .icon{ width:38px; height:38px; }
+.ci-row strong{ display:block; color:var(--ink); font-size:.93rem; margin-bottom:2px; font-weight:700; }
+.ci-row a, .ci-row span{ color:var(--muted); text-decoration:none; font-size:.93rem; line-height:1.5; }
+.ci-row a:hover{ color:var(--green); }
+
+/* ── FOOTER ── */
+footer{ padding:46px 22px 96px; background:var(--dark); color:rgba(246,243,236,.55); text-align:center; line-height:1.85; font-size:.88rem; }
+footer strong{ color:rgba(246,243,236,.85); }
+footer a{ color:inherit; text-decoration:none; }
+footer a:hover{ color:#fff; }
+
+/* ── MOBIL FAST BUNN ── */
+.mobile-bar{ position:fixed; left:0; right:0; bottom:0; z-index:3000; display:none; grid-template-columns:1fr 1fr 1fr; background:var(--dark); box-shadow:0 -12px 40px rgba(0,0,0,.28); }
+.mobile-bar a{ min-height:64px; display:flex; align-items:center; gap:7px; justify-content:center; text-decoration:none; font-weight:700; font-size:.9rem; color:#fff; }
+.mobile-bar .call{ background:var(--accent); }
+.mobile-bar .sms{ background:var(--green); }
+.mobile-bar .messenger{ background:#0084ff; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:1000px){
+  .hero-inner, .welcome-grid, .split, .gallery-grid, .booking-grid{ grid-template-columns:1fr; }
+  .services-grid{ grid-template-columns:1fr; }
+  .trust-bar-inner{ grid-template-columns:repeat(2,1fr); gap:22px; }
+  .price-heading, .price-line{ grid-template-columns:1.4fr repeat(3,1fr); }
+  .gallery-main img{ height:420px; }
+  .gallery-side img{ height:280px; }
+}
+@media(max-width:760px){
+  body{ font-size:17px; }
+  .topbar{ padding:8px 18px; }
+  .topbar-inner{ display:grid; gap:2px; font-size:.78rem; }
+  .header-inner{ padding:12px 18px; }
+  .logo strong{ font-size:1.12rem; }
+  nav, .header-call{ display:none; }
+  .hero{ min-height:66vh; padding:0 16px 28px; }
+  .hero::before{ background:linear-gradient(to top,rgba(21,36,46,.45),rgba(21,36,46,.12) 55%,rgba(21,36,46,.2)),url("bilvask7.jpg") center/cover no-repeat; }
+  .hero-card{ padding:24px 22px; max-width:100%; border-radius:16px; }
+  .hero h1{ font-size:clamp(1.9rem,7.5vw,2.5rem); }
+  .hero p{ font-size:1rem; margin-bottom:22px; }
+  .hero-actions a{ flex:1; min-width:140px; }
+  .hero-links{ display:none; }
+  .trust-bar-inner{ grid-template-columns:1fr; gap:18px; }
+  .info-card{ padding:26px; }
+  .section{ padding:64px 18px; }
+  .section-header{ text-align:left; margin-bottom:36px; }
+  .welcome-image img, .image-box img, .gallery-main img{ height:300px; }
+  .gallery-side img{ height:190px; }
+  .service-card, .booking-card, .contact-info-card{ padding:26px 22px; }
+  .price-board{ overflow:visible; border:0; background:transparent; box-shadow:none; border-radius:0; }
+  .price-heading{ display:none; }
+  .price-group{ border-top:0; margin-bottom:26px; }
+  .price-group-title{ background:transparent; color:var(--ink); border:0; padding:0 0 12px; font-size:1.18rem; min-width:0; }
+  .price-line{ display:block; background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:10px; min-width:0; grid-template-columns:none; }
+  .price-line:hover{ background:#fff; }
+  .price-line div{ border:0; padding:0; }
+  .price-line div:first-child{ font-weight:700; font-size:1.02rem; color:var(--ink); margin-bottom:6px; }
+  .price-line div:not(:first-child){ display:flex; justify-content:space-between; gap:14px; align-items:baseline; padding:8px 0; border-top:1px solid var(--line); font-weight:700; font-size:.95rem; white-space:normal; }
+  .price-line div:not(:first-child)::before{ content:attr(data-label); color:var(--muted); font-weight:500; }
+  .price-line div.avtale{ display:block; }
+  .price-line div.avtale::before{ content:none; }
+  .mobile-bar{ display:grid; }
+  body{ padding-bottom:64px; }
+}
+/* ── TILGJENGELIGHET ── */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:2px;
+  border-radius:4px;
+}
+@media(prefers-reduced-motion:reduce){
+  *{ transition-duration:0.01ms !important; animation-duration:0.01ms !important; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span><strong>Lade Arena, Trondheim</strong> · Haakon VIIs gate 12</span>
+    <span><strong>Åpent:</strong> Man–lør 09:00–17:00</span>
+    <span><strong>Ring/SMS:</strong> <a href="tel:41113113">41 11 31 13</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <strong>Lade Arena Bilvask & Bilpleie</strong>
+      <span>Bilvask og bilpleie i Trondheim</span>
+    </a>
+    <nav>
+      <a href="#om-oss">Om oss</a>
+      <a href="#priser">Priser</a>
+      <a href="#tjenester">Tjenester</a>
+      <a href="#bestill">Bestill time</a>
+    </nav>
+    <a href="tel:41113113" class="header-call">
+      <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Ring oss
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-panel">
+    <div class="hero-card">
+      <div class="kicker">Bilvask · Bilpleie · Polering · Hjulskift</div>
+      <h1>Bilvask og bilpleie på Lade Arena</h1>
+      <p>
+        Vi vasker, pleier og klargjør bilen din i Trondheim. Tydelige priser og enkel bestilling.
+        Ring eller send SMS, så finner vi en tid som passer.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:41113113" class="ring">
+          <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Ring oss
+        </a>
+        <a href="sms:41113113" class="sms">
+          <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Send SMS
+        </a>
+        <a href="https://m.me/61589307579289" target="_blank" rel="noopener" class="msg">
+          <svg class="btn-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.14.26.35.27.57l.05 1.78c.02.57.6.94 1.12.71l1.99-.88c.17-.07.36-.09.54-.04 .91.25 1.88.38 2.8.38 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2zm6 7.46l-2.93 4.66c-.47.74-1.47.93-2.18.4l-2.33-1.75a.6.6 0 0 0-.72 0l-3.15 2.39c-.42.32-.97-.18-.69-.63l2.93-4.66c.47-.74 1.47-.93 2.18-.4l2.33 1.75c.21.16.51.16.72 0l3.15-2.39c.42-.32.97.18.69.63z"/></svg>
+          Messenger
+        </a>
+      </div>
+      <div class="hero-links">
+        <a href="#priser">Se priser</a>
+        <a href="#bestill">Finn oss</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="tico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div><strong>Lokal og pålitelig</strong><span>Vi bryr oss om resultatet</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="tico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 6H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg></div>
+      <div><strong>Alle biltyper</strong><span>Personbil, SUV, varebil og Tesla</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="tico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+      <div><strong>Fra-priser</strong><span>Pris avtales før vi starter</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="tico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+      <div><strong>Enkel bestilling</strong><span>Ring eller send SMS</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="om-oss">
+  <div class="container">
+    <div class="welcome-grid">
+      <div class="welcome-text">
+        <div class="section-label">Om oss</div>
+        <h2>Vi tar vare på bilen din</h2>
+        <p>
+          Lade Arena Bilvask & Bilpleie holder til i parkeringskjelleren på Lade Arena i Trondheim.
+          Vi hjelper privatpersoner, familier, pendlere og bedrifter med å holde bilen ren og velstelt,
+          fra en rask utvendig vask til full klargjøring.
+        </p>
+        <p>
+          Hos oss vet du alltid hva du betaler. Prisene ligger åpent på siden, og endelig pris
+          avtaler vi med deg før vi setter i gang. Ingen overraskelser.
+        </p>
+        <div class="welcome-list">
+          <div><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Profesjonell håndvask, ikke tunnelvask</div>
+          <div><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Innvendig rens og skinnbehandling</div>
+          <div><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Polering og lakkrens</div>
+          <div><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hjulskift og sesongklargjøring</div>
+        </div>
+      </div>
+      <div class="welcome-image">
+        <img src="bilvask5.jpg" alt="Grå Honda CR-V med blank lakk etter vask og polering hos Lade Arena Bilvask i Trondheim">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section price-section" id="priser">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Priser</div>
+      <h2 class="section-title">Priser</h2>
+      <p class="section-text">
+        Prisene er fra-priser og kan variere etter bilstørrelse og hvor mye arbeid som trengs.
+      </p>
+    </div>
+
+    <div class="notice">
+      <strong>10% rabatt for pensjonister og studenter.</strong>
+      Endelig pris avtales før arbeidet starter.
+    </div>
+
+    <div class="price-board">
+      <div class="price-heading">
+        <div>Behandling</div>
+        <div>Liten personbil</div>
+        <div>Mellomstor personbil <small>SUV / STV / Tesla / kombi</small></div>
+        <div>Stor personbil <small>Stor SUV / vare / 7-seter</small></div>
+      </div>
+
+      <div class="price-group">
+        <div class="price-group-title">Bilvask</div>
+        <div class="price-line"><div>Utvendig håndvask</div><div data-label="Liten">Fra 320 kr</div><div data-label="Mellomstor">Fra 390 kr</div><div data-label="Stor">Fra 490 kr</div></div>
+        <div class="price-line"><div>Innvendig vask</div><div data-label="Liten">Fra 340 kr</div><div data-label="Mellomstor">Fra 440 kr</div><div data-label="Stor">Fra 540 kr</div></div>
+        <div class="price-line"><div>Inn- og utvendig vask</div><div data-label="Liten">Fra 590 kr</div><div data-label="Mellomstor">Fra 690 kr</div><div data-label="Stor">Fra 790 kr</div></div>
+        <div class="price-line"><div>Super inn- og utvendig vask</div><div data-label="Liten">Fra 1300 kr</div><div data-label="Mellomstor">Fra 1500 kr</div><div data-label="Stor">Fra 1700 kr</div></div>
+        <div class="price-line"><div>Avfetting</div><div data-label="Liten">100 kr</div><div data-label="Mellomstor">125 kr</div><div data-label="Stor">150 kr</div></div>
+        <div class="price-line"><div>Insektfjerning</div><div data-label="Liten">100 kr</div><div data-label="Mellomstor">125 kr</div><div data-label="Stor">150 kr</div></div>
+        <div class="price-line"><div>Underspyling</div><div data-label="Liten">70 kr</div><div data-label="Mellomstor">80 kr</div><div data-label="Stor">80 kr</div></div>
+        <div class="price-line"><div>Skiboks</div><div data-label="Liten">70 kr</div><div data-label="Mellomstor">70 kr</div><div data-label="Stor">70 kr</div></div>
+        <div class="price-line"><div>Motorvask, drivstoff</div><div data-label="Liten">400 kr</div><div data-label="Mellomstor">400 kr</div><div data-label="Stor">400 kr</div></div>
+        <div class="price-line"><div>Motorvask, elbil</div><div data-label="Liten">800 kr</div><div data-label="Mellomstor">800 kr</div><div data-label="Stor">800 kr</div></div>
+        <div class="price-line"><div>Fjerning av dyrehår</div><div data-label="Liten">Fra 300 kr</div><div data-label="Mellomstor">Fra 500 kr</div><div data-label="Stor">Fra 500 kr</div></div>
+      </div>
+
+      <div class="price-group">
+        <div class="price-group-title">Polering</div>
+        <div class="price-line"><div>Utvendig vask med polering</div><div class="avtale">Pris etter avtale</div></div>
+        <div class="price-line"><div>Lakkrens og polering</div><div class="avtale">Pris etter avtale</div></div>
+        <div class="price-line"><div>Rubbing / fjerning av riper</div><div class="avtale">Pris etter avtale</div></div>
+      </div>
+
+      <div class="price-group">
+        <div class="price-group-title">Interiør</div>
+        <div class="price-line"><div>Innvendig rens</div><div data-label="Liten">Fra 2590 kr</div><div data-label="Mellomstor">Fra 2990 kr</div><div data-label="Stor">Fra 3690 kr</div></div>
+        <div class="price-line"><div>Skinnbehandling</div><div data-label="Liten">500 kr</div><div data-label="Mellomstor">500 kr</div><div data-label="Stor">700 kr</div></div>
+      </div>
+
+      <div class="price-group">
+        <div class="price-group-title">Sesongskift av hjul</div>
+        <div class="price-line"><div>Skifte av 4 hjul</div><div data-label="Liten">350 kr</div><div data-label="Mellomstor">400 kr</div><div data-label="Stor">450 kr</div></div>
+        <div class="price-line"><div>Vask av 4 hjul</div><div data-label="Liten">200 kr</div><div data-label="Mellomstor">200 kr</div><div data-label="Stor">200 kr</div></div>
+      </div>
+
+      <div class="price-group">
+        <div class="price-group-title">Bildekor</div>
+        <div class="price-line"><div>Fjerning og montering av logo / dekor</div><div class="avtale">Pris etter avtale</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tjenester">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Tjenester</div>
+      <h2 class="section-title">Hva kan vi hjelpe deg med?</h2>
+      <p class="section-text">Fra en rask utvendig vask til en grundig innvendig rens. Vi tilpasser oss det du trenger.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div>
+        <h3>Utvendig håndvask</h3>
+        <p>Vi vasker bilen for hånd, ikke i tunnelvask. Det gir et bedre resultat og skåner lakken din.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 5-6"/></svg></div>
+        <h3>Innvendig vask</h3>
+        <p>Støvsuging, rengjøring av dashbord og overflater, og grundig gjennomgang av kupeen.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg></div>
+        <h3>Inn- og utvendig vask</h3>
+        <p>Den komplette vasken, både inni og utenpå. Bra når bilen trenger en skikkelig oppfriskning.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></div>
+        <h3>Polering og lakkrens</h3>
+        <p>Fjerner matt lakk, mikroriper og solskader. Bilen får tilbake glansen.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 11a2 2 0 0 1 2 2v3h14v-3a2 2 0 0 1 2-2 2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M5 18v2M19 18v2"/></svg></div>
+        <h3>Interiørrens og skinn</h3>
+        <p>Grundig innvendig rens av hele kupeen. Vi tilbyr også skinnbehandling som beskytter skinnet.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>Hjulskift og sesong</h3>
+        <p>Vi bytter hjul og vasker felgene. Praktisk å gjøre samtidig med en vask.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="gallery-grid">
+      <div class="gallery-main"><img src="bilvask6.jpg" alt="Hvit Tesla Model X med blank lakk etter bilpleie hos Lade Arena Bilvask i Trondheim"></div>
+      <div class="gallery-side">
+        <div><img src="bilvask2.jpg" alt="Sort Porsche med polert lakk og rene felger hos Lade Arena Bilvask i Trondheim"></div>
+        <div><img src="bilvask1.jpg" alt="Mørk grå Kia med nyvasket, blankt panser hos Lade Arena Bilvask i Trondheim"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="split">
+      <div class="image-box"><img src="bilvask3.jpg" alt="Sort Porsche klargjort og polert i bilpleiestudio på Lade Arena i Trondheim"></div>
+      <div class="text-card">
+        <div class="section-label">Lade Arena</div>
+        <h2>Lever bilen, gjør andre ting</h2>
+        <p>
+          Vi holder til i parkeringskjelleren på Lade Arena, sentralt i Trondheim.
+          Det gjør det enkelt å levere bilen og bruke ventetiden på handel, trening eller en kaffe.
+        </p>
+        <p>Kontakt oss på telefon eller SMS, så finner vi en tid som passer. Vi svarer raskt.</p>
+        <div class="simple-list">
+          <div><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Enkel bestilling på telefon eller SMS</div>
+          <div><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tydelige priser, ingen skjulte kostnader</div>
+          <div><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sentralt på Lade Arena</div>
+          <div><svg class="chk" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>10% rabatt for studenter og pensjonister</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Vanlige spørsmål</div>
+      <h2 class="section-title">Spørsmål og svar</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Hvordan bestiller jeg time?</div>
+        <div class="faq-a">Ring oss på 41 11 31 13, send en SMS, eller bruk skjemaet lenger ned. Fortell hva slags bil du har og hva du ønsker gjort, så finner vi en tid som passer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Hva koster det?</div>
+        <div class="faq-a">Prisene varierer etter bilstørrelse og behandling. Se prislisten på siden. Endelig pris avtaler vi alltid med deg før vi setter i gang.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Hvor lang tid tar det?</div>
+        <div class="faq-a">En enkel utvendig vask tar gjerne 30 til 60 minutter. En grundig innvendig rens kan ta 2 til 4 timer. Du får et estimat når du bestiller.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Gjelder rabatten for studenter og pensjonister?</div>
+        <div class="faq-a">Vis legitimasjon eller nevn det når du bestiller, så ordner vi 10% rabatt.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Hva slags biler tar dere?</div>
+        <div class="faq-a">Alle typer personbiler, fra kompaktbiler til store SUV-er, varebiler, Tesla og 7-setere. Prisen justeres etter bilstørrelse.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Kan bedrifter med firmabiler bruke dere?</div>
+        <div class="faq-a">Ja. Ta kontakt på telefon eller e-post, så finner vi en løsning som passer for din bedrift.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section booking-section" id="bestill">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Bestill time</div>
+      <h2 class="section-title">Send oss en forespørsel</h2>
+      <p class="section-text">Fyll ut feltene, så sender du oss en ferdig SMS. Vi svarer så raskt vi kan med tid og pris.</p>
+    </div>
+
+    <div class="booking-grid">
+      <div>
+        <div class="booking-card">
+          <h3>Be om time</h3>
+          <p class="lead">Det tar ett minutt. Du sender meldingen fra din egen telefon.</p>
+
+          <div class="field">
+            <label for="navn">Navn</label>
+            <input type="text" id="navn" placeholder="Ditt navn">
+          </div>
+          <div class="field">
+            <label for="bil">Bilmodell</label>
+            <input type="text" id="bil" placeholder="For eksempel Volkswagen Golf">
+          </div>
+          <div class="field">
+            <label for="tjeneste">Hva ønsker du?</label>
+            <select id="tjeneste">
+              <option>Utvendig håndvask</option>
+              <option>Innvendig vask</option>
+              <option>Inn- og utvendig vask</option>
+              <option>Super inn- og utvendig vask</option>
+              <option>Polering</option>
+              <option>Innvendig rens</option>
+              <option>Sesongskift av hjul</option>
+              <option>Annet / usikker</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="melding">Når passer det? (valgfritt)</label>
+            <textarea id="melding" placeholder="For eksempel en gang neste uke, helst formiddag"></textarea>
+          </div>
+
+          <button class="submit-btn" onclick="sendBestilling()">
+            <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Send forespørsel på SMS
+          </button>
+          <p class="form-note">Foretrekker du å ringe? <a href="tel:41113113" style="color:var(--green);font-weight:700;">41 11 31 13</a></p>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>Kontakt og åpningstider</h3>
+          <div class="ci-row">
+            <div class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><strong>Telefon og SMS</strong><a href="tel:41113113">41 11 31 13</a></div>
+          </div>
+          <div class="ci-row">
+            <div class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div>
+            <div><strong>E-post</strong><a href="mailto:ladebilvask@gmail.com">ladebilvask@gmail.com</a></div>
+          </div>
+          <div class="ci-row">
+            <div class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.14.26.35.27.57l.05 1.78c.02.57.6.94 1.12.71l1.99-.88c.17-.07.36-.09.54-.04 .91.25 1.88.38 2.8.38 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2zm6 7.46l-2.93 4.66c-.47.74-1.47.93-2.18.4l-2.33-1.75a.6.6 0 0 0-.72 0l-3.15 2.39c-.42.32-.97-.18-.69-.63l2.93-4.66c.47-.74 1.47-.93 2.18-.4l2.33 1.75c.21.16.51.16.72 0l3.15-2.39c.42-.32.97.18.69.63z"/></svg></div>
+            <div><strong>Messenger</strong><a href="https://m.me/61589307579289" target="_blank" rel="noopener">Send oss en melding</a></div>
+          </div>
+          <div class="ci-row">
+            <div class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 1 1-2.6-2.6c.27 0 .53.04.78.12V9.7a5.7 5.7 0 0 0-.78-.05 5.69 5.69 0 1 0 5.69 5.69V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3a4.3 4.3 0 0 1-3.24-1.48z"/></svg></div>
+            <div><strong>TikTok</strong><a href="https://www.tiktok.com/@moaayham" target="_blank" rel="noopener">@moaayham</a></div>
+          </div>
+          <div class="ci-row">
+            <div class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></div>
+            <div><strong>Facebook</strong><a href="https://www.facebook.com/share/1BSwGyzJLh/" target="_blank" rel="noopener">Følg oss på Facebook</a></div>
+          </div>
+          <div class="ci-row">
+            <div class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><strong>Adresse</strong><span>Haakon VIIs gate 12, 7041 Trondheim. Lade Arena.</span></div>
+          </div>
+          <div class="ci-row">
+            <div class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div><strong>Åpningstider</strong><span>Mandag til lørdag: 09:00–17:00. Søndag stengt.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-box">
+        <iframe
+          title="Kart til Lade Arena Bilvask"
+          src="https://www.google.com/maps?q=Haakon+VIIs+gate+12,+7041+Trondheim&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>Lade Arena Bilvask & Bilpleie AS</strong><br>
+  Haakon VIIs gate 12, 7041 Trondheim<br>
+  Telefon: <a href="tel:41113113">41 11 31 13</a> · E-post: <a href="mailto:ladebilvask@gmail.com">ladebilvask@gmail.com</a><br>
+  Åpent mandag til lørdag 09:00–17:00<br><br>
+  © 2026 Lade Arena Bilvask & Bilpleie AS
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:41113113" class="call">
+    <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Ring nå
+  </a>
+  <a href="sms:41113113" class="sms">
+    <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    SMS
+  </a>
+  <a href="https://m.me/61589307579289" target="_blank" rel="noopener" class="messenger">
+    <svg class="btn-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.14.26.35.27.57l.05 1.78c.02.57.6.94 1.12.71l1.99-.88c.17-.07.36-.09.54-.04 .91.25 1.88.38 2.8.38 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2zm6 7.46l-2.93 4.66c-.47.74-1.47.93-2.18.4l-2.33-1.75a.6.6 0 0 0-.72 0l-3.15 2.39c-.42.32-.97-.18-.69-.63l2.93-4.66c.47-.74 1.47-.93 2.18-.4l2.33 1.75c.21.16.51.16.72 0l3.15-2.39c.42-.32.97.18.69.63z"/></svg>
+    Chat
+  </a>
+</div>
+
+<script>
+function sendBestilling(){
+  var navn = document.getElementById('navn').value.trim();
+  var bil = document.getElementById('bil').value.trim();
+  var tjeneste = document.getElementById('tjeneste').value;
+  var melding = document.getElementById('melding').value.trim();
+
+  var tekst = 'Hei! Jeg vil bestille time hos Lade Arena Bilvask.';
+  if(navn) tekst += '\n\nNavn: ' + navn;
+  if(bil) tekst += '\nBil: ' + bil;
+  tekst += '\nØnsker: ' + tjeneste;
+  if(melding) tekst += '\nTidspunkt: ' + melding;
+
+  window.location.href = 'sms:41113113?body=' + encodeURIComponent(tekst);
+}
+</script>
+
+</body>
+</html>
