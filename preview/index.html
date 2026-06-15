@@ -154,7 +154,7 @@ nav a:hover{ color:var(--green); }
 .welcome-list div{ border-top:1px solid var(--line); padding:14px 0; color:var(--ink); font-weight:600; font-size:.98rem; display:flex; align-items:center; gap:11px; }
 .welcome-list .chk{ color:var(--green); }
 .welcome-image{ border-radius:16px; overflow:hidden; box-shadow:var(--shadow); }
-.welcome-image img{ width:100%; height:560px; object-fit:cover; }
+.welcome-image img{ width:100%; height:500px; object-fit:cover; }
 
 
 /* ── PRISER ── */
@@ -290,6 +290,15 @@ footer a:hover{ color:#fff; }
   .mobile-bar{ display:grid; }
   body{ padding-bottom:64px; }
 }
+/* ── TILGJENGELIGHET ── */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:2px;
+  border-radius:4px;
+}
+@media(prefers-reduced-motion:reduce){
+  *{ transition-duration:0.01ms !important; animation-duration:0.01ms !important; }
+}
 </style>
 </head>
 
@@ -407,7 +416,7 @@ footer a:hover{ color:#fff; }
   <div class="container">
     <div class="section-header">
       <div class="section-label">Priser</div>
-      <h2 class="section-title">Priser</h2>
+      <h2 class="section-title">Faste priser</h2>
       <p class="section-text">
         Prisene er fra-priser og kan variere etter bilstørrelse og hvor mye arbeid som trengs.
       </p>
