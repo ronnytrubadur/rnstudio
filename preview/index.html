@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,11 +14,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="nb_NO" />
 
+<!-- VIKTIG: Bytt preview-URL til kundens endelige domene ved publisering (gjelder canonical UNDER og "url" i JSON-LD) -->
+<link rel="canonical" href="https://rnstudio.no/preview/index.html" />
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "AutoWash",
   "name": "Lade Arena Bilvask & Bilpleie AS",
+  "url": "https://rnstudio.no/preview/index.html",
   "image": "bilde7.jpg",
   "telephone": "+4741113113",
   "email": "ladebilvask@gmail.com",
@@ -207,7 +211,7 @@ nav a:hover{ color:var(--green); }
 
 /* ── BESTILL / KONTAKT ── */
 .booking-section{ background:var(--bg-alt); }
-.booking-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+.booking-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; }
 .booking-card{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:36px; box-shadow:var(--shadow); }
 .booking-card h3{ font-size:1.4rem; font-weight:800; margin-bottom:8px; color:var(--ink); }
 .booking-card .lead{ color:var(--muted); line-height:1.6; margin-bottom:24px; font-size:.96rem; }
@@ -664,7 +668,7 @@ footer a:hover{ color:#fff; }
   Haakon VIIs gate 12, 7041 Trondheim<br>
   Telefon: <a href="tel:41113113">41 11 31 13</a> · E-post: <a href="mailto:ladebilvask@gmail.com">ladebilvask@gmail.com</a><br>
   Åpent mandag til lørdag 09:00–17:00<br><br>
-  © 2025 Lade Arena Bilvask & Bilpleie AS
+  © 2026 Lade Arena Bilvask & Bilpleie AS
 </footer>
 
 <div class="mobile-bar">
