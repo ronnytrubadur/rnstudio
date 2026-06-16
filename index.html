@@ -15,7 +15,7 @@
 <meta property="og:title" content="RNstudio | Nettsider som føles ekte">
 <meta property="og:description" content="Rolige, moderne og menneskelige nettsider for små bedrifter i Trondheim og omegn.">
 <meta property="og:image" content="https://rnstudio.no/og-image.jpg">
-<meta property="og:url" content="https://rnstudio.no">
+<meta property="og:url" content="https://rnstudio.no/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nb_NO">
 <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +34,8 @@
   "@type": "ProfessionalService",
   "name": "RNstudio",
   "url": "https://rnstudio.no",
-  "email": "Ronny.nilsen.studio@gmail.com",
+  "email": "ronny.nilsen.studio@gmail.com",
+  "telephone": "+4741357603",
   "description": "RNstudio lager rolige, moderne og menneskelige nettsider for små bedrifter i Trondheim og omegn – laget for å bli funnet, bygge tillit og gjøre det enklere for kunder å ta kontakt.",
   "areaServed": ["Trondheim", "Trøndelag", "Norge"],
   "founder": {
@@ -224,6 +225,12 @@ backdrop-filter:blur(10px);
 color:white;
 }
 
+.button.call{
+background:var(--gold);
+color:#071017;
+gap:10px;
+}
+
 .button:hover{
 transform:translateY(-4px);
 }
@@ -324,11 +331,35 @@ border-radius:34px;
 overflow:hidden;
 box-shadow:var(--shadow);
 transition:.35s ease;
+position:relative;
+}
+
+.demo-card.live{
+border-color:rgba(199,173,131,.35);
 }
 
 .demo-card:hover{
 transform:translateY(-8px);
 border-color:rgba(255,255,255,.18);
+}
+
+.demo-card.live:hover{
+border-color:rgba(199,173,131,.6);
+}
+
+.live-badge{
+position:absolute;
+top:22px;
+right:22px;
+z-index:3;
+background:rgba(199,173,131,.95);
+color:#071017;
+font-size:.62rem;
+letter-spacing:2.2px;
+text-transform:uppercase;
+font-weight:600;
+padding:8px 14px;
+border-radius:999px;
 }
 
 .demo-image{
@@ -455,22 +486,31 @@ border-top:1px solid var(--line);
 border-bottom:1px solid var(--line);
 }
 
-.price-wrapper{
-max-width:920px;
-margin:0 auto;
+.price-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+margin-bottom:32px;
 }
 
 .price-card{
-background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.028));
-border:1px solid rgba(199,173,131,.35);
-border-radius:38px;
-padding:58px 52px;
+background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+border:1px solid var(--line);
+border-radius:32px;
+padding:42px 36px;
 box-shadow:var(--shadow);
 position:relative;
 overflow:hidden;
+display:flex;
+flex-direction:column;
 }
 
-.price-card::before{
+.price-card.featured{
+background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.028));
+border-color:rgba(199,173,131,.4);
+}
+
+.price-card.featured::before{
 content:"";
 position:absolute;
 top:-120px;
@@ -481,13 +521,18 @@ background:radial-gradient(circle,rgba(199,173,131,.18),transparent 65%);
 pointer-events:none;
 }
 
-.price-top{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:46px;
-align-items:end;
-position:relative;
-z-index:2;
+.recommended-badge{
+position:absolute;
+top:20px;
+right:20px;
+background:var(--gold);
+color:#071017;
+font-size:.6rem;
+letter-spacing:2.2px;
+text-transform:uppercase;
+font-weight:600;
+padding:7px 12px;
+border-radius:999px;
 }
 
 .price-tag{
@@ -495,62 +540,140 @@ font-size:.72rem;
 letter-spacing:3px;
 text-transform:uppercase;
 color:var(--gold);
-margin-bottom:24px;
+margin-bottom:20px;
+position:relative;
+z-index:2;
 }
 
 .price-card h3{
 font-family:'Cormorant Garamond',serif;
-font-size:clamp(3rem,5vw,5rem);
+font-size:2.4rem;
 font-weight:500;
-line-height:.98;
-margin-bottom:24px;
+line-height:1.05;
+margin-bottom:18px;
+position:relative;
+z-index:2;
 }
 
-.price-card p{
+.price-card .price-desc{
 color:var(--muted);
-line-height:1.9;
-font-size:1.05rem;
+line-height:1.85;
+font-size:.98rem;
+margin-bottom:28px;
+position:relative;
+z-index:2;
 }
 
-.price-number{
-text-align:right;
+.price-amount{
+position:relative;
+z-index:2;
+padding-bottom:24px;
+margin-bottom:24px;
+border-bottom:1px solid var(--line);
 }
 
-.price-number span{
+.price-amount span{
 display:block;
-font-size:.74rem;
-letter-spacing:3px;
+font-size:.7rem;
+letter-spacing:2.6px;
 text-transform:uppercase;
 color:rgba(255,255,255,.46);
-margin-bottom:14px;
+margin-bottom:10px;
 }
 
-.price-number strong{
+.price-amount strong{
 display:block;
-font-size:clamp(2.6rem,5vw,4.7rem);
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
 font-weight:500;
 line-height:1;
 color:white;
 }
 
-.price-number small{
+.price-includes{
+list-style:none;
+position:relative;
+z-index:2;
+margin-bottom:0;
+}
+
+.price-includes li{
+color:rgba(255,255,255,.74);
+font-size:.95rem;
+line-height:1.55;
+padding:9px 0;
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.price-includes li:last-child{
+border-bottom:0;
+}
+
+.price-includes li::before{
+content:"— ";
+color:var(--gold);
+}
+
+.maintenance-card{
+margin-top:8px;
+background:rgba(255,255,255,.025);
+border:1px solid var(--line);
+border-radius:28px;
+padding:36px 42px;
+display:grid;
+grid-template-columns:1.3fr .7fr;
+gap:32px;
+align-items:center;
+}
+
+.maintenance-card .price-tag{
+margin-bottom:14px;
+}
+
+.maintenance-card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:1.9rem;
+font-weight:500;
+margin-bottom:12px;
+}
+
+.maintenance-card p{
+color:var(--muted);
+line-height:1.8;
+font-size:.98rem;
+}
+
+.maintenance-price{
+text-align:right;
+}
+
+.maintenance-price strong{
 display:block;
-margin-top:14px;
-color:rgba(255,255,255,.52);
-font-size:.9rem;
-line-height:1.7;
+font-family:'Cormorant Garamond',serif;
+font-size:2.4rem;
+font-weight:500;
+line-height:1;
+color:white;
+}
+
+.maintenance-price small{
+display:block;
+margin-top:10px;
+color:rgba(255,255,255,.5);
+font-size:.85rem;
+letter-spacing:1px;
 }
 
 .approval-note{
-position:relative;
-z-index:2;
-margin-top:40px;
-padding:24px 26px;
+max-width:920px;
+margin:32px auto 0;
+padding:24px 28px;
 border-radius:24px;
-background:rgba(199,173,131,.10);
-border:1px solid rgba(199,173,131,.22);
+background:rgba(199,173,131,.08);
+border:1px solid rgba(199,173,131,.2);
 color:rgba(255,255,255,.78);
 line-height:1.75;
+text-align:center;
 }
 
 .approval-note strong{
@@ -558,42 +681,13 @@ color:white;
 font-weight:500;
 }
 
-.includes{
-list-style:none;
-margin-top:36px;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:16px 28px;
-position:relative;
-z-index:2;
-}
-
-.includes li{
-color:rgba(255,255,255,.72);
-font-size:.98rem;
-line-height:1.6;
-}
-
-.includes li::before{
-content:"— ";
-color:var(--gold);
-}
-
-.price-note{
-margin-top:44px;
-padding-top:34px;
-border-top:1px solid rgba(255,255,255,.09);
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:32px;
-position:relative;
-z-index:2;
-}
-
-.price-note p{
-font-size:.95rem;
-color:rgba(255,255,255,.58);
+.price-footnote{
+max-width:920px;
+margin:28px auto 0;
+text-align:center;
+color:rgba(255,255,255,.55);
 line-height:1.85;
+font-size:.95rem;
 }
 
 .split-section{
@@ -709,8 +803,8 @@ transform:translateY(0);
 .demo-grid,
 .process-grid,
 .split-section,
-.price-top,
-.price-note{
+.price-grid,
+.maintenance-card{
 grid-template-columns:1fr;
 }
 
@@ -718,12 +812,8 @@ grid-template-columns:1fr;
 height:340px;
 }
 
-.price-number{
+.maintenance-price{
 text-align:left;
-}
-
-.includes{
-grid-template-columns:1fr;
 }
 }
 
@@ -819,16 +909,17 @@ font-size:2.55rem;
 
 .process-box,
 .quote-box,
-.price-card{
+.price-card,
+.maintenance-card{
 padding:32px 26px;
 }
 
 .price-card h3{
-font-size:2.8rem;
+font-size:2.1rem;
 }
 
-.price-number strong{
-font-size:3rem;
+.price-amount strong{
+font-size:2.6rem;
 }
 
 .contact{
@@ -836,8 +927,11 @@ text-align:left;
 }
 
 .contact .section-text,
-.contact-note{
+.contact-note,
+.approval-note,
+.price-footnote{
 margin-left:0;
+text-align:left;
 }
 }
 
@@ -867,9 +961,9 @@ transform:none;
 <a href="#hero" class="logo" aria-label="RNstudio – til toppen">RNS</a>
 
 <div class="nav-links">
-<a href="#demoer">Demoer</a>
+<a href="#arbeid">Arbeid</a>
 <a href="#prosess">Prosess</a>
-<a href="#priser">Pris</a>
+<a href="#priser">Priser</a>
 <a href="#kontakt">Kontakt</a>
 </div>
 </nav>
@@ -888,7 +982,11 @@ før kunden tar kontakt.
 </p>
 
 <div class="hero-actions">
-<a href="#demoer" class="button primary">Se demoer</a>
+<a href="tel:+4741357603" class="button call">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+Ring 41 35 76 03
+</a>
+<a href="#arbeid" class="button primary">Se arbeid</a>
 <a href="#kontakt" class="button secondary">Ta kontakt</a>
 </div>
 </div>
@@ -904,24 +1002,41 @@ Bilder, luft, typografi og tempo sier noe om hvem du er.
 </div>
 </section>
 
-<section class="section" id="demoer">
+<section class="section" id="arbeid">
 <div class="container">
 
 <div class="section-header fade">
-<div class="section-label">Demoer / Konsepter</div>
-<h2 class="section-title">Fire uttrykk. Fire førsteinntrykk.</h2>
+<div class="section-label">Arbeid og konsepter</div>
+<h2 class="section-title">Levert arbeid og uttrykk vi kan bygge.</h2>
 <p class="section-text">
-Demoene viser hvordan ulike bedrifter kan føles på nett. Ikke som ferdige maler,
-men som retninger for stemning, struktur og tillit.
+En levert kunde og fire konseptdemoer som viser hvordan ulike bedrifter kan føles på nett.
+Ikke ferdige maler, men retninger for stemning, struktur og tillit.
 </p>
 </div>
 
-<div class="concept-note fade">
-<strong>Merk:</strong> Dette er fiktive konseptdemoer laget for å vise stil, stemning og struktur.
-De er ikke ekte kundecaser, men eksempler på hva RNstudio kan bygge for ulike bransjer.
-</div>
-
 <div class="demo-grid">
+
+<div class="demo-card live fade">
+<div class="live-badge">Levert kunde</div>
+<div class="demo-image">
+<img src="ladearena-cover.jpg" alt="Lade Arena Bilvask & Bilpleie – levert nettside" loading="lazy" width="800" height="600">
+</div>
+<div class="demo-body">
+<div class="demo-type">Levert · Bilpleie / Trondheim</div>
+<h3>Lade Arena Bilvask</h3>
+<p>
+Komplett konverteringsside for et bilpleiestudio på Lade.
+Hero, prisliste, tjenester, FAQ, SMS-bestilling, kart og fast handlingslinje på mobil.
+Bygget for å bli funnet lokalt og gjøre det enkelt å ringe eller booke.
+</p>
+<div class="demo-meta">
+<span>Lokal SEO</span>
+<span>SMS-bestilling</span>
+<span>Mobil-først</span>
+</div>
+<a href="https://trondheim-bilvask.no" target="_blank" rel="noopener" class="demo-link">Besøk siden</a>
+</div>
+</div>
 
 <div class="demo-card fade">
 <div class="demo-image">
@@ -1000,6 +1115,12 @@ Et lyst og rolig salongkonsept med myke bilder, tydelige tjenester og en følels
 </div>
 
 </div>
+
+<div class="concept-note fade" style="margin-top:60px;margin-bottom:0;">
+<strong>Merk:</strong> Konseptdemoene er fiktive eksempler laget for å vise stil, stemning og struktur — ikke ekte kundecaser.
+Lade Arena Bilvask er en ekte, levert nettside.
+</div>
+
 </div>
 </section>
 
@@ -1103,67 +1224,103 @@ Når alt er godkjent, kobles siden opp og blir tilgjengelig for kundene dine.
 <div class="container">
 
 <div class="section-header fade">
-<div class="section-label">Oppstartspris</div>
-<h2 class="section-title">Én enkel pakke.</h2>
+<div class="section-label">Priser</div>
+<h2 class="section-title">Tre pakker. Én tydelig vei.</h2>
 <p class="section-text">
-Jeg er i oppstartsfasen med RNstudio og tilbyr derfor redusert pris på de første prosjektene.
-Målet er å gjøre prosessen enkel, trygg og oversiktlig.
+Velg pakken som passer det du trenger. Alle prisene er fra-priser og tilpasses behovet ditt.
+Vi avtaler alltid endelig pris før arbeidet starter.
 </p>
 </div>
 
-<div class="price-wrapper">
+<div class="price-grid">
+
 <div class="price-card fade">
+<div class="price-tag">Start</div>
+<h3>Én profesjonell side</h3>
+<p class="price-desc">
+For enkeltpersonforetak, musikere, terapeuter og små tjenester som trenger én ryddig side.
+</p>
+<div class="price-amount">
+<span>Fra</span>
+<strong>5.900 kr</strong>
+</div>
+<ul class="price-includes">
+<li>Én godt strukturert side (one-pager)</li>
+<li>Mobiltilpasset design</li>
+<li>Tydelig kontaktseksjon</li>
+<li>Grunnleggende SEO</li>
+<li>Publisering på eget domene</li>
+<li>Én runde med justeringer</li>
+</ul>
+</div>
 
-<div class="price-top">
+<div class="price-card featured fade">
+<div class="recommended-badge">Mest valgt</div>
+<div class="price-tag">Standard</div>
+<h3>Komplett liten nettside</h3>
+<p class="price-desc">
+For kafé, frisør, bilpleie, håndverkere og lokale tjenester som vil bli funnet og bygge tillit.
+</p>
+<div class="price-amount">
+<span>Fra</span>
+<strong>11.900 kr</strong>
+</div>
+<ul class="price-includes">
+<li>Forside, om oss, tjenester, priser, kontakt</li>
+<li>Lokal SEO og lokale søkeord</li>
+<li>Hjelp til Google Bedriftsprofil</li>
+<li>Google Search Console + sitemap</li>
+<li>Mobil-først og rask lasting</li>
+<li>To runder med justeringer</li>
+</ul>
+</div>
+
+<div class="price-card fade">
+<div class="price-tag">Premium</div>
+<h3>Gjennomarbeidet uttrykk</h3>
+<p class="price-desc">
+For restauranter, studioer, hoteller og campingplasser som vil at uttrykket skal matche kvaliteten.
+</p>
+<div class="price-amount">
+<span>Fra</span>
+<strong>19.900 kr</strong>
+</div>
+<ul class="price-includes">
+<li>Alt i Standardpakken</li>
+<li>Flere undersider etter behov</li>
+<li>Mer gjennomarbeidet design</li>
+<li>Teksthjelp og bildeplassering</li>
+<li>Innholdsplan og opplæring</li>
+<li>Tre runder med justeringer</li>
+</ul>
+</div>
+
+</div>
+
+<div class="maintenance-card fade">
 <div>
-<div class="price-tag">Nettside</div>
-<h3>Moderne nettside for små bedrifter</h3>
+<div class="price-tag">Vedlikehold</div>
+<h3>Vedlikehold og trygghet</h3>
 <p>
-For deg som trenger en rolig, tydelig og mobilvennlig nettside med et profesjonelt førsteinntrykk.
-Passer godt for små bedrifter, gründere, kreative prosjekter, salonger, caféer, behandlere og lokale tjenester.
+For deg som vil slippe å tenke på siden selv. Mindre tekstendringer, bildeoppdateringer,
+priser og åpningstider, enkel teknisk kontroll og månedlig oppfølging.
 </p>
 </div>
-
-<div class="price-number">
-<span>Oppstartspris</span>
-<strong>5.900 kr</strong>
-<small>
-50% ved oppstart<br>
-50% før publisering
-</small>
+<div class="maintenance-price">
+<strong>Fra 690 kr</strong>
+<small>per måned</small>
 </div>
 </div>
 
-<div class="approval-note">
+<div class="approval-note fade">
 <strong>Ingen publisering før du har godkjent uttrykket.</strong><br>
 Du får først se siden på en preview-link, og vi justerer sammen før den kobles til domenet ditt.
 </div>
 
-<ul class="includes">
-<li>Moderne forside med rolig design</li>
-<li>Mobilvennlig oppsett</li>
-<li>Tekst, bilder og kontaktinformasjon</li>
-<li>Tjenester, priser eller meny</li>
-<li>Galleri eller visuell seksjon</li>
-<li>Kontaktknapp, e-post og telefon</li>
-<li>Preview-link før publisering</li>
-<li>Hjelp til domene og live nettside</li>
-<li>Én runde med justeringer</li>
-<li>Personlig oppfølging hele veien</li>
-</ul>
-
-<div class="price-note">
-<p>
-Trenger du flere undersider, logo, video, bookingoppsett eller mer omfattende teksthjelp,
-avtaler vi pris før arbeidet starter.
+<p class="price-footnote fade">
+Alle priser er fra-priser uten MVA. Trenger du noe utenom — flere undersider, video, bookingoppsett
+eller mer omfattende teksthjelp — avtaler vi pris før arbeidet starter.
 </p>
-<p>
-Du trenger ikke ha alt klart før du tar kontakt. Jeg hjelper deg å finne ut hva siden bør inneholde.
-</p>
-</div>
-
-</div>
-</div>
 
 </div>
 </section>
@@ -1185,23 +1342,29 @@ stemningen, menneskene, arbeidet og følelsen bak virksomheten.
 <div class="section-label">Kontakt</div>
 <h2 class="section-title">Vil du lage en nettside som føles riktig?</h2>
 <p class="section-text">
-Send meg en kort melding med hva du driver med, så ser vi på hva som passer.
+Ring meg, eller send en kort melding med hva du driver med, så ser vi på hva som passer.
 Du trenger ikke ha alt klart før du tar kontakt.
 </p>
 </div>
 
 <div class="contact-actions fade">
-<a href="mailto:Ronny.nilsen.studio@gmail.com?subject=Foresp%C3%B8rsel%20om%20nettside&body=Hei%20Ronny%2C%0A%0AJeg%20%C3%B8nsker%20%C3%A5%20h%C3%B8re%20mer%20om%20nettside.%0A%0ABedrift%3A%0ANettside%20i%20dag%3A%0AHva%20jeg%20trenger%3A%0A%0AMvh%0A" class="button primary">
-Send en kort forespørsel
+<a href="tel:+4741357603" class="button call">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+Ring 41 35 76 03
 </a>
 
-<a href="mailto:Ronny.nilsen.studio@gmail.com" class="mail-link">
+<a href="mailto:ronny.nilsen.studio@gmail.com?subject=Foresp%C3%B8rsel%20om%20nettside&body=Hei%20Ronny%2C%0A%0AJeg%20%C3%B8nsker%20%C3%A5%20h%C3%B8re%20mer%20om%20nettside.%0A%0ABedrift%3A%0ANettside%20i%20dag%3A%0AHva%20jeg%20trenger%3A%0A%0AMvh%0A" class="button primary">
+Send forespørsel
+</a>
+
+<a href="mailto:ronny.nilsen.studio@gmail.com" class="mail-link">
 Send vanlig e-post
 </a>
 </div>
 
 <div class="contact-note fade">
-E-post: Ronny.nilsen.studio@gmail.com<br>
+Telefon: <a href="tel:+4741357603" style="color:var(--gold);text-decoration:none;">41 35 76 03</a><br>
+E-post: ronny.nilsen.studio@gmail.com<br>
 RNstudio holder til i Trondheim og lager nettsider for små bedrifter i hele Trøndelag.
 Jeg svarer så raskt jeg kan og hjelper deg å finne ut hva nettsiden bør inneholde.
 </div>
