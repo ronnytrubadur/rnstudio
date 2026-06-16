@@ -180,6 +180,7 @@ nav a:hover{ color:var(--green); }
 .price-line div:first-child{ border-left:0; color:var(--ink); font-weight:500; }
 .price-line div:not(:first-child){ color:var(--ink); font-weight:700; white-space:nowrap; }
 .price-line div.avtale{ grid-column:2 / -1; color:var(--muted); font-weight:600; white-space:normal; }
+.price-line div.fast{ grid-column:2 / -1; color:var(--ink); font-weight:700; white-space:nowrap; }
 
 /* ── TJENESTER ── */
 .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
@@ -294,6 +295,8 @@ footer a:hover{ color:#fff; }
   .price-line div:not(:first-child)::before{ content:attr(data-label); color:var(--muted); font-weight:500; }
   .price-line div.avtale{ display:block; }
   .price-line div.avtale::before{ content:none; }
+  .price-line div.fast{ display:block; }
+  .price-line div.fast::before{ content:none; }
   .mobile-bar{ display:grid; }
   body{ padding-bottom:64px; }
 }
@@ -451,9 +454,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
         <div class="price-line"><div>Avfetting</div><div data-label="Liten">100 kr</div><div data-label="Mellomstor">125 kr</div><div data-label="Stor">150 kr</div></div>
         <div class="price-line"><div>Insektfjerning</div><div data-label="Liten">100 kr</div><div data-label="Mellomstor">125 kr</div><div data-label="Stor">150 kr</div></div>
         <div class="price-line"><div>Underspyling</div><div data-label="Liten">70 kr</div><div data-label="Mellomstor">80 kr</div><div data-label="Stor">80 kr</div></div>
-        <div class="price-line"><div>Skiboks</div><div data-label="Liten">70 kr</div><div data-label="Mellomstor">70 kr</div><div data-label="Stor">70 kr</div></div>
-        <div class="price-line"><div>Motorvask, drivstoff</div><div data-label="Liten">400 kr</div><div data-label="Mellomstor">400 kr</div><div data-label="Stor">400 kr</div></div>
-        <div class="price-line"><div>Motorvask, elbil</div><div data-label="Liten">800 kr</div><div data-label="Mellomstor">800 kr</div><div data-label="Stor">800 kr</div></div>
+        <div class="price-line"><div>Skiboks</div><div class="fast">70 kr</div></div>
+        <div class="price-line"><div>Motorvask, drivstoff</div><div class="fast">400 kr</div></div>
+        <div class="price-line"><div>Motorvask, elbil</div><div class="fast">800 kr</div></div>
         <div class="price-line"><div>Fjerning av dyrehår</div><div data-label="Liten">Fra 300 kr</div><div data-label="Mellomstor">Fra 500 kr</div><div data-label="Stor">Fra 500 kr</div></div>
       </div>
 
@@ -473,7 +476,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
       <div class="price-group">
         <div class="price-group-title">Sesongskift av hjul</div>
         <div class="price-line"><div>Skifte av 4 hjul</div><div data-label="Liten">350 kr</div><div data-label="Mellomstor">400 kr</div><div data-label="Stor">450 kr</div></div>
-        <div class="price-line"><div>Vask av 4 hjul</div><div data-label="Liten">200 kr</div><div data-label="Mellomstor">200 kr</div><div data-label="Stor">200 kr</div></div>
+        <div class="price-line"><div>Vask av 4 hjul</div><div class="fast">200 kr</div></div>
       </div>
 
       <div class="price-group">
