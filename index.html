@@ -727,6 +727,89 @@ line-height:1.04;
 color:white;
 }
 
+.testimonial{
+background:#050a0f;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+padding:140px 24px;
+}
+
+.testimonial-inner{
+max-width:1000px;
+margin:0 auto;
+text-align:center;
+position:relative;
+}
+
+.testimonial-mark{
+font-family:'Cormorant Garamond',serif;
+font-size:9rem;
+line-height:.5;
+color:var(--gold);
+opacity:.5;
+margin-bottom:24px;
+display:block;
+}
+
+.testimonial blockquote{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(2rem,4vw,3.4rem);
+line-height:1.25;
+font-weight:500;
+color:white;
+margin:0 auto 44px;
+max-width:880px;
+}
+
+.testimonial-source{
+display:inline-flex;
+align-items:center;
+gap:18px;
+padding:14px 24px;
+border:1px solid rgba(199,173,131,.3);
+border-radius:999px;
+background:rgba(199,173,131,.06);
+}
+
+.testimonial-source-label{
+font-size:.66rem;
+letter-spacing:2.4px;
+text-transform:uppercase;
+color:var(--gold);
+font-weight:500;
+}
+
+.testimonial-source-name{
+font-size:.95rem;
+color:white;
+font-weight:500;
+letter-spacing:.5px;
+}
+
+.testimonial-source-divider{
+width:1px;
+height:14px;
+background:rgba(255,255,255,.2);
+}
+
+.testimonial-link{
+display:inline-block;
+margin-top:32px;
+font-size:.72rem;
+letter-spacing:2.4px;
+text-transform:uppercase;
+color:rgba(255,255,255,.62);
+text-decoration:none;
+border-bottom:1px solid rgba(255,255,255,.2);
+padding-bottom:4px;
+transition:.25s ease;
+}
+
+.testimonial-link:hover{
+color:white;
+border-color:white;
+}
+
 .contact{
 text-align:center;
 background:#050a0f;
@@ -920,6 +1003,25 @@ font-size:2.1rem;
 
 .price-amount strong{
 font-size:2.6rem;
+}
+
+.testimonial{
+padding:90px 20px;
+text-align:left;
+}
+
+.testimonial-inner{
+text-align:left;
+}
+
+.testimonial-mark{
+font-size:6rem;
+}
+
+.testimonial-source{
+flex-wrap:wrap;
+gap:12px;
+padding:14px 20px;
 }
 
 .contact{
@@ -1322,6 +1424,22 @@ Alle priser er fra-priser uten MVA. Trenger du noe utenom — flere undersider, 
 eller mer omfattende teksthjelp — avtaler vi pris før arbeidet starter.
 </p>
 
+</div>
+</section>
+
+<section class="testimonial">
+<div class="testimonial-inner fade">
+<span class="testimonial-mark" aria-hidden="true">“</span>
+<blockquote>
+Takk for en fantastisk jobb, Ronny. Du gjorde alt perfekt, svarte raskt og kjørte på med fart. Anbefaler deg til alle jeg kjenner.
+</blockquote>
+<div class="testimonial-source">
+<span class="testimonial-source-label">Levert kunde</span>
+<span class="testimonial-source-divider"></span>
+<span class="testimonial-source-name">Lade Arena Bilvask</span>
+</div>
+<br>
+<a href="https://trondheim-bilvask.no" target="_blank" rel="noopener" class="testimonial-link">Se nettsiden →</a>
 </div>
 </section>
 
