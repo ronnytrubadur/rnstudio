@@ -221,6 +221,17 @@ nav a:hover{ color:var(--green); }
 .booking-card{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:36px; box-shadow:var(--shadow); }
 .booking-card h3{ font-size:1.4rem; font-weight:800; margin-bottom:8px; color:var(--ink); }
 .booking-card .lead{ color:var(--muted); line-height:1.6; margin-bottom:24px; font-size:.96rem; }
+.booking-note{
+  background:#f6f3ec;
+  border:1px solid var(--line);
+  border-left:3px solid var(--green);
+  border-radius:10px;
+  padding:14px 16px;
+  color:var(--ink);
+  font-size:.92rem;
+  line-height:1.55;
+  margin-bottom:22px;
+}
 .field{ margin-bottom:16px; }
 .field label{ display:block; font-size:.88rem; font-weight:600; color:var(--ink); margin-bottom:6px; }
 .field input, .field select, .field textarea{ width:100%; padding:13px 14px; border:1px solid var(--line); border-radius:9px; background:var(--bg); font-family:inherit; font-size:1rem; color:var(--ink); transition:.2s; }
@@ -632,6 +643,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
           <h3>Be om time</h3>
           <p class="lead">Det tar ett minutt. Du sender meldingen fra din egen telefon.</p>
 
+          <p class="booking-note">
+            Avbestilling må gjøres senest 24 timer før avtalt time. Ved manglende oppmøte eller avbestilling senere enn 24 timer før timen kan det påløpe gebyr.
+          </p>
+
           <div class="field">
             <label for="navn">Navn</label>
             <input type="text" id="navn" placeholder="Ditt navn">
@@ -739,7 +754,7 @@ function sendBestilling(){
   var tjeneste = document.getElementById('tjeneste').value;
   var melding = document.getElementById('melding').value.trim();
 
-  var tekst = 'Hei! Jeg vil bestille time hos Lade Arena Bilvask.';
+  var tekst = 'Hei! Jeg vil bestille time hos Lade Arena Bilvask.\n\nJeg har lest at avbestilling må gjøres senest 24 timer før avtalt time, og at manglende oppmøte eller sen avbestilling kan medføre gebyr.';
   if(navn) tekst += '\n\nNavn: ' + navn;
   if(bil) tekst += '\nBil: ' + bil;
   tekst += '\nØnsker: ' + tjeneste;
